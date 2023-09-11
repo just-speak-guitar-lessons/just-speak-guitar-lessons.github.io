@@ -53,28 +53,76 @@ document.addEventListener('DOMContentLoaded', () => {
   closeModalBtn.addEventListener('click', closeModal);
 
 
-  // modal tab section 
-  const tabButtons = document.querySelectorAll('.tab-button');
-  const tabContents = document.querySelectorAll('.tab-content');
+// Function to handle modal tab clicks
+function handleModalTabClick(event) {
+  const tabName = event.currentTarget.getAttribute('data-tab');
+  const modalContainer = event.currentTarget.closest('.modal');
+  const tabContents = modalContainer.querySelectorAll('.tab-content');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const tabId = button.getAttribute('data-tab');
-
-      tabButtons.forEach(btn => {
-        btn.classList.remove('active');
-      });
-      tabContents.forEach(content => {
-        content.style.display = 'none';
-      });
-
-      button.classList.add('active');
-      document.getElementById(tabId).style.display = 'flex';
-    });
+  // Hide all modal tab contents
+  tabContents.forEach(content => {
+    content.style.display = 'none';
   });
 
-  // Initialize the first tab as active
-  tabButtons[0].click();
+  // Deactivate all modal tab buttons
+  const tabLinks = modalContainer.querySelectorAll('.tab-button');
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Display the selected modal tab content and activate the button
+  const selectedTabContent = modalContainer.querySelector(`#${tabName}`);
+  selectedTabContent.style.display = 'block';
+  event.currentTarget.classList.add('active');
+}
+
+// Add click event listeners to modal tab buttons
+const modalTabButtons = document.querySelectorAll('.modal .tab-button');
+modalTabButtons.forEach(button => {
+  button.addEventListener('click', handleModalTabClick);
+});
+
+// Initialize the first modal tab as active for the modal
+const firstModalTabButton = document.querySelector('.modal .tab-button');
+if (firstModalTabButton) {
+  firstModalTabButton.click();
+}
+
+/// Function to handle tab clicks for the new tabs
+function handleNewTabClick(event) {
+  const tabName = event.currentTarget.getAttribute('data-tab');
+  const tabsContainer = event.currentTarget.closest('.flex-col');
+  const tabContents = tabsContainer.querySelectorAll('.tab-content');
+
+  // Hide all new tab contents
+  tabContents.forEach(content => {
+    content.style.display = 'none';
+  });
+
+  // Deactivate all new tab links
+  const tabLinks = tabsContainer.querySelectorAll('.tab-link');
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Display the selected new tab content and activate the link
+  const selectedTabContent = tabsContainer.querySelector(`#${tabName}`);
+  selectedTabContent.style.display = 'block';
+  event.currentTarget.classList.add('active');
+}
+
+// Add click event listeners to new tab links
+const newTabLinks = document.querySelectorAll('.flex-col .tab-link');
+newTabLinks.forEach(link => {
+  link.addEventListener('click', handleNewTabClick);
+});
+
+// Initialize the first new tab as active for the new tabs
+const firstNewTabLink = document.querySelector('.flex-col .tab-link');
+if (firstNewTabLink) {
+  firstNewTabLink.click();
+}
+
 
 
 function play(sound) {
@@ -86,6 +134,7 @@ function play(sound) {
   }
 }
 // end of code for navigation and modal interactions
+
 
 });
 

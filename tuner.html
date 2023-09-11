@@ -9,7 +9,7 @@
   <meta name="author" content="Joseph Percival">
   <meta name="theme-color" content="#317EFB">
   <title>Tuning</title>
-  <link rel="icon" href="/assets/img/global-imgs/badge.png" type="image/x-icon">
+  <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,16 @@
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
   <!-- <script src="scripts/correlation_worker.js"></script> -->
   <!-- <script src="scripts/tuner-script.js"></script> -->
+  <style>
+    /* Add your CSS styles here */
+    .tab-content {
+      display: none;
+    }
 
+    .active {
+      display: block;
+    }
+  </style>
 
 </head>
 
@@ -33,7 +42,7 @@
         <div class="home-link">
           <a href="/index.html" class="navbar-logo">
             <div class="logo-container" title="logo and home button">
-              <img src="/assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
+              <img src="assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
               <div class="logo-name">
                 <h1>Guitar <span>Lessons</span></h1>
               </div>
@@ -109,7 +118,6 @@
                 <button class="tab-button" data-tab="tab2">Controls</button>
               </div>
               <div class="tab-content" id="tab1">
-
                 <table>
                   <!-- <th>What to say</th> -->
                   <tr>
@@ -217,7 +225,7 @@
         </div>
         <br>
         <div class="flex-row">
-          <img class="emphasis-logo" src="/assets/img/global-imgs/badge.svg" alt="company logo" width="60" height="60">
+          <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo" width="60" height="60">
           <p>
             To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
               Hub."
@@ -243,8 +251,15 @@
       </section>
       <section>
         <div class="flex-row-SA">
-          <div class="flex-col">
-          
+
+          <div class="flex-col no-gap">
+            <div class="tabs">
+              <button class="tab-link" data-tab="tab1Content">Guitar</button>
+              <button class="tab-link" data-tab="tab2Content">Bass</button>
+            </div>
+
+            <div id="tab1Content" class="tab-content">
+              <p>String notes in Standard Tuning for any 6 string Guitar</p>
               <table class="guitar-tuner-table">
                 <tr>
                   <th>String</th>
@@ -252,7 +267,7 @@
                   <th>Note</th>
                 </tr>
                 <tr>
-                  <td>6th (Low E)</td>
+                  <td>6th (Bass String)</td>
                   <td>Tune to</td>
                   <td>E</td>
                 </tr>
@@ -277,14 +292,50 @@
                   <td>B</td>
                 </tr>
                 <tr>
-                  <td>1st (High E)</td>
+                  <td>1st (Lightest String)</td>
                   <td>Tune to</td>
                   <td>E</td>
                 </tr>
-
               </table>
             </div>
-         
+
+            <div id="tab2Content" class="tab-content">
+              <p>String notes in Standard Tuning for Bass Guitar</p>
+              <table class="guitar-tuner-table">
+                <tr>
+                  <th>String</th>
+                  <th>Status</th>
+                  <th>Note</th>
+                </tr>
+                <tr>
+                  <td>6th (Bass String)</td>
+                  <td>Tune to</td>
+                  <td>E</td>
+                </tr>
+                <tr>
+                  <td>5th (A)</td>
+                  <td>Tune to</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>4th (D)</td>
+                  <td>Tune to</td>
+                  <td>D</td>
+                </tr>
+                <tr>
+                  <td>3rd (G)</td>
+                  <td>Tune to</td>
+                  <td>G</td>
+                </tr>
+           
+              </table>
+            </div>
+
+          </div>
+
+
+
+
           <div class="flex-col">
 
             <div class="guitar-tuner">
@@ -316,22 +367,22 @@
             <div class="flex-row interactive-notes">
               <audio id="audio"></audio>
               <div class="col_sides">
-                <button onclick="play('/assets/mp3/lowE.mp3')">E</button>
-                <button onclick="play('/assets/mp3/A.mp3')">A</button>
-                <button onclick="play('/assets/mp3/D.mp3')">D</button>
+                <button onclick="play('assets/mp3/lowE.mp3')">E</button>
+                <button onclick="play('assets/mp3/A.mp3')">A</button>
+                <button onclick="play('assets/mp3/D.mp3')">D</button>
               </div>
               <div class="col_center interactive-placeholder"></div>
               <div class="col_sides">
-                <button onclick="play('/assets/mp3/G.mp3')">G</button>
-                <button onclick="play('/assets/mp3/B.mp3')">B</button>
-                <button onclick="play('/assets/mp3/highE.mp3')">E</button>
+                <button onclick="play('assets/mp3/G.mp3')">G</button>
+                <button onclick="play('assets/mp3/B.mp3')">B</button>
+                <button onclick="play('assets/mp3/highE.mp3')">E</button>
               </div>
             </div>
           </div>
 
           <div class="flex-col_centered">
             <div class="flex-row">
-              <img class="emphasis-logo" src="/assets/img/global-imgs/badge.svg" alt="company logo" width="60"
+              <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo" width="60"
                 height="60">
               <p>
                 Ask, "<strong>Connie, play ...</strong>" and then any strings note. Once Connie understands you, the
@@ -372,7 +423,7 @@
       <div class="footer-row">
         <div class="footer-column">
           <a class="logo" href="index.html" title="Guitar Lessons">
-            <img class="logo-image" src="/assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
+            <img class="logo-image" src="assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
               title="Guitar Lessons">
             <div class="logo-name">
               Guitar <span>Lessons</span>
@@ -515,6 +566,7 @@
       </div>
     </footer>
   </main>
+
   <script src="scripts/script.js"></script>
   <script src="scripts/tuner-script.js"></script>
 </body>

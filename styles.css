@@ -354,19 +354,19 @@ a {
 
 /* hero sections  */
 .global-hero-banner-with-button.index {
-    background-image: url(/assets/img/hero-imgs/index-hero.webp);
+    background-image: url(assets/img/hero-imgs/index-hero.webp);
 }
 
 .global-hero-banner-with-button.basics {
-    background-image: url(/assets/img/hero-imgs/basics-hero.webp);
+    background-image: url(assets/img/hero-imgs/basics-hero.webp);
 }
 
 .global-hero-banner-with-button.strings {
-    background-image: url(/assets/img/hero-imgs/strings-hero.webp);
+    background-image: url(assets/img/hero-imgs/strings-hero.webp);
 }
 
 .global-hero-banner-with-button.tuning {
-    background-image: url(/assets/img/hero-imgs/tuning-hero.webp);
+    background-image: url(assets/img/hero-imgs/tuning-hero.webp);
 }
 
 .hero-content {
@@ -472,21 +472,21 @@ a {
     flex-direction: row;
 }
 
-.tab-button {
+.tab-button, .tab-link {
     font-family: var(--body-copy);
     font-size: 0.98rem;
     letter-spacing: 1px;
     background-color: #809ee1;
     color: var(--brand-color-black);
+    border: 1px solid var(--blue-grey-1);
     width: 50%;
-    border: none;
     padding: 10px 20px;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.tab-button.active {
+.tab-button.active, .tab-link.active {
     color: var(--brand-color-white);
     background-color: var(--brand-color-purple);
     border: 1px solid var(--brand-color-d-blue);
@@ -495,10 +495,12 @@ a {
 .tab-content {
     display: none;
     border: 1px solid var(--blue-grey-1);
+    border-radius:0 0 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    padding: 20px;
     width: 99%
 }
 
@@ -585,31 +587,31 @@ a {
 }
 
 .page-nav-container .card-image.basics {
-    background-image: url(/assets/img/index-imgs/basics-thumbnail.webp);
+    background-image: url(assets/img/index-imgs/basics-thumbnail.webp);
 }
 
 .page-nav-container .card-image.strings {
-    background-image: url(/assets/img/index-imgs/strings-image.webp);
+    background-image: url(assets/img/index-imgs/strings-image.webp);
 }
 
 .page-nav-container .card-image.tuning {
-    background-image: url(/assets/img/index-imgs/tuning-image-sm.webp);
+    background-image: url(assets/img/index-imgs/tuning-image-sm.webp);
 }
 
 .page-nav-container .card-image.frets {
-    background-image: url(/assets/img/index-imgs/frets-image.webp);
+    background-image: url(assets/img/index-imgs/frets-image.webp);
 }
 
 .page-nav-container .card-image.chords {
-    background-image: url(/assets/img/index-imgs/chords-image.webp);
+    background-image: url(assets/img/index-imgs/chords-image.webp);
 }
 
 .page-nav-container .card-image.rhythm {
-    background-image: url(/assets/img/index-imgs/rhythm-guitar-image.webp);
+    background-image: url(assets/img/index-imgs/rhythm-guitar-image.webp);
 }
 
 .page-nav-container .card-image.lead {
-    background-image: url(/assets/img/index-imgs/lead-guitar-image.webp);
+    background-image: url(assets/img/index-imgs/lead-guitar-image.webp);
 }
 
 .page-nav-container .card-content {
@@ -652,7 +654,7 @@ a {
 }
 
 .flex-col_centered .guitar-comp-image {
-    background-image: url(/assets/img/basics-imgs/guitar-diagram-min.webp);
+    background-image: url(assets/img/basics-imgs/guitar-diagram-min.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -660,6 +662,9 @@ a {
     height: 300px;
 }
 
+.flex-col.no-gap{
+    gap: 0;
+}
 /* editorial section  */
 .main-editorial {
     display: flex;
@@ -699,87 +704,87 @@ a {
 }
 
 .headstock {
-    background-image: url(/assets/img/basics-imgs/headstock.webp);
+    background-image: url(assets/img/basics-imgs/headstock.webp);
 }
 
 .tuning {
-    background-image: url(/assets/img/basics-imgs/tuning-image.webp);
+    background-image: url(assets/img/basics-imgs/tuning-image.webp);
 }
 
 .nut {
-    background-image: url(/assets/img/basics-imgs/nut-min.webp);
+    background-image: url(assets/img/basics-imgs/nut-min.webp);
 }
 
 .fretboard {
-    background-image: url(/assets/img/basics-imgs/frets-image.webp);
+    background-image: url(assets/img/basics-imgs/frets-image.webp);
 }
 
 .frets {
-    background-image: url(/assets/img/basics-imgs/frets-placeholder-min.webp);
+    background-image: url(assets/img/basics-imgs/frets-placeholder-min.webp);
 }
 
 .bridge {
-    background-image: url(/assets/img/basics-imgs/bridge-min.webp);
+    background-image: url(assets/img/basics-imgs/bridge-min.webp);
 }
 
 .sitting {
-    background-image: url(/assets/img/basics-imgs/sitting.webp);
+    background-image: url(assets/img/basics-imgs/sitting.webp);
 }
 
 .shoulders {
-    background-image: url(/assets/img/basics-imgs/shoulders-level.webp);
+    background-image: url(assets/img/basics-imgs/shoulders-level.webp);
 }
 
 .take-time {
-    background-image: url(/assets/img/basics-imgs/take-a-break.webp);
+    background-image: url(assets/img/basics-imgs/take-a-break.webp);
 }
 
 .chair {
-    background-image: url(/assets/img/basics-imgs/chair.webp);
+    background-image: url(assets/img/basics-imgs/chair.webp);
 }
 
 .no-slouching {
-    background-image: url(/assets/img/basics-imgs/avoid-slouching.webp);
+    background-image: url(assets/img/basics-imgs/avoid-slouching.webp);
 }
 
 .foot-position {
-    background-image: url(/assets/img/basics-imgs/feet-planted.webp);
+    background-image: url(assets/img/basics-imgs/feet-planted.webp);
 }
 
 .classical {
-    background-image: url(/assets/img/basics-imgs/classical-position.webp);
+    background-image: url(assets/img/basics-imgs/classical-position.webp);
 }
 
 .regular {
-    background-image: url(/assets/img/basics-imgs/regular-acoustic-position.webp);
+    background-image: url(assets/img/basics-imgs/regular-acoustic-position.webp);
 }
 
 .regular-resting {
-    background-image: url(/assets/img/basics-imgs/rest-forearm.webp);
+    background-image: url(assets/img/basics-imgs/rest-forearm.webp);
 }
 
 .strap {
-    background-image: url(/assets/img/basics-imgs/strap.webp);
+    background-image: url(assets/img/basics-imgs/strap.webp);
 }
 
 .strap-adjusting {
-    background-image: url(/assets/img/basics-imgs/strap-adjust.webp);
+    background-image: url(assets/img/basics-imgs/strap-adjust.webp);
 }
 
 .standing {
-    background-image: url(/assets/img/basics-imgs/standing.webp);
+    background-image: url(assets/img/basics-imgs/standing.webp);
 }
 
 .classical-guitar {
-    background-image: url(/assets/img/strings-imgs/classical-guitar.webp);
+    background-image: url(assets/img/strings-imgs/classical-guitar.webp);
 }
 
 .acoustic-guitar {
-    background-image: url(/assets/img/strings-imgs/acoustic-guitar.webp);
+    background-image: url(assets/img/strings-imgs/acoustic-guitar.webp);
 }
 
 .electric-guitar {
-    background-image: url(/assets/img/strings-imgs/electric-guitar.webp);
+    background-image: url(assets/img/strings-imgs/electric-guitar.webp);
 }
 
 .grid-container .card .card-content {
