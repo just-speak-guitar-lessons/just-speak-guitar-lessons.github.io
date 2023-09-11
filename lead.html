@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+        <meta name="description"
+            content="University final year project to test the feasibility of integrating a no AI, rules based algorithm, voice command system into a website">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Joseph Percival">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#317EFB" />
+        <title>Guitar Tutorial - Lead</title>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Montserrat&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+
+            <a id="#header-anchor"></a>
+            <div class="header-container">
+                <div class="nav-bar">
+                    <div class="hamburger-menu">
+                        <button class="burger-button" title="menu icon">
+                            <i class="fa fa-bars" title="Edit"></i>
+                        </button>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html" title="Guitar Lessons">
+                            <h2><img class="logo-image" src="img/logo1.png" alt="Just Speak logo">
+                           <span class="dark-text">GUITAR </span><span class="red-text">LESSONS</span></h2>
+                        </a>
+                    </div>
+                    <nav class="nav-bar">
+                        <ul>
+                            <li> <a href="index.html">Home</a></li>
+                            <li> <a href="basics.html">Basics</a></li>
+                            <li> <a href="frets.html">Frets</a></li>
+                            <li> <a href="chords.html">Chords</a></li>
+                            <li> <a href="rhythm.html">Rhythm</a></li>
+                            <li> <a href="lead.html">Lead</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="mobile-navigation">
+                        <a href="index.html">HOME</a>
+                        <a href="basics.html">BASICS</a>
+                        <a href="frets.html">FRETS</a>
+                        <a href="chords.html">CHORDS</a>
+                        <a href="rhythm.html">RHYTHM</a>
+                        <a href="lead.html">LEAD</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="strip-banner" href="#">
+                Click here to see the design process for this site
+            </div>
+        </header>
+      <div id="main-banner-image-frets">
+        <img src="img/nav4.png" alt="main image and title of page">
+      </div>
+      <article>
+        <div id="dialog" class="help-box" title="help-box">
+          <h2>Help Box</h2>
+          <p>Hello, you can call this help box at any time, by saying, "What to say."<br>
+            Below are a list of command's that you can say to go anywhere within this website - Have fun.<br></p>
+          <div class="table">
+            <table>
+              <tr>
+                <th>What to say</th>
+                <th>What happens</th>
+              </tr>
+              <tr>
+                <td>Scroll Up</td>
+                <td>Scroll's the page up</td>
+              </tr>
+              <tr>
+                <td>Scroll Down</td>
+                <td>Scroll's the page down</td>
+              </tr>
+              <tr>
+                <td>Go to the Top</td>
+                <td>Takes you to the top of the page</td>
+              </tr>
+              <tr>
+                <td>Go to the bottom</td>
+                <td>Takes you to the bottom of the page</td>
+              </tr>
+              <tr>
+                <td>Go forward</td>
+                <td>Goes forward a previously visited page</td>
+              </tr>
+              <tr>
+                <td>Go backwards</td>
+                <td>returns to the previously visited page</td>
+              </tr>
+              <tr>
+                <td>Home</td>
+                <td>Takes you to the Home Page</td>
+              </tr>
+              <tr>
+                <td>Open Basics</td>
+                <td>Takes you to the first Basics Lesson</td>
+              </tr>
+              <tr>
+                <td>Open Second Basics Lesson</td>
+                <td>Takes you to the second Basics Lesson</td>
+              </tr>
+              <tr>
+                <td>Open Fret's</td>
+                <td>Takes you to the first Frets Lesson</td>
+              </tr>
+              <tr>
+                <td>Finger positioning</td>
+                <td>Takes you to the second Fret's lesson on Finger positioning.</td>
+              </tr>
+              <tr>
+                <td>Open Chords</td>
+                <td>Takes you to the Chords Lesson</td>
+              </tr>
+              <tr>
+                <td>The Power Chord</td>
+                <td>Takes you to the second Chord's Lesson on Power Chords</td>
+              </tr>
+              <tr>
+                <td>Open Rhythm</td>
+                <td>Takes you to the Rhythm Guitar Lesson</td>
+              </tr>
+              <tr>
+                <td>First music lesson</td>
+                <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song</td>
+              </tr>
+              <tr>
+                <td>Open Lead</td>
+                <td>Takes you to the Lead Guitar Lesson</td>
+              </tr>
+              <tr>
+                <td>Reading music</td>
+                <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read music</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="main-content-wrapper">
+          <section class="welcome">
+            <h1>To Start with . . .</h1>
+            <p>Lead guitar is the musical part of a song were the guitarist picks the chords plays along melodically
+              with the rest of the group and play's an instrumental were there may be a gap between verses, known as a
+              solo. This is were the guitarist would play a group of notes named a, "riff." </p>
+            <p>All of this builds up within the song structure and then explodes into the solo part of the song. The
+              solo is usually the section of a song that is the inspiration for a anyone deciding to learn the
+              guitar.<br><b> For all voice commands for this website, just say, "What to say" at any time to open the
+                Help Box.</b><br></p>
+          </section>
+          <div class="higher-section-image-lead">
+          </div>
+
+          <section class="higher-section-l1">
+            <h2>The Electric Guitar</h2>
+            <p>The solo of any song can also be played on an acoustic guitar, but it is the electric guitar that
+              releases those tones, effects and distortion we are all familiar with. There are many variations of an
+              electric guitar but they all work
+              off the same principal. Electro-Magnetic pick ups.
+              The guitar itself has minimal electricity running through it, so it would be impossible to give the player
+              an electric shock but it does happen to connect to an amplifier which enables the sound to travel through
+              to a speaker. Given this
+              extra affordance many sound effects can be achieved which is what makes this instrument so versatile and
+              popular through out the years and probably a lot more.</p>
+          </section>
+          <section class="lower-information-box-lead" id="information-box-lead">
+            <h4>The need for an <b>Electric</b> Guitar surfaced as orchestras' started to increase in size, they also
+              became much louder. The 1920's Big Band's achieved their sound through heavy drum beats and brass
+              instruments and the acoustic guitar couldn't be heard over the sound. Before the invention of the pick up
+              musicians would use microphones from old telephones, of which, usually broke under the constant usage and
+              damage.</h4>
+          </section>
+          <div class="outro">
+            <p>
+              The first electric guitar was invented in 1931 by George Beauchamp and Adolf Rickenbacker and later
+              patented in 1937 under the Rickenbacker name. </p>
+          </div>
+          <section id="lesson-two-rhythm">
+            <a href="lead2.html" aria-label="link to lesson two">
+              <h1>Say,"Reading music," to go to the next lesson</h1>
+            </a>
+          </section>
+          <div class="anchor">
+            <a href="#top">
+              <img src="img/arrow.jpg" alt="link pointing to the top of page">
+            </a>
+            <p>Go to the top</p>
+          </div>
+        </div>
+      </article>
+      <footer>
+        <div class="footer-content">
+          <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+            <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+              viewbox="0 0 24 24">
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/joseph-percival/" aria-label="Link to the Author's Linked In account">
+            <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+              viewbox="0 0 24 24">
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account">
+            <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+              viewbox="0 0 24 24">
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+</html>

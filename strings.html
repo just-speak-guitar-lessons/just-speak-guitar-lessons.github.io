@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
+  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+  <meta name="author" content="Joseph Percival">
+  <meta name="theme-color" content="#317EFB">
+  <title>Strings Lesson</title>
+  <link rel="icon" href="/assets/img/global-imgs/badge.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="preload" fetchpriority="high" as="image" href="/assets/img/hero-imgs/tuning-hero.webp" type="image/webp"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
+    rel="stylesheet">
+  <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="navbar-container">
+        <div class="home-link">
+          <a href="/index.html" class="navbar-logo">
+            <div class="logo-container" title="logo and home button">
+              <img src="/assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
+              <div class="logo-name">
+                <h1>Guitar <span>Lessons</span></h1>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
+          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
+          </svg>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li class="navbar-link navbar-item">
+            <a href="/basics.html" title="Link to the basics Page">Basics</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/strings.html" title="Link to the strings page">Strings</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/frets.html" title="Link to the tuner page">Frets</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/chords.html" title="Link to the tuner page">Chords</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/lead.html" title="Link to the tuner page">Lead</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="top" class="global-hero-banner-with-button tuning">
+      <div class="hero-content">
+        <h2 class="title white">Welcome To The Standard Tuning Lesson.</h2>
+        <div class="hero-button-container">
+          <a href="#" class="primary-button" id="openModal">Command Hub</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <article>
+      <div class="main-content-container">
+        <div class="modal" id="modal" title="help-center">
+          <div class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+
+                <h3>Command Hub</h3>
+                <span class="close-modal" id="closeModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                    <path
+                      d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="modal-body">
+
+                <p>Please use any of the commands below to navigate anywhere on this application.
+                  <br>Please enjoy - thank you.
+                </p>
+
+                <div class="tabs">
+                  <button class="tab-button active" data-tab="tab1">Lessons</button>
+                  <button class="tab-button" data-tab="tab2">Controls</button>
+                </div>
+                <div class="tab-content" id="tab1">
+
+                  <table>
+                    <!-- <th>What to say</th> -->
+                    <tr>
+                      <th>What to say to Connie.</th>
+                    </tr>
+                    <tr>
+                      <!-- <td>Home</td> -->
+                      <td>Connie, open the Home Page</td>
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Basics</td> -->
+                      <td>Connie, open the Basics Lesson.</td>
+                    </tr>
+                    <tr>
+                      <td>Connie, open the Basics Lesson 2.</td>
+                      <!-- <td>Go to the second Basics Lesson.</td> -->
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Fret's</td> -->
+                      <td>Connie, open the Frets Lesson.</td>
+                    </tr>
+                    <tr>
+                      <td>Connie, open the Guitar Tuner.</td>
+                      <!-- <td>Go to the second Fret's lesson.</td> -->
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Chords</td> -->
+                      <td>Connie, open the Chords Lesson.</td>
+                    </tr>
+                    <tr>
+                      <td>Connie, open the Chord's Lesson 2.</td>
+                      <!-- <td>Go to the second Chord's Lesson.</td> -->
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Rhythm</td> -->
+                      <td>Connie, open the Rhythm Guitar Lesson.</td>
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Rhythm Lesson Two</td> -->
+                      <td>Connie, open the Rhythm Guitar Lesson 2.
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Lead</td> -->
+                      <td>Connie, open the Lead Guitar Lesson.</td>
+                    </tr>
+                    <tr>
+                      <!-- <td>Open Lead Lesson Two</td> -->
+                      <td>Connie, open the Lead Guitar Lesson 2.
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tab-content" id="tab2">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>What to say.</th>
+                      </tr>
+                      <tr>
+                        <td>Scroll Up.</td>
+                      </tr>
+                      <tr>
+                        <td>Scroll Down.</td>
+                      </tr>
+                      <tr>
+                        <td>Go to the Top Of The Page.</td>
+                      </tr>
+                      <tr>
+                        <td>Go to the bottom of the page</td>
+                      </tr>
+                      <tr>
+                        <td>Go to the next lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Go back to the last lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Start the guitar tuner</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+            <section>
+              <div class="flex-col_left">
+                <h3>Posture</h3>
+                <div class="flex-col_left">
+                  <p>Developing the correct posture is very important when learning to play the guitar in a natural, healthy
+                    way. By keeping your upper body relaxed and learning how to have proper posture while standing and
+                    sitting, you will be able to play to your best ability while also avoiding injury. Holding and playing
+                    the guitar will even begin to feel subconsciously natural after you have gotten comfortable with the
+                    instrument.</p>
+                </div>
+              </div>
+            </section>
+    
+            <section>
+              <div class="flex-row">
+                <img class="emphasis-logo" src="/assets/img/global-imgs/badge.svg" alt="company logo" width="60" height="60">
+                <p>
+                  To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
+                    Hub."
+                  </span>
+                </p>
+              </div>
+            </section>
+    
+            <section>
+              <h3>Maintaining Good Upper Body Posture</h3>
+              <div class="grid-container">
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section sitting"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Good Posture</h3>
+                      <p class="card-text">
+                        Keep your back straight and your shoulders relaxed. While practicing, keep your back as straight as
+                        you can without putting any strain on your lower back, focusing on upper body alignment. This will
+                        provide you with more flexibility, while helping to avoid any potential back aches.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section shoulders"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Shoulders.</h3>
+                      <p class="card-text">
+                        Focus on keeping your shoulders relaxed, while keeping some slight pressure in your shoulder blades.
+                        Although your shoulders may shift while playing some parts, try to keep some levelness.
+                        If it is hard to keep your shoulders level, you may need to reposition your guitar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section take-time"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Take Breaks.</h3>
+                      <p class="card-text">
+                        You should only practice between 30
+                        minutes to an hour - then take a short break. During your break, put the
+                        guitar down and do some upper body stretches on your back and shoulders. Regular rests,
+                        ensures that you don't become tense while playing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+    
+            <section>
+              <h3>Good Sitting Posture</h3>
+              <div class="grid-container">
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section chair"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Correct Seating.</h3>
+                      <p class="card-text">
+                        Purchase a folding chair to sit on while playing. Find a folding chair, or any chair that is low to
+                        the ground. Make sure that the chair allows you to comfortably sit up straight. Sitting on a couch
+                        or bed will make it difficult to practice good posture while playing guitar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section no-slouching"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Sit Properly.</h3>
+                      <p class="card-text">
+                        Sit at the front of the chair to avoid slouching. Using the back of the chair as support for your
+                        back and shoulders will make it hard to have proper posture. Do not rely on the chair for support
+                        and focus on staying at the front of the chair the entire time you play.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section foot-position"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Foot Placement.</h3>
+                      <p class="card-text">
+                        Place both feet on the ground and spread them apart comfortably. Doing so will allow you to keep the
+                        posture in your back and allow you to rest the guitar on your thigh.
+                        If you need to raise your leg to support the guitar, then your chair is
+                        too high or your guitar needs to be repositioned.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section classical"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Classical.</h3>
+                      <p class="card-text">
+                        When playing, keep the guitar close to the center of your body. The guitar sits between your legs,
+                        resting on the inner thigh, so that the guitar stands at a 45 degree angle. Optionally, Placing
+                        your leading foot on a footstool, will keep the guitar raised and in the proper position.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section regular"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Regular.</h3>
+                      <p class="card-text">
+                        To play in this position, place the guitars body on your leading thigh. In this position, the guitar
+                        is more
+                        horizontal and your forearm gently rests on the guitars body.
+                        Allow the guitar to sit balanced, you should not need to use your hands to balance it.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section regular-resting"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Regular Positioning.</h3>
+                      <p class="card-text">
+                        Rest your forearm on the lower part of the guitar's body. With your forearm here, you should not be
+                        supporting the neck of the guitar with your other hand. Check the balance of the guitar is correct by 
+                        taking your other hand completely off of the guitar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+    
+            <section>
+              <h3>Good Standing Posture</h3>
+              <div class="grid-container">
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section strap"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">The Strap.</h3>
+                      <p class="card-text">
+                        Guitar straps are an important part
+                        of playing the guitar while standing, they are affordable and can be purchased online too.
+                        Once you receive the strap, attach it to the strap pins on both ends of your guitar.
+                        Always ensure that the strap is secured before playing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section strap-adjusting"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Strap Adjustment.</h3>
+                      <p class="card-text">
+                        With the guitar strap properly attached, put the
+                        strap over your head and let it fall naturally at your waist. If you prefer playing with the guitar
+                        in a low position, adjust the strap to let the guitar fall
+                        lower. If it is too low, adjust the strap to raise the guitar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="grid-item">
+                  <div class="card">
+                    <div class="card-image-section standing"></div>
+                    <div class="card-content">
+                      <h3 class="card-title">Standing.</h3>
+                      <p class="card-text">
+                        Keep your feet in line with your shoulders. Even though you could be moving around while playing,
+                        keeping your feet spread in a natural way, helps posture. Keeping your feet below your
+                        shoulders will keep your entire body in line and will help you stop any aches.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="italic-text">
+                  <p>Even a soft strum can get a pretty loud sound. A lot of beginner's tend to hit their guitar with
+                    everything they’ve got, and can sound harsh to other people. Take your time and try to think about other
+                    people too.</p>
+                </div>
+              </div>
+            </section>
+    
+            <a href="#top" class="btt-button" title="Go back to the top button">
+              <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+                <path
+                  d="M463.077-200v-495.308L224.102-456.333 200-480l280-280 280 280-24.102 23.667-238.975-238.975V-200h-33.846Z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </article>
+    
+        <footer>
+          <div class="footer-row">
+            <!-- <div class="footer-top-row_container"> -->
+            <div class="footer-column">
+              <a class="logo" href="index.html" title="Guitar Lessons">
+                <img class="logo-image" src="/assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
+                  title="Guitar Lessons">
+                <div class="logo-name">
+                  Guitar <span>Lessons</span>
+                </div>
+              </a>
+            </div>
+    
+            <div class="footer-column">
+              <h2 class="emphasis">Connect with us</h2>
+    
+    
+              <ul aria-label="Connect with us" class="footer-list-row">
+                <li>
+                  <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+    
+                    <svg class="facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg" width="54"
+                      height="54" viewbox="0 0 30 30">
+                      <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+                        <path class="fill"
+                          d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
+                        </path>
+                      </a>
+                    </svg>
+                  </a>
+                </li>
+    
+                <li>
+                  <svg class="linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+                    viewbox="0 0 30 30">
+                    <a href="https://www.linkedin.com/in/joseph-percival/"
+                      aria-label="Link to the Author's Linked In account">
+    
+                      <path class="fill"
+                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z">
+                      </path>
+                    </a>
+                  </svg>
+                </li>
+                <li>
+    
+                  <svg class="twitter" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+                    viewbox="0 0 30 30">
+                    <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account">
+                      <path class="fill"
+                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z">
+                      </path>
+                    </a>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="footer-row">
+            <div class="footer-column">
+              <h3 class="emphasis">
+                Help and Information
+              </h3>
+              <ul>
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="M480-436.847q-37.006 0-61.502-26.077-24.497-26.076-24.497-63.768v-247.923q0-35.512 24.938-60.448 24.937-24.936 61.002-24.936t61.061 24.936q24.997 24.936 24.997 60.448v247.923q0 37.692-24.497 63.768-24.496 26.077-61.502 26.077Zm0-211.076Zm-22.692 517.922v-141.385q-100.23-9.077-168.768-82.076-68.539-73-68.539-173.23h45.384q0 89.077 62.698 150.115 62.698 61.038 151.653 61.038 88.956 0 151.918-61.038 62.961-61.038 62.961-150.115h45.384q0 100.23-68.539 173.23-68.538 72.999-168.768 82.076v141.385h-45.384ZM480-482.231q17.615 0 29.115-12.923t11.5-31.694v-247.767q0-17-11.677-28.5-11.676-11.5-28.938-11.5t-28.938 11.5q-11.677 11.5-11.677 28.5v247.923q0 18.615 11.5 31.538 11.5 12.923 29.115 12.923Z" />
+                    </svg>
+                    <p>
+                      Commands
+                    </p>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933ZM360.539-165.77l69.539-163.078q-34.606-11.994-60.995-37.535-26.389-25.541-39.466-62.31L165-362.539q29.462 69.462 79.693 120.308 50.23 50.846 115.846 76.461Zm-31.538-364.922q12.539-36.769 38.846-62.307 26.308-25.538 60.846-37.384L362.539-795Q289.846-765.538 239-714.192q-50.846 51.346-74 117.346l164.001 66.154Zm150.908 164.538q47.398 0 80.668-33.179 33.269-33.179 33.269-80.576 0-47.398-33.179-80.668-33.178-33.269-80.576-33.269-47.398 0-80.668 33.179-33.269 33.178-33.269 80.576 0 47.398 33.179 80.668 33.179 33.269 80.576 33.269ZM599.846-165.77q67.077-27.23 117.115-77.576Q767-293.693 794.23-360.539l-163.078-68.923q-12.692 37.384-39.115 62.999-26.422 25.615-60.961 36.846l68.77 163.847Zm30.537-366.306 163.847-67.77Q767-666.307 716.654-716.654 666.307-767 599.846-794.23l-67.154 163.847q33.384 12.231 58.499 37.269 25.115 25.038 39.192 61.038Z" />
+                    </svg>
+                    <div class="span">Help Center</div>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="m608.923-141.54-256.846-90.692-212.076 84.076v-596.843l212.076-73.461 256.846 89.692 211.076-83.692v597.613L608.923-141.54ZM583-198.077v-494.999l-206-70.231v494.999l206 70.231Zm45.384 0 146.231-48.154V-748.23l-146.231 55.154v494.999ZM185.385-212.77l146.231-55.538v-494.999l-146.231 48.923v501.614Zm442.999-480.306v494.999-494.999Zm-296.768-70.231v494.999-494.999Z" />
+                    </svg>
+                    <div class="span">Site Map</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="emphasis">
+                How To Contact Us
+              </h3>
+              <ul class="footer-list">
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="M829.999-521.693v391.692H129.001v-392.461q-27.616-22.077-37-55.153-9.385-33.077 1.23-66.923l57.923-185.461h655.307l60.308 185.461q10.615 33.846.73 67.307-9.884 33.462-37.5 55.538Zm-260.768-20.999q34.385 0 55.154-20.538 20.769-20.539 17.154-46.385L615-784.616H502.692v170.385q0 28.693 19.115 50.116 19.116 21.423 47.424 21.423Zm-185.077 0q31.077 0 52.116-20.923 21.038-20.923 21.038-50.616v-170.385H344.615l-26.539 176.54q-3.23 22.922 15.924 44.153 19.154 21.231 50.154 21.231Zm-180.846 0q26.308 0 45.539-18.038 19.231-18.039 22.615-44.347l26.385-179.539H184.384L138-634q-10.77 33.308 8.577 62.308 19.346 29 56.731 29Zm552.384 0q34.693 0 55.885-27.731Q832.77-598.154 821.616-634l-46.385-150.616H661.769l26.384 179.539q3.769 26.308 22.808 44.347 19.039 18.038 44.731 18.038ZM174.384-175.384h610.232v-324.847q-2.462 1.769-11.116 2.346-8.654.577-17.808.577-25.385 0-47.308-10.885t-42.769-34.038q-15.615 20.384-39.23 32.653-23.616 12.27-55.308 12.27-27.692 0-48.808-9.654-21.115-9.654-42.269-30.808-17.308 19.923-41.077 30.192-23.769 10.27-50.077 10.27-28.692 0-52.692-10.423t-41-34.5Q267.692-517 244.5-507.154q-23.193 9.846-41.192 9.846-8.539 0-16.385-.577-7.846-.577-12.539-2.346v324.847Zm597.923 0H186.693h585.614Z" />
+                    </svg>
+                    <p>Mon-Fri 8.30 <span>a.m - 5 p.m</span>
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="M769.999-140.001q-104.153 0-215.768-53.616-111.615-53.615-209-150.999Q247.616-442 193.809-553.808q-53.808-111.807-53.808-216.191v-50h191.537l37.692 173.23-113.153 110.923q28.769 47.307 58.846 87.154Q345-408.846 377-376.846q36 36.385 77.962 67.885 41.961 31.5 92.808 59.423L659-365.153l160.999 33.999v191.153h-50ZM234-577.999l86.001-83.154-24.539-113.462H185.385q-.769 40.308 11.115 88.846 11.885 48.539 37.5 107.77Zm356.307 349.153q39.077 19.384 88.039 31 48.961 11.615 96.269 12.846v-110.078l-101.461-20.615-82.847 86.847ZM234-577.999Zm356.307 349.153Z" />
+                    </svg>
+                    <p>
+                      07709718757
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="help-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                      <path
+                        d="M100.001-180.001v-599.998h759.998v599.998H100.001ZM480-473.924 145.385-695.385v470h669.23v-470L480-473.924Zm0-47.691 325.615-213h-650.23l324.615 213Zm-334.615-173.77v-39.23 215.396-176.166Z" />
+                    </svg>
+                    <p> <span>
+                        joseph.m.percival@gmail.com
+                      </span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-row">
+            <div class="footer-column">
+              <ul class="footer-list">
+                <li>
+                  <p>2021 &#169; JUST SPEAK GUITAR LESSONS </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </main>
+      <script defer src="scripts/script.js"></script>
+    
+    </body>
+    
+    </html>

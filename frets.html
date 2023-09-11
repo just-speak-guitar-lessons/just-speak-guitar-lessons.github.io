@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="description" content="Description on how to string an array of six stringed guitars">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Joseph Percival">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#317EFB" />
+    <title>Strings Lesson 1</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link preload rel="stylesheet" type="text/css" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&family=Raleway:wght@400;500&family=Spartan&display=swap"
+      rel="stylesheet">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+    <script defer src="scripts/script.js"></script>
+  </head>
+  <header>
+    <div class="header-container">
+
+      <nav class="menu">
+
+        <a class="logo" href="index.html" title="Guitar Lessons">
+          <img class="logo-image" src="img/logo-optimised.svg" width="50" height="50" alt="Site logo"
+            title="Guitar Lessons">
+          <img class="brand-image" src="img/logo1-min.svg" width="300" height="300" alt="brand logo" title="brand logo">
+        </a>
+
+        <div class="navigation">
+          <ul>
+            <li class="item"><a href="index.html">Home</a></li>
+
+            <li class="item"><a href="#">Basics</a>
+              <ul>
+                <li class="item"><a href="basics.html">Basics Lesson 1</a></li>
+                <li class="item"><a href="basics2.html">Basics Lesson 2</a></li>
+              </ul>
+            </li>
+
+            <li class="item selected"><a href="#">string's</a>
+              <ul>
+                <li class="item"><a href="strings.html">String's - Lesson 1</a></li>
+                <li class="item"><a href="strings2.html">String's - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Frets</a>
+              <ul>
+                <li class="item"><a href="frets.html">Frets - Lesson 1</a></li>
+                <li class="item"><a href="frets2.html">Frets - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Chords</a>
+              <ul>
+                <li class="item"><a href="chords.html">Chords - Lesson 1</a></li>
+                <li class="item"><a href="chords2.html">Chords - Lesson 2</a></li>
+              </ul>
+            </li>
+
+            <li class="item"><a href="#">Rhythm</a>
+              <ul>
+                <li class="item"><a href="rhythm.html">Rhythm - Lesson 1</a></li>
+                <li class="item"><a href="rhythm2.html">Rhythm - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Lead</a>
+              <ul>
+                <li class="item"><a href="lead.html">Lead - Lesson 1</a></li>
+                <li class="item"><a href="lead2.html">Lead - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><span class="bars"></span></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+
+    <div class="strip-banner">
+      <a href="#">
+        Click here to see the design process for this site</a>
+    </div>
+
+    <section class="global-hero-banner-with-button">
+      <div class="hero-image-frets">
+        <div class="hero-text">
+          <h1 class="hero-header">Frets, Fretting & Finger Positioning</h1>
+          <a href="#" class="hero-button"> Voice Commands </a>
+          <a href="/frets2.html" class="hero-button"> Frets-Lesson 2 </a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <article>
+      <!-- command modal  -->
+      <div id="help-modal" class="help-center" title="help-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span id="closeModal" class="close">&times;</span>
+            <h1>Help Center</h1>
+          </div>
+          <div class="modal-body">
+            <p>Hello, saying, "Open Help Center," at any time opens the help menu, were you will find
+              list of voice
+              commands
+              to navigate through the site.</p>
+            <div class="table">
+              <table>
+                <tr>
+                  <th>What to say</th>
+                  <th>What happens</th>
+                </tr>
+                <tr>
+                  <td>Scroll Up</td>
+                  <td>Scroll's the page up</td>
+                </tr>
+                <tr>
+                  <td>Scroll Down</td>
+                  <td>Scroll's the page down</td>
+                </tr>
+                <tr>
+                  <td>Go to the Top</td>
+                  <td>Takes you to the top of the page</td>
+                </tr>
+                <tr>
+                  <td>Go to the bottom</td>
+                  <td>Takes you to the bottom of the page</td>
+                </tr>
+                <tr>
+                  <td>Go forward</td>
+                  <td>Goes forward a previously visited page</td>
+                </tr>
+                <tr>
+                  <td>Go backwards</td>
+                  <td>returns to the previously visited page</td>
+                </tr>
+                <tr>
+                  <td>Home</td>
+                  <td>Takes you to the Home Page</td>
+                </tr>
+                <tr>
+                  <td>Open Basics</td>
+                  <td>Takes you to the first Basics Lesson</td>
+                </tr>
+                <tr>
+                  <td>Open Basics Lesson Two</td>
+                  <td>Takes you to the second Basics Lesson</td>
+                </tr>
+                <tr>
+                  <td>Open Fret's</td>
+                  <td>Takes you to the first Frets Lesson</td>
+                </tr>
+                <tr>
+                  <td>Open Fret's Lesson Two</td>
+                  <td>Takes you to the second Fret's lesson on Finger positioning.</td>
+                </tr>
+                <tr>
+                  <td>Open Chords</td>
+                  <td>Takes you to the Chords Lesson</td>
+                </tr>
+                <tr>
+                  <td>The Chord's Lesson Two</td>
+                  <td>Takes you to the second Chord's Lesson on Power Chords</td>
+                </tr>
+                <tr>
+                  <td>Open Rhythm</td>
+                  <td>Takes you to the Rhythm Guitar Lesson</td>
+                </tr>
+                <tr>
+                  <td>Open Rhythm Lesson Two</td>
+                  <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song
+                  </td>
+                </tr>
+                <tr>
+                  <td>Open Lead</td>
+                  <td>Takes you to the Lead Guitar Lesson</td>
+                </tr>
+                <tr>
+                  <td>Open Lead Lesson Two</td>
+                  <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read
+                    music
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <h1>Say "close" to close the help center</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article class="main-content-container">
+        <div class="centered-title">
+          <h1>Frets and Fretting</h1>
+        </div>
+        <section class="welcome">
+
+          <div class="welcome-content">
+            <p>The neck of your guitar has a thin piece of wood running down it, you can easily see the difference as
+              this wood is not lacquered, typically darker and has circle inlays. <br> These are usually circle shaped
+              and pearl in colour on an acoustic guitar and wide blocks on an electric guitar.</p>
+            <p class="emphasis"> For all voice
+              commands for this website, just say, "Open Voice Commands," at any time to open the Help Box.</p>
+          </div>
+        </section>
+
+        <section class="welcome">
+          <div class="welcome-content">
+            <div class="centeredImage_container frets">
+              <div class="centeredImageBanner_title-top">
+                <h2 class="centered-title_light">The Fret Board.</h2>
+              </div>
+            </div>
+
+            <p class="left-text_dark">This is a typical guitar fret board, the pearl markers on an acoustic guitar are
+              usually small circle shapes, integrated into the face of the fretboard.</p>
+            <p>
+              Electric guitar markers can be wider and are usually more elegantly styled. These are there so a
+              guitarist
+              can easily identify the fret numbers. These markers run on frets 3, 5, 7, 9 and a double set on the 12th
+              fret to mark the higher octave for that open note (an open note is the note your string sounds out when
+              you play
+              it without positioning your finger anywhere on the fretboard).</p>
+            <p>
+              Fret boards can vary in colour and shade, Rosewood has a darker chocolate colour and the Maple boards
+              have a soft
+              yellow finish for example. Electric Guitar fretboard's are curved, specially designed to suit the curve
+              of
+              your finger tips. Acoustic guitar's do too, however Classical guitars
+              tend to have a completely flat fretboard.
+            </p>
+
+            <section class="cards-container">
+              <div class="welcome-content">
+                <div class="centeredImage_container fretting">
+                  <div class="centeredImageBanner_title-top">
+                    <h2 class="centered-title_light">Fretting a note.</h2>
+                  </div>
+                </div>
+
+                <p class="left-text_dark">One of the most important things about playing guitar is knowing how to
+                  properly
+                  fret a note. Use the wrong technique and you’ll end up with sore hands, buzzing notes, and quite
+                  possibly,
+                  even a serious injury over time too. However, the good news is that fretting a note is very easy,
+                  and there
+                  are really only five things you have to take note of: proper finger placement, fingertip accuracy,
+                  thumb position,
+                  curvature of the fingers, and wrist position. More on this in lesson 2.</p>
+              </div>
+            </section>
+
+            <section class="cards-container">
+
+              <div class="centeredImage_container soundWaves">
+                <div class="centeredImageBanner_title-top">
+                  <h2 class="centered-title_light">How sounds are made.</h2>
+                </div>
+              </div>
+              <p class="left-text_dark"> Guitar sounds are made from the string's vibrating once they are played.
+                The
+                string is played by the guitarist's fingers or a
+                plectrum, this causes the strings to vibrate. The image above demonstrates what the strings are
+                doing
+                when the guitar is being played from inside of the guitar. The vibration from the string enters the
+                guitar and is released through sound waves either from the sound hole on an Acoustic guitar or
+                through the
+                pick-ups on an Electric guitar. These sound waves are then released
+                through an amplifier's speaker.</p>
+
+            </section>
+
+          </div>
+        </section>
+
+        <section>
+          <div class="right-text_dark">
+            <p>The fretboard is an important component on most stringed instruments. It is a thin, long strip of wood,
+              that is glued to the front of the neck on a string instrument. The strings run over the board,
+              between the nut at the top of the guitar and the bridge at the bottom past the sound hole on a Acoustic
+              and the pick-up's on an Electric Guitar.</p>
+          </div>
+        </section>
+
+        <section class="toTheTopBtn">
+          <button id="scroll-btn" title="Go to top">
+            <svg class="up-chevron" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 500 500">
+              <polygon xmlns="http://www.w3.org/2000/svg" style="fill:#ffffff;"
+                points="207.248,96.856 386.258,275.283 414.496,246.953 207.248,40.379 0,246.953 28.238,275.283" />
+            </svg>
+          </button>
+        </section>
+      </article>
+    </article>
+  </main>
+  <footer>
+    <div class="eastSideFooter-top-row">
+      <div class="eastSideFooter-top-row_container">
+        <div class="eastSideFooter_logo">
+          <a class="eastSide-logo" href="index.html" title="Guitar Lessons">
+            <img class="logo-image" src="img/logo-optimised.svg" alt="Site logo" title="Guitar Lessons">
+          </a>
+        </div>
+
+        <div class="left-text_dark socialMedia_right-column">
+          <p><b>Connect with us</b></p>
+
+          <div class="eastSideFooter-socialIcons">
+            <ul class="eastSideFooter-socialMediaIcons_list" aria-label="Connect with us">
+              <li class="eastSideFooter-socialIcons_listItem">
+                <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+
+                  <svg class="facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg" width="54"
+                    height="54" viewbox="0 0 40 40">
+                    <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+                      <path class="fill"
+                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
+                      </path>
+                    </a>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="eastSideFooter-socialIcons_listItem">
+                <svg class="linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54"
+                  height="54" viewbox="0 0 40 40">
+                  <a href="https://www.linkedin.com/in/joseph-percival/"
+                    aria-label="Link to the Author's Linked In account">
+
+                    <path class="fill"
+                      d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z">
+                    </path>
+                  </a>
+                </svg>
+              </li>
+              <li class="eastSideFooter-socialIcons_listItem">
+
+                <svg class="twitter" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54"
+                  viewbox="0 0 40 40">
+                  <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account">
+                    <path class="fill"
+                      d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z">
+                    </path>
+                  </a>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eastSideFooter-bottom-row">
+      <div class="eastSideFooter-bottom-row_container">
+        <div class="eastSideFooter-linkColumns">
+          <div class="eastSideFooter-linkColumns_levelOne-first">
+            <div class="eastSideFooter-linkColumns_levelOneItem">
+              <div class="eastSideFooter-linkColumns_levelOne-title">
+                <span class="display-name">
+                  Help and Information
+                </span>
+                <ul class="eastSideFooter-levelTwo-first">
+                  <li class="levelTwoListItem-icon-and-title_container">
+                    <a href="#" class="eastSideFooterLinkColumns_levelTwoItemLink">
+                      <span class="eastSideFooter-levelTwoLink_logo eastSideFooter-linkText_dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 101" width="24" height="24">
+                          <defs>
+                            <image width="134" height="138" id="img1"
+                              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACKCAMAAABYZcLYAAAAAXNSR0IB2cksfwAAAq9QTFRF/////////v7++/v77Ozs19fXwMDAtLS0qampp6enpaWlqqqqsLCwv7+/z8/P6+vr+vr6/f39/v3+7e3toaGhjo6OY2NjHh0eAAAADQ0Nc3NzmZmZxsbG9vb2sbGxTExMICAgnZ2d9fX1/Pz83NzcpKSkQkJCb29vy8vL+fn50dHRXV1dGRkZtra2KysrUlJS4+Pju7u7BQUFlZWV4uLicXFx4ODgurq64eHh8/PzeXl5vr6+2NjYAwMD1NTU39/f3d3d7+/vNjY2vLy8o6Oj6enpmJiYOTk59/f3ra2tdHR06Ojorq6ulpaWJSUlEhISt7e3kZGRfn5+8fHx7u7uycnJsrKyzs7Om5ubxMTEj4+PhISEg4ODhoaGtbW1jY2Nl5eXysrKvb29nJyc//7/GxsbVlZWenp6Pz8/fHx8qKio29vb3t7ezc3N5ubmcnJyFhYW9PT05eXlJycnCQkJExMTZGRk+Pj40tLSgICA6urqxcXFEBAQS0tLyMjIfX192dnZ8vLyGhoa5+bnh4eH09PTrKysFRUVXFxckJCQLS0t5OTkTU1Ns7OzKSkpPj4+dnZ2Hx8f5+fndXV11dXVV1dX9/b34eDhCgoKZ2dnHBwc8PDwwsLCMTExjIyMd3d3mpqaubm5iYmJT09Pa2tr1tbWe3t7QEBAoqKiPDw8ioqKeHh4kpKSFxcX0NDQQ0NDgYGBn5+fFBQUOzs7q6urSEhIMjIyMDAwr6+vpqamwcHBDAwMzMzMBgYGw8PDODg4np6eRUVFWVlZ2trab25vDw8P/Pz89/f39vb2+Pj48vLy4ODg6+vr+vr64+Pj8/Pz8PDw6enp+/v74eHh9fX18vHy5+fn7u7u6OjoxsXG+fn57e3t/v7+5eXl5ubm0tHSx8fH5OTk7Ozs/f39//7/A7LmcAAAAOV0Uk5T/wAAADD/////////////QAAAACD///////////8A/////wAA//////8A////////wP///9D/8P/gAP////////8A////YP//AP//cP////////8AEP///////////////////wD///////////+Q//8AoP////8A//9Q////////AP+Q/////////7D///////+A////APD///8A/////////////////////////////////////////////////////////////////////////////////////////////////3q+x9kAAAbDSURBVHic7duLXxRFHADw2zkOzBDZFBsFTDgqjh6KIYIgaKj5wHzASWiaJ2opiGbWnVySmc+IHmalefaGHpapmaXZkxIoBV8hJZg9/pDmN3cXd7u3t7s3c5qfz/4+H51hhp39uo/ZmdnVZDLCCCOMMMIII4yIfgjXOq5HBkLIHGOJjet3Q/8b4wckDEwUrzoD3TQodnDSkJtxQAwdlpySKqCrxUAodfgtWCFGpKVfFYY149bblAzeuD0zNdoMW9Yd4Q007swyR5Mh3nW3BgTEyFFRY6Ds0RoREPdYo8PIGaYDQWJMbhQY1rH6EBB5kd68ioz8cfoVGBfwZaDC8ZEoMB7Lk4GKIkNEfDxCMzIjVmBczI0xgUGB8UROjFwmBR4TwXM3BMN8LxsDl3BhTGJUYDyZAyOLWYGnsDPM97Ez8FRmxjQOCjydlRHDQ4HxDEZGKR/GTDYGup8PY5bOq0PCKOajwHg2CwPN4cWYy8Kw8lLgWfpGhMGMMm4MXM7AsPNjZDAw5vFjVDAwHuDHqGRgzOfH0DcoDWYs4McYzsB4kB8jnoGxkB9jEQPjIX4MfROFIIa4mB/DwXA0+vNjFDIwlvBjWBgYOfwYDgZGIj9G1dLIGeIybozlupY6JKOvZG4MfXMmCYPDXMkfDzMwOF4cWM9KmHSC8Ag/xopEX5saZvhSxkp+DFzlu0qR+tUqZVRzZOCawP335VfNnV+rwhBXc2SsqbSF+Jc/ClVrg4+QbCqdwJFB+tJE+QmZDBWPlYVn2BTfWEQS62Lkr1usj0PNE86wDFTCkxFyxcVF11xXBt5AMoaA1vNkrDE7Aw9HTB3ZOVpLqxxhGUIdT8aIvMCm3cueXAmzyuFQtUEMyxAGc2QMqfAfDFEUnPBepJTsXaTPrvrwjPKR3BRPbfTfETanGaXTMphIPQ2ZTdawDOEZTojNW0QU2IWirbQ4hmQHQGZ2eIbQjwdiXF5f1+nv1jdDxRzyE9pGMtvF8AzrDnbFs4lBTTbYoaOwPgdVdpJrhMx/fXpohjBVz0u20OEOatCB8fNlyNdJTyeZWsjEqTCEOGZG8OP9BVIyEnp2uhQOd/GLJH3Jf5EqMXauY2UEn5OXoQguCtorbSUXRz1kBqowvBcTS+wKas/7ciSHNLyCpK+8SroFKKhQYbDfLIuD26uEskkkswgyrwmCeTdJG9UYblbGHsnhhTeZr5PMXqj0kMweku5QY1SwMqZJGqTv78gFs3QfSfuT9A2SrldjMA5/RnukC6M2KIYJ9psknUPSt0i6XY2RwsbADbLhDpS+Tc7OOyRdKHiXD95VY2QzMt6TLRND6TzBu5azQPD2IKoM1qf9UOnshC6EN5FMM0mTkPekLFdjsC7i26UnxQWlMFJ/n6QfIO8emlUY1mYmxIcuqQJ9RIrHC76hBrwj3U/S+SoMp5ZPaRRjhHx+QsefH5OMBzIbyQjsE9x3VysxBjGtdByQ3Sa123x7pyPuT9N9bysyVRhsL8irZIyDUNws+s7JIVJPP4poUGFE/uUExGFZe5+R0k07kYDocKfad63s9n8fpcTwMDGwrL14UlgnIqEBaveRPmUiZPr5q5UYR5gUn8vaExPiymF4TMcdsIJcABn/OVFkJDExGuQNeoM+5VdYyaWxgWSOqgyJfaOlSMMtb88b3icEPG7oA7zvIazAQF9Ejkjaq6Rw0vpSyNKcynSJMPTue//ML8eWlJQeOubOV0IIQir8ZjIMUuni/PG+GgWGWR/CUyZqWuciI8uDNvIbq2CjrwK+ZlRgzNClOBFu14GBcnLhWNR9DVvFBlQoML7RoyjU+Qle+bewVVLgVqEZSM9o4zsNC46BIX4PWx0N+uZWgaHjMb86Ubq1SniXcYK7FgWGjinsBJ0KIR+2alJZkKQxVbtiiP6PVdMwThG1MHQ8X6XrvZFFaEajZsUPDF/uqjK0v489wkWhwNC+BtcSRYZTswKzfucejjFKs+JHHv8BQYlxQjPjUDQZxzQzSqLIEKccnvWTpjis7028PsY1iP8VwwgjjDDCCCOMMMKIvjjZ2trW3tbWdvLnX061n67paG3rPHPmbOe5zvMXTBfaO1t/vWAynWs539TV0tVV01J9MaO7qOMif8bpuOOrYhPiYjt/87jdhbML7PUetysztt6xxNV5wlVS4En4/VJP7/GalMrelN6CXWnZlx3dFv4Mk8fV7Si2Z536I6t7S4Wr0HKgcEJT9RWLq6nlcpHFUfRnR7upx3LJUZTZcaXjrwMZmcVnu1xRYPzdYzL1kD+mHpKlefgLEhr0d+iPJij/x0RTrfEvD7uLqljxGBsAAAAASUVORK5CYII=" />
+                          </defs>
+
+                          <use id="img1" href="#img1" x="-3" y="-16" />
+                        </svg>
+                        Commands
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="levelTwoListItem-icon-and-title_container">
+                    <a href="#" class="eastSideFooterLinkColumns_levelTwoItemLink">
+                      <span class="eastSideFooter-levelTwoLink_logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path class="eastendFooterLinkColumns_svgIconFill-light eastSideFooter-linkText_dark"
+                            d="M6,7.43978349 C6.12053571,4.32746955 8.19642857,2 12.0803571,2 C15.6160714,2 18,4.12449256 18,7.0608931 C18,9.14479026 16.9553571,10.6197564 15.1875,11.6887686 C13.4598214,12.7171854 12.9642857,13.4343708 12.9642857,14.8010825 L12.9642857,15.6129905 L10.1919643,15.6129905 L10.1785714,14.5845737 C10.1116071,12.6359946 10.9285714,11.4181326 12.7633929,10.308525 C14.3839286,9.32070365 14.9598214,8.54939107 14.9598214,7.1826793 C14.9598214,5.69418133 13.7678571,4.61163735 11.9330357,4.61163735 C10.0848214,4.61163735 8.89285714,5.70771313 8.77232143,7.43978349 L6,7.43978349 Z M11.7455357,22 C10.5133929,22 9.66964286,21.1745602 9.66964286,19.9431664 C9.66964286,18.6847091 10.5133929,17.8592693 11.7455357,17.8592693 C12.9776786,17.8592693 13.8080357,18.6847091 13.8080357,19.9431664 C13.8080357,21.1745602 12.9776786,22 11.7455357,22 Z">
+                          </path>
+                        </svg>
+                        Help Center
+                      </span>
+
+                    </a>
+                  </li>
+
+                  <li class="levelTwoListItem-icon-and-title_container">
+                    <a href="#" class="eastSideFooterLinkColumns_levelTwoItemLink">
+                      <span class="eastSideFooter-levelTwoLink_logo eastSideFooter-linkText_dark">
+                        <svg class="eastendFooterLinkColumns_svgIcon" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" viewBox="0 0 24 24">
+                          <path class="eastendFooterLinkColumns_svgIconFill-light"
+                            d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M11,18 L13,18 L13,11 L11,11 L11,18 Z M12,9 C12.8633094,9 13.5,8.34980989 13.5,7.50570342 C13.5,6.65019011 12.8633094,6 12,6 C11.1366906,6 10.5,6.65019011 10.5,7.50570342 C10.5,8.34980989 11.1366906,9 12,9 Z">
+                          </path>
+                        </svg>
+                        Contact Us
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="eastSideFooter-linkColumns_levelOne-first">
+            <div class="eastSideFooter-linkColumns_levelOneItem">
+              <div class="eastSideFooter-linkColumns_levelOne-title">
+                <span class="display-name">
+                  How To Contact Us
+                </span>
+                <ul class="eastSideFooter-levelTwo-first">
+                  <li class="levelTwoListItem-icon-and-title_container">
+                    <a href="#" class="eastSideFooterLinkColumns_levelTwoItemLink">
+                      <span class="eastSideFooter-levelTwoLink_logo eastSideFooter-linkText_dark">
+                        <svg class="eastendFooterLinkColumns_svgIcon" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" viewBox="0 0 24 24">
+                          <path class="eastendFooterLinkColumns_svgIconFill-light"
+                            d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M11,18 L13,18 L13,11 L11,11 L11,18 Z M12,9 C12.8633094,9 13.5,8.34980989 13.5,7.50570342 C13.5,6.65019011 12.8633094,6 12,6 C11.1366906,6 10.5,6.65019011 10.5,7.50570342 C10.5,8.34980989 11.1366906,9 12,9 Z">
+                          </path>
+                        </svg>
+                        Mon-Fri <br>8.30am -
+                        5p.m<br>07709718757
+                        <br>joseph.m.percival@gmail.com
+                      </span>
+
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eastSideFooter-logo-row" style="background: #fff;">
+      <div class="eastSideFooter-bottom-row_container">
+        <div class="eastSideFooter-logoContainer">
+          <div class="eastSideFooter-logo">
+            <div class="logo">
+              <a href="index.html" title="Guitar Lessons">
+                <img src="img/logo1-min.svg" alt="Just Speak logo" title="Brand Logo">
+                <p class="eastSideFooter-logo_text">2021 &#169; JUST SPEAK</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+
+</html>
