@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
-    <meta name="description" content="Description on how to string an array of six stringed guitars">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
     <meta name="author" content="Joseph Percival">
     <meta name="theme-color" content="#317EFB">
-    <title>Basics Lesson 1</title>
-    <link rel="icon" href="/assets/img/global-imgs/badge.png" type="image/x-icon">
+    <title>Tuning Lesson 2</title>
+    <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="preload" fetchpriority="high" as="image" href="/assets/img/hero-imgs/tuning-hero.webp" type="image/webp"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
         rel="stylesheet">
+
+
     <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
+    <!-- <script src="scripts/correlation_worker.js"></script> -->
+    <!-- <script src="scripts/tuner-script.js"></script> -->
+
 
 </head>
 
@@ -28,10 +31,9 @@
         <nav id="navbar">
             <div class="navbar-container">
                 <div class="home-link">
-                    <a href="//just-speak-guitar-lessons.github.io/index.html" class="navbar-logo">
+                    <a href="/index.html" class="navbar-logo">
                         <div class="logo-container" title="logo and home button">
-                            <img src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg" width="40"
-                                height="40" alt="company logo">
+                            <img src="assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
                             <div class="logo-name">
                                 <h1>Guitar <span>Lessons</span></h1>
                             </div>
@@ -79,266 +81,238 @@
                 </ul>
             </div>
         </nav>
-        <section id="top" class="global-hero-banner-with-button basics">
+        <section id="top" class="global-hero-banner-with-button tuning">
             <div class="hero-content">
-                <h2 class="title white">The Basics.</h2>
+                <h2 class="title white">The Tuning <br> Lesson 2</h2>
                 <div class="hero-button-container">
                     <a class="secondary-button" id="openModal">Command Hub </a>
-                    <a href="tuner2.html" class="primary-button">Lesson 2</a>
+                    <a onclick="goBack()" class="primary-button">Go Back</a>
                 </div>
             </div>
         </section>
     </header>
 
     <main>
-        <article>
-            <div class="main-content-container">
-                <div class="modal" id="modal" title="help-center">
-                    <div class="modal-overlay">
-                        <div class="modal-content">
-                            <div class="modal-header">
 
-                                <h3>Command Hub</h3>
-                                <span class="close-modal" id="closeModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960"
-                                        width="30">
-                                        <path
-                                            d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
-                                    </svg>
-                                </span>
+        <div class="main-content-container">
+            <div class="modal" id="modal" title="help-center">
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <h3>Command Hub</h3>
+                            <span class="close-modal" id="closeModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                                    <path
+                                        d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="modal-body">
+
+                            <p>Please use any of the commands below to navigate anywhere on this application.
+                                <br>Please enjoy - thank you.
+                            </p>
+
+                            <div class="tabs">
+                                <button class="tab-button active" data-tab="tab1">Lessons</button>
+                                <button class="tab-button" data-tab="tab2">Controls</button>
                             </div>
-                            <div class="modal-body">
-
-                                <p>Please use any of the commands below to navigate anywhere on this application.
-                                    <br>Please enjoy - thank you.
-                                </p>
-
-                                <div class="tabs">
-                                    <button class="tab-button active" data-tab="tab1">Lessons</button>
-                                    <button class="tab-button" data-tab="tab2">Controls</button>
-                                </div>
-                                <div class="tab-content" id="tab1">
-
-                                    <table>
-                                        <!-- <th>What to say</th> -->
+                            <div class="tab-content" id="tab1">
+                                <table>
+                                    <!-- <th>What to say</th> -->
+                                    <tr>
+                                        <th>What to say to Connie.</th>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Home</td> -->
+                                        <td>Connie, open the Home Page</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Basics</td> -->
+                                        <td>Connie, open the Basics Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connie, open the Basics Lesson 2.</td>
+                                        <!-- <td>Go to the second Basics Lesson.</td> -->
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Fret's</td> -->
+                                        <td>Connie, open the Frets Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connie, open the Guitar Tuner.</td>
+                                        <!-- <td>Go to the second Fret's lesson.</td> -->
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Chords</td> -->
+                                        <td>Connie, open the Chords Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connie, open the Chord's Lesson 2.</td>
+                                        <!-- <td>Go to the second Chord's Lesson.</td> -->
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Rhythm</td> -->
+                                        <td>Connie, open the Rhythm Guitar Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Rhythm Lesson Two</td> -->
+                                        <td>Connie, open the Rhythm Guitar Lesson 2.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Lead</td> -->
+                                        <td>Connie, open the Lead Guitar Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <td>Open Lead Lesson Two</td> -->
+                                        <td>Connie, open the Lead Guitar Lesson 2.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-content" id="tab2">
+                                <table>
+                                    <tbody>
                                         <tr>
-                                            <th>What to say to Connie.</th>
+                                            <th>What to say.</th>
                                         </tr>
                                         <tr>
-                                            <!-- <td>Home</td> -->
-                                            <td>Connie, open the Home Page</td>
+                                            <td>Scroll Up.</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>Open Basics</td> -->
-                                            <td>Connie, open the Basics Lesson.</td>
+                                            <td>Scroll Down.</td>
                                         </tr>
                                         <tr>
-                                            <td>Connie, open the Basics Lesson 2.</td>
-                                            <!-- <td>Go to the second Basics Lesson.</td> -->
+                                            <td>Go to the Top Of The Page.</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>Open Fret's</td> -->
-                                            <td>Connie, open the Frets Lesson.</td>
+                                            <td>Go to the bottom of the page</td>
                                         </tr>
                                         <tr>
-                                            <td>Connie, open the Guitar Tuner.</td>
-                                            <!-- <td>Go to the second Fret's lesson.</td> -->
+                                            <td>Go to the next lesson</td>
                                         </tr>
                                         <tr>
-                                            <!-- <td>Open Chords</td> -->
-                                            <td>Connie, open the Chords Lesson.</td>
+                                            <td>Go back to the last lesson</td>
                                         </tr>
                                         <tr>
-                                            <td>Connie, open the Chord's Lesson 2.</td>
-                                            <!-- <td>Go to the second Chord's Lesson.</td> -->
+                                            <td>Start the guitar tuner</td>
                                         </tr>
-                                        <tr>
-                                            <!-- <td>Open Rhythm</td> -->
-                                            <td>Connie, open the Rhythm Guitar Lesson.</td>
-                                        </tr>
-                                        <tr>
-                                            <!-- <td>Open Rhythm Lesson Two</td> -->
-                                            <td>Connie, open the Rhythm Guitar Lesson 2.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!-- <td>Open Lead</td> -->
-                                            <td>Connie, open the Lead Guitar Lesson.</td>
-                                        </tr>
-                                        <tr>
-                                            <!-- <td>Open Lead Lesson Two</td> -->
-                                            <td>Connie, open the Lead Guitar Lesson 2.
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="tab-content" id="tab2">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <th>What to say.</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Scroll Up.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Scroll Down.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Go to the Top Of The Page.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Go to the bottom of the page</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Go to the next lesson</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Go back to the last lesson</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Start the guitar tuner</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <section>
-                    <div class="flex-col_left">
-                        <h3>The Basic Components.</h3>
-                        <div class="flex-col_centered">
-                            <div class="guitar-comp-image">
-                            </div>
-                        </div>
-                        <div class="flex-col_left">
-                            <p>Starting off can be tough! For this lesson we will learn the fundamentals of the
-                                guitar.
-                            </p>
-                            <p>To start with we will take a look at the components of the guitar so that you can
-                                familiarize
-                                yourself with the main parts, what they are used for and were to find them. </p>
-                        </div>
-                    </div>
+            <section>
+                <h3>Advanced Tuning.</h3>
+                <div class="flex-row">
+                    <p>Sometimes, a Guitar Tuner may not always be available. The old-fashioned way was to remember how
+                        each note
+                        sounded. This method of tuning is still important today for those same reasons. Also, you can
+                        use the tuner
+                        below to see if your guitar strings match! <br>
+                        Below is a picture of a guitar's headstock. At the side of each machine head is a button.
+                        Selecting any of
+                        these buttons will play each string note through your device. Give it a try and compare your
+                        tuned string to
+                        the related sound. <br>
+                        These small checks will help train your ears in good time, which will help you check if your
+                        guitar stays in
+                        tune whilst playing.
+                        If you get good at this, you may never need to use a tuner again - your ears will do it for you!
+                    </p>
+                </div>
+                <div class="flex-col_centered">
                     <div class="flex-row">
-                        <img class="emphasis-logo"
-                            src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg"
-                            alt="company logo" width="60" height="60">
+                        <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo" width="60"
+                            height="60">
                         <p>
-                            To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
-                                Hub."
-                            </span>
+                            Ask, "<strong>Connie, play ...</strong>" and then any strings note. Once Connie understands
+                            you, the
+                            sound
+                            of that note will play through your device. <br> Alternatively, you can click or touch one
+                            of the notes
+                            to
+                            hear it and check with your guitar.
                         </p>
                     </div>
-                </section>
-
-                <section>
-                    <div class="grid-container">
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section headstock"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">The Head Stock</h3>
-                                    <p class="card-text">
-                                        The head stock can be found at the top of the guitar. Its purpose is
-                                        to stock the machine heads. The
-                                        manufacturers logo can be found here too. They vary in design,
-                                        some cut through the headstock to fit the tuning pegs and some
-                                        are just a solid rectangle shape.
-                                    </p>
-                                </div>
+                </div>
+                <div class="flex-row no-wrap">
+                    <div class="flex-col">
+                        <div class="flex-row interactive-notes">
+                            <audio id="audio"></audio>
+                            <div class="col_sides">
+                                <button
+                                    onclick="play('assets/mp3/Acoustic-Guitar-Notes/01-Acoustic-(Low-E-Note).mp3')">E</button>
+                                <button onclick="play('assets/mp3/A.mp3')">A</button>
+                                <button onclick="play('assets/mp3/D.mp3')">D</button>
                             </div>
-                        </div>
-
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section tuning"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">Tuner Heads</h3>
-                                    <p class="card-text">
-                                        These can be found on the Headstock. They are used to hold the strings
-                                        tightly in place and with a turn in either direction can tune your guitar
-                                        to the required note. They can come in various designs and dynamics but
-                                        they all have the same purpose - Tuning.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section nut"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">The Nut</h3>
-                                    <p class="card-text">
-                                        The Nut is the small piece of material that supports the strings at the
-                                        base of the headstock. The nut have vertical lines that sets the spacing
-                                        of the strings equally across the neck of the guitar and holds the
-                                        strings at the correct height from the fingerboard.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section fretboard"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">Fret Board</h3>
-                                    <p class="card-text">
-                                        The Fret Board is the long thin strip of wood that runs from the headstock
-                                        down and past the body of the guitar.
-                                        A Classical guitar will have a flat fingerboard, an acoustic will have a
-                                        slight bezel to it and an electric guitar has a highly
-                                        lacquered finish to it.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section frets"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">The Frets</h3>
-                                    <p class="card-text">
-                                        Frets are the metal strips that cross the Fret board, their
-                                        purpose is to add different pitches to any string once it is played.
-                                        Pushing down between any two frets is the correct way to play and this is
-                                        called fretting (visit the Frets lesson for more information).</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-item">
-                            <div class="card">
-                                <div class="card-image-section bridge"></div>
-                                <div class="card-content">
-                                    <h3 class="card-title">The Bridge</h3>
-                                    <p class="card-text">
-                                        The Bridge can always be found below the sound hole on an acoustic guitar, or
-                                        below the pick ups, on an electric guitar. It's purpose is to fix the
-                                        strings in place. You will only interact with this when restringing your guitar
-                                        (visit the strings lesson for more information).
-                                    </p>
-                                </div>
+                            <div class="col_center interactive-placeholder"></div>
+                            <div class="col_sides">
+                                <button onclick="play('assets/mp3/G.mp3')">G</button>
+                                <button onclick="play('assets/mp3/B.mp3')">B</button>
+                                <button onclick="play('assets/mp3/highE.mp3')">E</button>
                             </div>
                         </div>
                     </div>
-                </section>
-                    <div class="italic-text">
-                        <p>
-                            Playing the guitar is really healthy, it can help to manage your stress, enhance
-                            your
-                            memory,
-                            improve motor skills and will help you feel more able to cope with performing in
-                            life!
-                        </p>
+
+                    <div class="flex-col">
+                        <div class="tuner-selection">
+                            <div class="flex-row">
+                                <h3>Instruments.</h3>
+                            </div>
+                            <div class="grid-container_quad">
+                              
+
+                                <div class="grid-item">
+                                    <div class="guitar-select-button">
+                                        <div class="thumbnail acoustic-headstock"></div>
+                                        <h3 class="card-title">Acoustic Guitar</h3>
+
+                                    </div>
+                                </div>
+
+                                <div class="grid-item">
+                                    <div class="guitar-select-button">
+                                        <div class="thumbnail electric-headstock"></div>
+                                        <h3 class="card-title">Electric Guitar</h3>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item">
+                                    <div class="guitar-select-button">
+                                        <div class="thumbnail bass-headstock"></div>
+                                        <h3 class="card-title">Bass Guitar</h3>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item">
+                                    <div class="guitar-select-button">
+                                        <div class="thumbnail uke-headstock"></div>
+                                        <h3 class="card-title">Ukulele</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                    <!-- end of main content container -->
+                </div>
+            </section>
 
-            
+            <div class="italic-text">
+                <p>
+                    Guitar tunings are the assignment of pitches to the open strings of guitars, including classical
+                    guitars,
+                    acoustic guitars, and electric guitars.
+                </p>
+            </div>
 
+            <div>
                 <a href="#top" class="btt-button" title="Go back to the top button">
                     <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                         width="40">
@@ -348,61 +322,61 @@
                     </svg>
                 </a>
             </div>
-        </article>
+            <!-- end of main container  -->
+        </div>
+
+
         <footer>
             <div class="footer-row">
-                <!-- <div class="footer-top-row_container"> -->
                 <div class="footer-column">
                     <a class="logo" href="index.html" title="Guitar Lessons">
-                        <img class="logo-image"
-                            src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg" width="80"
-                            height="80" alt="Site logo" title="Guitar Lessons">
-                        <h1 class="logo-name">Guitar <span>Lessons</span></h1>
+                        <img class="logo-image" src="assets/img/global-imgs/badge.svg" width="80" height="80"
+                            alt="Site logo" title="Guitar Lessons">
+                        <div class="logo-name">
+                            Guitar <span>Lessons</span>
+                        </div>
                     </a>
                 </div>
 
                 <div class="footer-column">
                     <h2 class="emphasis">Connect with us</h2>
 
-
                     <ul aria-label="Connect with us" class="footer-list-row">
                         <li>
-                            <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+                            <a href="http://www.facebook.com" aria-label="icon link to the Facebook website"
+                                class="social-media-link">
 
-                                <svg class="facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg"
-                                    width="54" height="54" viewbox="0 0 30 30">
-                                    <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
-                                        <path class="fill"
-                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
-                                        </path>
-                                    </a>
+                                <svg class="social-media-icons facebook" aria-label="facebook icon"
+                                    xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 30 30">
+                                    <path class="fill"
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
+                                    </path>
                                 </svg>
                             </a>
                         </li>
 
                         <li>
-                            <svg class="linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg"
-                                width="54" height="54" viewbox="0 0 30 30">
-                                <a href="https://www.linkedin.com/in/joseph-percival/"
-                                    aria-label="Link to the Author's Linked In account">
-
+                            <a href="https://www.linkedin.com/in/joseph-percival/"
+                                aria-label="Link to the Author's Linked In account" class="social-media-link">
+                                <svg class="social-media-icons linkedin" aria-label="twitter icon"
+                                    xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 30 30">
                                     <path class="fill"
                                         d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z">
                                     </path>
-                                </a>
-                            </svg>
+                                </svg>
+                            </a>
+
                         </li>
                         <li>
-
-                            <svg class="twitter" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54"
-                                height="54" viewbox="0 0 30 30">
-                                <a href="https://twitter.com/percival_joseph"
-                                    aria-label="icon link to the Author's Twitter account">
+                            <a href="https://twitter.com/percival_joseph"
+                                aria-label="icon link to the Author's Twitter account" class="social-media-link">
+                                <svg class="social-media-icons twitter" aria-label="twitter icon"
+                                    xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 30 30">
                                     <path class="fill"
                                         d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z">
                                     </path>
-                                </a>
-                            </svg>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -499,7 +473,7 @@
             </div>
         </footer>
     </main>
-    <script defer src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
