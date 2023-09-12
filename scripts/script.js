@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     links.classList.toggle("show");
   })
 
+  const backBtn =  document.querySelector(".hamburger-menu");
+
   function goBack() {
     window.history.back();
   }
@@ -93,9 +95,10 @@ function handleNewTabClick(event) {
   const tabName = event.currentTarget.getAttribute('data-tab');
   const tabsContainer = event.currentTarget.closest('.flex-col');
   const tabContents = tabsContainer.querySelectorAll('.tab-content');
+  const tabContentsMain = tabsContainer.querySelectorAll('.tab-content_main');
 
   // Hide all new tab contents
-  tabContents.forEach(content => {
+  tabContents&&tabContentsMain.forEach(content => {
     content.style.display = 'none';
   });
 

@@ -22,16 +22,7 @@
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
   <!-- <script src="scripts/correlation_worker.js"></script> -->
   <!-- <script src="scripts/tuner-script.js"></script> -->
-  <style>
-    /* Add your CSS styles here */
-    .tab-content {
-      display: none;
-    }
 
-    .active {
-      display: block;
-    }
-  </style>
 
 </head>
 
@@ -85,7 +76,8 @@
       <div class="hero-content">
         <h2 class="title white">The Tuning Lesson</h2>
         <div class="hero-button-container">
-          <a href="#" class="primary-button" id="openModal">Command Hub </a>
+          <a class="secondary-button" id="openModal">Command Hub </a>
+          <a href="tuner2.html" class="primary-button">Lesson 2</a>
         </div>
       </div>
     </section>
@@ -222,6 +214,8 @@
             <strong>B</strong>etter <strong>E</strong>ventually. Each first letter from every word matches the Standard
             Tuning note order.
           </p>
+          <p>This is much easier said than done when you are a beginner, to help you, we have provided an online
+            Microphone tuner below.</p>
         </div>
         <br>
         <div class="flex-row">
@@ -241,10 +235,15 @@
             this request, as the tuner will not work without your consent. If you accidentally select no, please refresh
             your browser and start again.
             The Guitar Tuner will detect each note when you play each guitar string.
-            When a string is in tune, the background will turn Green, and when it is out of tune (a bit sharp or flat),
+            When a string is in tune, the background will turn Green, and when it is out of tune (too flat),
             it will turn Red.
             If your string is Flat, you need to tighten that string using the Tuning Peg found on the Machine head.
             If your string is Sharp, you need to loosen that string using the Tuning Peg. <br>
+          </p>
+          <p>
+            Please note, the Chromatic Note Scale come in alphabetical order from notes A - G, please check the table
+            below for each strings corresponding note
+            and tune up or down accordingly.
           </p>
         </div>
 
@@ -256,10 +255,11 @@
             <div class="tabs">
               <button class="tab-link" data-tab="tab1Content">Guitar</button>
               <button class="tab-link" data-tab="tab2Content">Bass</button>
+              <button class="tab-link" data-tab="tab3Content">Ukulele</button>
             </div>
 
-            <div id="tab1Content" class="tab-content">
-              <p>String notes in Standard Tuning for any 6 string Guitar</p>
+            <div id="tab1Content" class="tab-content_main">
+              <p>String notes in Standard Tuning for any 6 stringed Guitar.</p>
               <table class="guitar-tuner-table">
                 <tr>
                   <th>String</th>
@@ -272,22 +272,22 @@
                   <td>E</td>
                 </tr>
                 <tr>
-                  <td>5th (A)</td>
+                  <td>5th</td>
                   <td>Tune to</td>
                   <td>A</td>
                 </tr>
                 <tr>
-                  <td>4th (D)</td>
+                  <td>4th</td>
                   <td>Tune to</td>
                   <td>D</td>
                 </tr>
                 <tr>
-                  <td>3rd (G)</td>
+                  <td>3rd</td>
                   <td>Tune to</td>
                   <td>G</td>
                 </tr>
                 <tr>
-                  <td>2nd (B)</td>
+                  <td>2nd</td>
                   <td>Tune to</td>
                   <td>B</td>
                 </tr>
@@ -299,8 +299,8 @@
               </table>
             </div>
 
-            <div id="tab2Content" class="tab-content">
-              <p>String notes in Standard Tuning for Bass Guitar</p>
+            <div id="tab2Content" class="tab-content_main">
+              <p>String notes in Standard Tuning for Bass Guitar.</p>
               <table class="guitar-tuner-table">
                 <tr>
                   <th>String</th>
@@ -308,33 +308,60 @@
                   <th>Note</th>
                 </tr>
                 <tr>
-                  <td>6th (Bass String)</td>
+                  <td>4th (Bass String)</td>
                   <td>Tune to</td>
                   <td>E</td>
                 </tr>
                 <tr>
-                  <td>5th (A)</td>
+                  <td>3rd</td>
                   <td>Tune to</td>
                   <td>A</td>
                 </tr>
                 <tr>
-                  <td>4th (D)</td>
+                  <td>2nd</td>
                   <td>Tune to</td>
                   <td>D</td>
                 </tr>
                 <tr>
-                  <td>3rd (G)</td>
+                  <td>1st</td>
                   <td>Tune to</td>
                   <td>G</td>
                 </tr>
-           
+
               </table>
             </div>
+            <div id="tab3Content" class="tab-content_main">
+              <p>String notes in Standard Tuning for Ukulele.</p>
+              <table class="guitar-tuner-table">
+                <tr>
+                  <th>String</th>
+                  <th>Status</th>
+                  <th>Note</th>
+                </tr>
+                <tr>
+                  <td>4th (lightest)</td>
+                  <td>Tune to</td>
+                  <td>G</td>
+                </tr>
+                <tr>
+                  <td>3rd</td>
+                  <td>Tune to</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>2nd</td>
+                  <td>Tune to</td>
+                  <td>E</td>
+                </tr>
+                <tr>
+                  <td>1st</td>
+                  <td>Tune to</td>
+                  <td>A</td>
+                </tr>
 
+              </table>
+            </div>
           </div>
-
-
-
 
           <div class="flex-col">
 
@@ -349,55 +376,6 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="flex-row">
-          <p>Sometimes, a Guitar Tuner may not always be available. The old-fashioned way was to remember how each note
-            sounded. This method of tuning is still important today for those same reasons. Also, you can use the tuner
-            below to see if your guitar strings match! <br>
-            Below is a picture of a guitar's headstock. At the side of each machine head is a button. Selecting any of
-            these buttons will play each string note through your device. Give it a try and compare your tuned string to
-            the related sound. <br>
-            These small checks will help train your ears in good time, which will help you check if your guitar stays in
-            tune whilst playing.
-            If you get good at this, you may never need to use a tuner again - your ears will do it for you!
-          </p>
-        </div>
-        <div class="flex-row">
-          <div class="flex-col_centered">
-            <div class="flex-row interactive-notes">
-              <audio id="audio"></audio>
-              <div class="col_sides">
-                <button onclick="play('assets/mp3/lowE.mp3')">E</button>
-                <button onclick="play('assets/mp3/A.mp3')">A</button>
-                <button onclick="play('assets/mp3/D.mp3')">D</button>
-              </div>
-              <div class="col_center interactive-placeholder"></div>
-              <div class="col_sides">
-                <button onclick="play('assets/mp3/G.mp3')">G</button>
-                <button onclick="play('assets/mp3/B.mp3')">B</button>
-                <button onclick="play('assets/mp3/highE.mp3')">E</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex-col_centered">
-            <div class="flex-row">
-              <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo" width="60"
-                height="60">
-              <p>
-                Ask, "<strong>Connie, play ...</strong>" and then any strings note. Once Connie understands you, the
-                sound
-                of that note will play through your device. <br> Alternatively, you can click or touch one of the notes
-                to
-                hear it and check with your guitar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
 
       <div class="italic-text">
         <p>

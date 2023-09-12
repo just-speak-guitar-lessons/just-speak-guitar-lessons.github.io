@@ -24,7 +24,7 @@
     --blue-grey-1: #8091a5;
     --blue-grey-2: #667587;
     --blue-grey-3: #3f4a56;
-    --secondary-border: #2a4a8d;
+    --secondary-border: #4402a0;
     /* box-shadow settings  */
     --b-shadow: -8px 8px 15px -7px #cccccc;
     --br-shadow: 8px 8px 15px -1px #cccccc;
@@ -174,6 +174,11 @@ a {
     font-family: "Poppins";
     font-weight: 700;
     display: flex;
+    margin-top: 2em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 2em;
 }
 
@@ -187,7 +192,7 @@ a {
     font-family: var(--body-copy);
     letter-spacing: 2pt;
     color: var(--brand-color-white);
-    border: none;
+    border: 1px solid var(--secondary-border);
     font-size: 1rem;
     cursor: pointer;
     border-radius: 50px;
@@ -378,8 +383,8 @@ a {
     width: 100%;
     background-color: #a9a9a963;
     padding: 20px 20px 10px 20px;
-    border-top-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .hero-content .title.dark {
@@ -472,7 +477,8 @@ a {
     flex-direction: row;
 }
 
-.tab-button, .tab-link {
+.tab-button,
+.tab-link {
     font-family: var(--body-copy);
     font-size: 0.98rem;
     letter-spacing: 1px;
@@ -486,7 +492,8 @@ a {
     transition: background-color 0.3s;
 }
 
-.tab-button.active, .tab-link.active {
+.tab-button.active,
+.tab-link.active {
     color: var(--brand-color-white);
     background-color: var(--brand-color-purple);
     border: 1px solid var(--brand-color-d-blue);
@@ -495,13 +502,26 @@ a {
 .tab-content {
     display: none;
     border: 1px solid var(--blue-grey-1);
-    border-radius:0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     padding: 20px;
     width: 99%
+}
+
+.tab-content_main {
+    display: none;
+    border: 1px solid var(--blue-grey-1);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    width: 100%;
+    height: 400px;
 }
 
 .tab-content table {
@@ -543,6 +563,10 @@ a {
     width: 100%;
 }
 
+.flex-row.no-wrap {
+    flex-wrap: nowrap;
+}
+
 /* flex-roe-space-around  */
 .flex-row-SA {
     display: flex;
@@ -554,6 +578,7 @@ a {
     margin-bottom: 1em;
     width: 100%;
 }
+
 
 /* home page -inner course navigation  */
 
@@ -662,9 +687,10 @@ a {
     height: 300px;
 }
 
-.flex-col.no-gap{
+.flex-col.no-gap {
     gap: 0;
 }
+
 /* editorial section  */
 .main-editorial {
     display: flex;
@@ -686,13 +712,49 @@ a {
     margin: 20px auto;
 }
 
+.tuner-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border: 1px solid var(--blue-grey-1);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.grid-container_quad {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Default to a quadrant 2*2 column */
+    grid-gap: 20px;
+}
+
+.grid-container_quad .guitar-select-button {
+    background-color: #fff;
+    border: 1px solid var(--blue-grey-1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.grid-container_quad .guitar-select-button:hover {
+    box-shadow: none;
+    filter: grayscale(0.6);
+}
+
 /* Card styles */
 .grid-container .card {
     width: 100%;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .grid-container .card .card-image-section {
@@ -701,6 +763,14 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.grid-container_quad .guitar-select-button .thumbnail {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 150px;
 }
 
 .headstock {
@@ -787,6 +857,22 @@ a {
     background-image: url(assets/img/strings-imgs/electric-guitar.webp);
 }
 
+.acoustic-headstock {
+    background-image: url(assets/img/tuner-imgs/new-headstock.webp);
+}
+
+.electric-headstock {
+    background-image: url(assets/img/tuner-imgs/electric-headstock.webp);
+}
+
+.bass-headstock {
+    background-image: url(assets/img/tuner-imgs/ricky-bass-vector.webp);
+}
+
+.uke-headstock {
+    background-image: url(assets/img/tuner-imgs/uke-vector.webp);
+}
+
 .grid-container .card .card-content {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -795,10 +881,12 @@ a {
 .grid-container .card .card-content .card-title {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .grid-container .card .card-content .card-text {
     font-size: 1rem;
+    text-align: left;
 }
 
 .grid-container .card .video-container {
@@ -864,6 +952,7 @@ a {
     align-items: center;
     gap: 1em;
 }
+
 /* table  */
 .guitar-tuner-table {
     border-collapse: collapse;
@@ -888,6 +977,7 @@ a {
 .guitar-tuner-table td {
     padding: 10px 18px;
 }
+
 .guitar-tuner-table tr:nth-child(odd) {
     background-color: #f7f7f7;
     /* Zebra striping */
@@ -1317,7 +1407,7 @@ footer {
     .flex-row-SA {
         flex-wrap: nowrap;
     }
-    
+
     .global-hero-banner-with-button {
         padding-top: 160px;
         padding-bottom: 160px;
@@ -1513,7 +1603,7 @@ footer {
     .page-nav-container .card .card-content .button-container {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
 
@@ -1523,7 +1613,7 @@ footer {
         box-shadow: var(--br-dark-shadow);
     }
 
-    .page-nav-container .card .card-content .button-container .primary-button {
+    .page-nav-container .card .card-content .button-container .primary-button:hover {
         background-color: var(--primary-hover);
         box-shadow: none;
     }
@@ -1701,12 +1791,14 @@ footer {
     }
 
     .hero-content {
-        width: 20%;
+        width: 460px;
+        height: 200px;
         max-width: unset;
     }
 
-    .hero-content .hero-button-container .primary-button {
-        width: 80%;
+    .hero-content .hero-button-container .primary-button,
+    .hero-content .hero-button-container .secondary-button {
+        width: 50%;
     }
 
     .flex-col_left {
