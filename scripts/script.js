@@ -127,6 +127,7 @@ if (firstNewTabLink) {
 }
 
 
+// Advanced Tuner page 
 
 function play(sound) {
   var audio = document.getElementById("audio");

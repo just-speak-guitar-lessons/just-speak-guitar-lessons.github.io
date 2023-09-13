@@ -862,7 +862,7 @@ a {
 }
 
 .electric-headstock {
-    background-image: url(assets/img/tuner-imgs/electric-headstock.webp);
+    background-image: url(assets/img/tuner-imgs/electric-headstock-1.webp);
 }
 
 .bass-headstock {
@@ -1007,8 +1007,6 @@ a {
     height: auto;
 }
 
-
-
 .tuner-button-container {
     display: flex;
     flex-direction: column;
@@ -1027,21 +1025,100 @@ a {
 }
 
 /* interactive tuner */
-.interactive-notes {
+.interactive-guitar-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 65%;
+    height: auto;
+    gap: 2em;
 }
 
-.col_sides {
+.interactive-guitar-container .notes-container {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin-top: 20px;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    margin-top: 4em;
+}
+
+.tuner-string-item .acoustic{
+    position: unset;
+}
+
+.notes-container .tuner-string-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-copy);
+    font-size: 1rem;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--brand-color-blue);
+    border-radius: 50%;
+    box-shadow: var(--br-shadow);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    position: relative;
+
+    &:hover {
+        background-color: var(--brand-color-blue);
+        color: var(--brand-color-white);
+        box-shadow: none;
+    }
+}
+
+.tuner-string-item.low-e {
+    top: -5px;
+    left: 110px;
+}
+
+.tuner-string-item.a {
+    top: -5px;
+    left: 90px;
+}
+
+.tuner-string-item.d {
+    top: -5px;
+    left: 70px;
+}
+
+.tuner-string-item.g {
+    top: -5px;
+    left: 50px;
+}
+
+.tuner-string-item.b {
+    top: -5px;
+    left: 30px;
+}
+
+.tuner-string-item.high-e {
+    top: -5px;
+    left: 10px;
 }
 
 .col_center {
@@ -1050,20 +1127,28 @@ a {
 }
 
 .interactive-placeholder {
-    background-image: url(assets/img/tuner-imgs/new-headstock.webp);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 216px;
-    width: 150px;
+    height: 632px;
+    width: 500px;
 }
 
-.interactive-notes button {
-    font-family: var(--body-copy);
-    font-size: 1rem;
-    padding: 20px;
-    border: 1px solid var(--brand-color-blue);
-    border-radius: 50%;
-    box-shadow: var(--br-shadow);
+.acoustic {
+    background-image: url(assets/img/tuner-imgs/new-headstock.webp);
+    height: 450px;
+    width: 250px;
+}
+
+.electric {
+    background-image: url(assets/img/tuner-imgs/electric-headstock-1.webp);
+}
+
+.bass {
+    background-image: url(assets/img/tuner-imgs/ricky-bass-vector.webp);
+}
+
+.uke {
+    background-image: url(assets/img/tuner-imgs/uke-vector.webp);
 }
 
 /* footer styles  */
