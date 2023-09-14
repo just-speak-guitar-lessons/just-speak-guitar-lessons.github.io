@@ -1058,10 +1058,10 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 2em;
-    margin-top: 4em;
+    gap: 1em;
+    margin-top: 2em;
 }
 
 .tuner-string-item .acoustic{
@@ -1135,8 +1135,8 @@ a {
 
 .acoustic {
     background-image: url(assets/img/tuner-imgs/new-headstock.webp);
-    height: 450px;
-    width: 250px;
+    height: 350px;
+    width: 200px;
 }
 
 .electric {
