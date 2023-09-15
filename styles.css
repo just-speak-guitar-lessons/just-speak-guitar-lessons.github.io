@@ -858,19 +858,19 @@ a {
 }
 
 .acoustic-headstock {
-    background-image: url(assets/img/tuner-imgs/new-headstock.webp);
+    background-image: url(assets/img/tuner-imgs/acoustic-headstock-tuner.webp);
 }
 
 .electric-headstock {
-    background-image: url(assets/img/tuner-imgs/electric-headstock-1.webp);
+    background-image: url(assets/img/tuner-imgs/electric-headstock-tuner.webp);
 }
 
 .bass-headstock {
-    background-image: url(assets/img/tuner-imgs/ricky-bass-vector.webp);
+    background-image: url(assets/img/tuner-imgs/bass-headstock-tuner.webp);
 }
 
 .uke-headstock {
-    background-image: url(assets/img/tuner-imgs/uke-vector.webp);
+    background-image: url(assets/img/tuner-imgs/uke-headstock-tuner.webp);
 }
 
 .grid-container .card .card-content {
@@ -1026,23 +1026,28 @@ a {
 
 /* interactive tuner */
 .interactive-guitar-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
     width: 65%;
     height: auto;
-    gap: 2em;
 }
 
 .interactive-guitar-container .notes-container {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    /* margin-top: 16px; */
+    position: relative;
+    top: -9%;
+}
+
+.interactive-guitar-container .notes-container.acoustic-margins {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: 52px;
 }
 
 .button-row {
@@ -1075,50 +1080,19 @@ a {
     align-items: center;
     font-family: var(--body-copy);
     font-size: 1rem;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     border: 1px solid var(--brand-color-blue);
     border-radius: 50%;
     box-shadow: var(--br-shadow);
     cursor: pointer;
     transition: all .5s ease-in-out;
-    position: relative;
 
     &:hover {
         background-color: var(--brand-color-blue);
         color: var(--brand-color-white);
         box-shadow: none;
     }
-}
-
-.tuner-string-item.low-e {
-    top: -5px;
-    left: 110px;
-}
-
-.tuner-string-item.a {
-    top: -5px;
-    left: 90px;
-}
-
-.tuner-string-item.d {
-    top: -5px;
-    left: 70px;
-}
-
-.tuner-string-item.g {
-    top: -5px;
-    left: 50px;
-}
-
-.tuner-string-item.b {
-    top: -5px;
-    left: 30px;
-}
-
-.tuner-string-item.high-e {
-    top: -5px;
-    left: 10px;
 }
 
 .col_center {
@@ -1129,26 +1103,31 @@ a {
 .interactive-placeholder {
     background-size: contain;
     background-repeat: no-repeat;
-    height: 632px;
+    height: 500px;
     width: 500px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px
 }
 
 .acoustic {
-    background-image: url(assets/img/tuner-imgs/new-headstock.webp);
-    height: 350px;
-    width: 200px;
+    background-image: url(assets/img/tuner-imgs/acoustic-headstock-tuner.webp);
 }
 
 .electric {
-    background-image: url(assets/img/tuner-imgs/electric-headstock-1.webp);
+    background-image: url(assets/img/tuner-imgs/electric-headstock-tuner.webp);
 }
 
 .bass {
-    background-image: url(assets/img/tuner-imgs/ricky-bass-vector.webp);
+    background-image: url(assets/img/tuner-imgs/bass-headstock-tuner.webp);
 }
 
 .uke {
-    background-image: url(assets/img/tuner-imgs/uke-vector.webp);
+    background-image: url(assets/img/tuner-imgs/uke-headstock-tuner.webp);
 }
 
 /* footer styles  */
