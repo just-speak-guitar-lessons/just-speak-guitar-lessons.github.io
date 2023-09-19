@@ -551,7 +551,6 @@ a {
     background-color: #f8f7ff;
 }
 
-
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -565,6 +564,7 @@ a {
 
 .flex-row.no-wrap {
     flex-wrap: nowrap;
+    width: 60%;
 }
 
 /* flex-roe-space-around  */
@@ -739,6 +739,7 @@ a {
     text-align: center;
     padding: 20px;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 
 .grid-container_quad .guitar-select-button:hover {
@@ -998,9 +999,7 @@ a {
 .guitar-tuner-table td:nth-child(3),
 .guitar-tuner-table th:nth-child(3) {
     width: 10%;
-    /* Note column wider */
 }
-
 
 .flex-col_centered .guitar-headstock_tuning {
     width: 100%;
@@ -1024,57 +1023,61 @@ a {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-/* interactive tuner */
-.interactive-guitar-container {
-    width: 65%;
-    height: auto;
-}
-
-.interactive-guitar-container .notes-container {
+.notes-container_acoustic {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
-    position: relative;
-    top: -10%;
-}
-
-.interactive-guitar-container .notes-container.acoustic-margins {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin-top: 52px;
+    width: 80%;
+    margin-bottom: 5em;
 }
 
-.button-column {
+.notes-container_bass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5em;
+    gap: 25em;
+}
+
+.active-grid-item {
+    outline: 2px solid #109ec5;
+    border-radius: 10px;
+}
+
+.button-container_acoustic {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 4em;
+    margin-top: 0;
+}
+
+.button-container_electric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+    margin-left: 2em;
     margin-top: 2em;
 }
 
-.tuner-string-item .acoustic{
-    position: unset;
-}
-
-.notes-container .tuner-string-item {
+.rounded-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--body-copy);
     font-size: 1rem;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border: 1px solid var(--brand-color-blue);
     border-radius: 50%;
-    box-shadow: var(--br-shadow);
+    box-shadow: var(--br-dark-shadow);
     cursor: pointer;
     transition: all .5s ease-in-out;
 
@@ -1094,11 +1097,10 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
     height: 570px;
-    width: 620px;
+    width: 570px;
+    border-radius: 10px;
     background-position-y: 50%;
     background-position-x: 50%;
-    padding: 5em;
-    padding-top: 0;
 }
 
 .acoustic {
@@ -1455,7 +1457,7 @@ footer {
     }
 
     .top {
-        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .global-hero-banner-with-button {

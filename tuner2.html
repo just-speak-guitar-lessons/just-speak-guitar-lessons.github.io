@@ -241,33 +241,28 @@
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <section>
                 <div class="flex-row no-wrap">
                     <!-- acoustic guitar  -->
-                    <div class="flex-col" style="display: none;">
-                        <div class="interactive-guitar-container">
+                    <div class="flex-col">
+                        <div class="flex-col interactive-placeholder acoustic ">
                             <audio id="audio-acoustic"></audio>
+                            <div class="notes-container_acoustic">
 
-                            <div class="notes-container acoustic-margins">
-                                <div class="button-column">
-                                    <button class="tuner-string-item acoustic_low-e"
+                                <div class="button-container_acoustic">
+                                    <button class="rounded-button"
                                         onclick="play('assets/mp3/Acoustic-Guitar-Notes/01-Acoustic-(Low-E-Note).mp3')">E</button>
-                                    <button class="tuner-string-item acoustic_a"
-                                        onclick="play('assets/mp3/A.mp3')">A</button>
-                                    <button class="tuner-string-item acoustic_d"
-                                        onclick="play('assets/mp3/D.mp3')">D</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/A.mp3')">A</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/D.mp3')">D</button>
                                 </div>
-                            </div>
-                            <div class="interactive-placeholder acoustic"></div>
+                                <div class="button-container_acoustic">
+                                    <button class="rounded-button" onclick="play('assets/mp3/G.mp3')">G</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/B.mp3')">B</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/highE.mp3')">E</button>
+                                </div>
 
-                            <div class="notes-container  acoustic-margins">
-                                <div class="button-column">
-                                    <button class="tuner-string-item acoustic_g"
-                                        onclick="play('assets/mp3/G.mp3')">G</button>
-                                    <button class="tuner-string-item acoustic_b"
-                                        onclick="play('assets/mp3/B.mp3')">B</button>
-                                    <button class="tuner-string-item acoustic_high-e"
-                                        onclick="play('assets/mp3/highE.mp3')">E</button>
-                                </div>
                             </div>
                         </div>
                         <!-- acoustic guitar  -->
@@ -275,80 +270,70 @@
 
                     <!-- electric g section  -->
 
-                    <div class="flex-col" style="display: show;">
-                        <div class="flex-col_left top interactive-guitar-container interactive-placeholder electric">
+                    <div class="flex-col ">
+                        <div class="flex-col_left top interactive-placeholder electric">
                             <audio id="audio-electric"></audio>
-                            <div class="notes-container">
-                               
-                                    <button class="tuner-string-item electric_low-e" onclick="play('just-speak-guitar-lessons.github.io/assets/mp3/Electric-Guitar-Notes/Low-E-Electric.mp3')">E</button>
-                             
-                                    <button class="tuner-string-item a" onclick="play('assets/mp3/A.mp3')">A</button>
-                              
-                                    <button class="tuner-string-item d" onclick="play('assets/mp3/D.mp3')">D</button>
-                               
-                                    <button class="tuner-string-item g" onclick="play('assets/mp3/G.mp3')">G</button>
-                               
-                                    <button class="tuner-string-item b" onclick="play('assets/mp3/B.mp3')">B</button>
-                              
-                                    <button class="tuner-string-item high-e" onclick="play('assets/mp3/highE.mp3')">E</button>
-                               
+                            <div class="button-container_electric">
+
+                                <button class="rounded-button electric_low-e"
+                                    onclick="play('/Low-E-Electric.mp3')">E</button>
+
+                                <button class="rounded-button a" onclick="play('assets/mp3/A.mp3')">A</button>
+
+                                <button class="rounded-button d" onclick="play('assets/mp3/D.mp3')">D</button>
+
+                                <button class="rounded-button g" onclick="play('assets/mp3/G.mp3')">G</button>
+
+                                <button class="rounded-button b" onclick="play('assets/mp3/B.mp3')">B</button>
+
+                                <button class="rounded-button high-e" onclick="play('assets/mp3/highE.mp3')">E</button>
+
                             </div>
-                            <!-- <div class="interactive-placeholder electric"> -->
-                            <!-- </div> -->
                         </div>
                         <!-- electric g section  -->
                     </div>
 
 
-                    <div class="flex-col" style="display:none;">
+                    <div class="flex-col">
                         <!-- electric bass section  -->
-                        <div class="flex-row interactive-guitar-container">
+                        <div class="flex-col interactive-placeholder bass">
                             <audio id="audio-bass"></audio>
 
+                            <div class="notes-container_bass">
 
-                            <div class="notes-container">
-                                <div class="button-column">
-                                    <button class="tuner-string-item acoustic_low-e"
-                                        onclick="play('assets/mp3/lowE.mp3')">E</button>
-                                    <button class="tuner-string-item acoustic_a"
-                                        onclick="play('assets/mp3/A.mp3')">A</button>
+                                <div class="button-container_acoustic">
+
+                                    <button class="rounded-button" onclick="play('assets/mp3/lowE.mp3')">A</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/A.mp3')">E</button>
+                                </div>
+
+
+                                <div class="button-container_acoustic">
+
+                                    <button class="rounded-button" onclick="play('assets/mp3/G.mp3')">D</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/B.mp3')">G</button>
                                 </div>
                             </div>
-
-
-
-                            <div class="col_center interactive-placeholder bass"></div>
-
-
-
-                            <div class="notes-container">
-                                <div class="button-column">
-                                    <button class="tuner-string-item acoustic_d"
-                                        onclick="play('assets/mp3/G.mp3')">D</button>
-                                    <button class="tuner-string-item acoustic_g"
-                                        onclick="play('assets/mp3/B.mp3')">G</button>
-                                </div>
-                                <!-- electric bass section  -->
-                            </div>
+                            <!-- electric bass section  -->
                         </div>
                     </div>
 
-
-                    <div class="flex-col" style="display: none;">
-                        <div class="flex-row interactive-guitar-container">
+                    <div class="flex-col">
+                        <div class="flex-col interactive-placeholder uke">
                             <audio id="audio-uke"></audio>
-                            <div class="col_sides">
-                                <button
-                                    onclick="play('assets/mp3/Acoustic-Guitar-Notes/01-Acoustic-(Low-E-Note).mp3')">E</button>
-                                <button onclick="play('assets/mp3/A.mp3')">A</button>
-                                <button onclick="play('assets/mp3/D.mp3')">D</button>
-                            </div>
-                            <div class="col_center interactive-placeholder uke"></div>
 
-                            <div class="col_sides">
-                                <button onclick="play('assets/mp3/G.mp3')">G</button>
-                                <button onclick="play('assets/mp3/B.mp3')">B</button>
-                                <button onclick="play('assets/mp3/highE.mp3')">E</button>
+                            <div class="notes-container_acoustic">
+
+                                <div class="button-container_acoustic">
+                                    <button class="rounded-button"
+                                        onclick="play('01-Acoustic-(Low-E-Note).mp3')">C</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/A.mp3')">G</button>
+                                </div>
+
+                                <div class="button-container_acoustic">
+                                    <button class="rounded-button" onclick="play('assets/mp3/D.mp3')">E</button>
+                                    <button class="rounded-button" onclick="play('assets/mp3/G.mp3')">A</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,9 +345,8 @@
                             </div>
                             <div class="grid-container_quad">
 
-
-                                <div class="grid-item">
-                                    <div class="guitar-select-button">
+                                <div class="grid-item active">
+                                    <div class="guitar-select-button" data-placeholder="acoustic">
                                         <div class="thumbnail acoustic-headstock"></div>
                                         <h3 class="card-title">Acoustic Guitar</h3>
 
@@ -370,21 +354,21 @@
                                 </div>
 
                                 <div class="grid-item">
-                                    <div class="guitar-select-button">
+                                    <div class="guitar-select-button" data-placeholder="electric">
                                         <div class="thumbnail electric-headstock"></div>
                                         <h3 class="card-title">Electric Guitar</h3>
                                     </div>
                                 </div>
 
                                 <div class="grid-item">
-                                    <div class="guitar-select-button">
+                                    <div class="guitar-select-button" data-placeholder="bass">
                                         <div class="thumbnail bass-headstock"></div>
                                         <h3 class="card-title">Bass Guitar</h3>
                                     </div>
                                 </div>
 
                                 <div class="grid-item">
-                                    <div class="guitar-select-button">
+                                    <div class="guitar-select-button" data-placeholder="uke">
                                         <div class="thumbnail uke-headstock"></div>
                                         <h3 class="card-title">Ukulele</h3>
                                     </div>
@@ -394,8 +378,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- end of main content container -->
             </section>
 
             <div class="italic-text">
@@ -418,7 +400,6 @@
             </div>
             <!-- end of main container  -->
         </div>
-
 
         <footer>
             <div class="footer-row">
@@ -567,6 +548,57 @@
             </div>
         </footer>
     </main>
+    <script>
+        // Function to play audio
+        function play(audioSrc) {
+            const audio = new Audio(audioSrc);
+            audio.play();
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all the guitar selection buttons
+            const guitarButtons = document.querySelectorAll('.guitar-select-button');
+    
+            // Get all the interactive placeholders
+            const placeholders = document.querySelectorAll('.interactive-placeholder');
+    
+            // Get all the grid items
+            const gridItems = document.querySelectorAll('.grid-item');
+    
+            // Hide all placeholders except the "Acoustic Guitar" placeholder initially
+            placeholders.forEach((placeholder) => {
+                if (!placeholder.classList.contains('acoustic')) {
+                    placeholder.style.display = 'none';
+                }
+            });
+    
+            // Add the outline to the default "Acoustic Guitar" grid item
+            gridItems[0].classList.add('active-grid-item');
+    
+            // Add a click event listener to each guitar selection button
+            guitarButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    // Hide all placeholders
+                    placeholders.forEach((placeholder) => {
+                        placeholder.style.display = 'none';
+                    });
+    
+                    // Remove the outline from all grid items
+                    gridItems.forEach((gridItem) => {
+                        gridItem.classList.remove('active-grid-item');
+                    });
+    
+                    // Show the selected placeholder
+                    placeholders[index].style = 'display:flex';
+    
+                    // Add the outline to the selected grid item
+                    gridItems[index].classList.add('active-grid-item');
+                });
+            });
+        });
+    </script>
+    
+    
     <script src="scripts/script.js"></script>
 </body>
 
