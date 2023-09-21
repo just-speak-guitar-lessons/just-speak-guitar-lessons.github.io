@@ -3,6 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
     <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
@@ -277,12 +279,18 @@
                             <audio id="audio-electric"></audio>
                             <div class="button-container_electric">
 
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Electric-Guitar-Notes/06-Elec-High-E.mp3')">E</button>
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/05-Elec-B.mp3')">B</button>
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/04-Elec-G.mp3')">G</button>
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/03-Elec-D.mp3')">D</button>
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/02-Elec-A.mp3')">A</button>
-                                <button class="rounded-button" onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/01-Elec-Low-E.mp3')">E</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/06-Elec-High-E.mp3')">E</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/05-Elec-B.mp3')">B</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/04-Elec-G.mp3')">G</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/03-Elec-D.mp3')">D</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/02-Elec-A.mp3')">A</button>
+                                <button class="rounded-button"
+                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/01-Elec-Low-E.mp3')">E</button>
 
                             </div>
                         </div>
@@ -299,14 +307,18 @@
 
                                 <div class="button-container_acoustic">
 
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Bass-Guitar-Notes/02-Bass-A.mp3')">A</button>
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Bass-Guitar-Notes/01-Bass-E.mp3')">E</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Bass-Guitar-Notes/02-Bass-A.mp3')">A</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Bass-Guitar-Notes/01-Bass-E.mp3')">E</button>
                                 </div>
 
                                 <div class="button-container_acoustic">
 
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Bass-Guitar-Notes/03-Bass-D.mp3')">D</button>
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Bass-Guitar-Notes/04-Bass-G.mp3')">G</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Bass-Guitar-Notes/03-Bass-D.mp3')">D</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Bass-Guitar-Notes/04-Bass-G.mp3')">G</button>
                                 </div>
                             </div>
                             <!-- electric bass section  -->
@@ -320,13 +332,17 @@
                             <div class="notes-container_acoustic">
 
                                 <div class="button-container_acoustic">
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Uke-Notes/02-Uke-C.mp3')">C</button>
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Uke-Notes/01-Uke-G.mp3')">G</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Uke-Notes/02-Uke-C.mp3')">C</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Uke-Notes/01-Uke-G.mp3')">G</button>
                                 </div>
 
                                 <div class="button-container_acoustic">
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Uke-Notes/03-Uke-E.mp3')">E</button>
-                                    <button class="rounded-button" onclick="play('assets/media/mp3/Uke-Notes/04-Uke-A.mp3')">A</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Uke-Notes/03-Uke-E.mp3')">E</button>
+                                    <button class="rounded-button"
+                                        onclick="play('assets/media/mp3/Uke-Notes/04-Uke-A.mp3')">A</button>
                                 </div>
                             </div>
                         </div>
@@ -541,14 +557,6 @@
             </div>
         </footer>
     </main>
-    <script>
-        // Function to play audio
-        function play(audioSrc) {
-            const audio = new Audio(audioSrc);
-            audio.play();
-        }
-
-    </script>
     <script src="/just-speak-guitar-lessons.github.io/scripts/script.js" defer></script>
     <script src="/just-speak-guitar-lessons.github.io/scripts/dynamic-scripts.js" defer></script>
 </body>
