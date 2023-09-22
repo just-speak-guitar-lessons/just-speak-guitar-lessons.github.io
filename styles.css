@@ -553,7 +553,7 @@ a {
 
 .flex-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -712,40 +712,6 @@ a {
     margin: 20px auto;
 }
 
-.tuner-selection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    border: 1px solid var(--blue-grey-1);
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.grid-container_quad {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Default to a quadrant 2*2 column */
-    grid-gap: 20px;
-}
-
-.grid-container_quad .guitar-select-button {
-    background-color: #fff;
-    border: 1px solid var(--blue-grey-1);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-}
-
-.grid-container_quad .guitar-select-button:hover {
-    box-shadow: none;
-    filter: grayscale(0.6);
-}
 
 /* Card styles */
 .grid-container .card {
@@ -766,13 +732,7 @@ a {
     background-position: center;
 }
 
-.grid-container_quad .guitar-select-button .thumbnail {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 200px;
-    height: 150px;
-}
+
 
 .headstock {
     background-image: url(assets/img/basics-imgs/headstock.webp);
@@ -1023,6 +983,7 @@ a {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+/* advanced tuner  */
 .notes-container_acoustic {
     display: flex;
     flex-direction: row;
@@ -1046,13 +1007,52 @@ a {
     border-radius: 10px;
 }
 
+
+.col_center {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#interactive-image-tuner {
+    align-items: center;
+    margin: 0 10px;
+}
+
+
+.interactive-placeholder {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 90vw;
+    border-radius: 10px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+}
+
+.acoustic {
+    background-image: url(assets/img/tuner-imgs/acoustic-headstock-tuner.webp);
+}
+
+.electric {
+    background-image: url(assets/img/tuner-imgs/electric-headstock-tuner.webp);
+}
+
+.bass {
+    background-image: url(assets/img/tuner-imgs/bass-headstock-tuner.webp);
+}
+
+.uke {
+    background-image: url(assets/img/tuner-imgs/uke-headstock-tuner.webp);
+}
+
 .button-container_acoustic {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: 2em;
     margin-top: 0;
 }
 
@@ -1088,35 +1088,55 @@ a {
     }
 }
 
-.col_center {
+.tuner-selection {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    border: 1px solid var(--blue-grey-1);
+    border-radius: 1em;
+    background-color: var(--brand-color-white);
+    padding: 1em;
 }
 
-.interactive-placeholder {
+.grid-container_quad {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Default to a quadrant 2*2 column */
+    grid-gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container_quad .guitar-select-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid var(--blue-grey-1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.grid-container_quad .guitar-select-button:hover {
+    box-shadow: none;
+    filter: grayscale(0.6);
+}
+
+.grid-container_quad .guitar-select-button .thumbnail {
     background-size: contain;
     background-repeat: no-repeat;
-    height: 570px;
-    width: 570px;
-    border-radius: 10px;
-    background-position-y: 50%;
-    background-position-x: 50%;
-}
-
-.acoustic {
-    background-image: url(assets/img/tuner-imgs/acoustic-headstock-tuner.webp);
-}
-
-.electric {
-    background-image: url(assets/img/tuner-imgs/electric-headstock-tuner.webp);
-}
-
-.bass {
-    background-image: url(assets/img/tuner-imgs/bass-headstock-tuner.webp);
-}
-
-.uke {
-    background-image: url(assets/img/tuner-imgs/uke-headstock-tuner.webp);
+    background-position: center;
+    width: 200px;
+    height: 150px;
 }
 
 /* footer styles  */
@@ -1323,9 +1343,30 @@ footer {
         width: 100%;
         gap: 2em;
     }
+
+    .interactive-placeholder {
+        height: 510px;
+    }
+
+    .interactive-placeholder,
+    .tuner-selection {
+        width: 95vw;
+    }
+
+    .grid-container_quad {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .button-container_acoustic {
+        gap: 4em;
+    }
 }
 
 @media screen and (min-width: 768px) {
+
+    .hero-content {
+        align-items: flex-start;
+    }
 
     /* index-styles  */
     .page-nav-container {
@@ -1430,9 +1471,87 @@ footer {
         letter-spacing: 1pt;
     }
 
+    #interactive-image-tuner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-row.no-wrap {
+        width: unset;
+        gap: 0;
+    }
+
+    .interactive-placeholder {
+        width: 300px;
+    }
+
+    .interactive-placeholder.electric {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 380px;
+    }
+
+    
+    .interactive-placeholder.bass {
+        width: 340px;
+        margin-right: 10px;
+    }
+
+    .interactive-placeholder.uke {
+        width: 320px;
+        margin-right: 10px;
+    }
+
+    .tuner-selection {
+        width: 100%;
+        height: 510px;
+    }
+
+    .tuner-selection .flex-row {
+        margin-bottom: 0;
+    }
+
+    .grid-container_quad {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .notes-container_acoustic {
+        width: 90%;
+        margin-bottom: 4em;
+    }
+
+    .notes-container_bass {
+        margin-bottom: 4em;
+        gap: 13em;
+    }
+
+    .button-container_acoustic {
+        gap: 4em;
+    }
+
+    .button-container_electric {
+        margin-left: 8px;
+    }
+
+    .grid-container_quad .guitar-select-button {
+        padding: 8px;
+    }
+
+    .grid-container_quad .guitar-select-button .thumbnail {
+        width: 150px;
+        height: 110px;
+    }
 }
 
 @media screen and (min-width: 992px) {
+
     section {
         display: flex;
         justify-content: center;
@@ -1473,6 +1592,10 @@ footer {
         gap: 1em;
     }
 
+    .hero-content {
+        align-items: flex-start;
+    }
+
     .hero-button-container .primary-button {
         width: 100%;
     }
@@ -1481,10 +1604,10 @@ footer {
         margin: var(--side-margins-992px);
     }
 
-    .primary-button,
+    /* .primary-button,
     .secondary-button {
         width: 42%;
-    }
+    } */
 
     .page-nav-container {
         justify-content: center;
@@ -1511,6 +1634,10 @@ footer {
 
     .grid-container .card .card-content {
         height: 460px;
+    }
+
+    .interactive-placeholder.bass {
+        width: 380px;
     }
 
     /* footer styles  */
