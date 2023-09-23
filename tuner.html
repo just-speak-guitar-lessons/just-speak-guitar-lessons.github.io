@@ -201,7 +201,10 @@
       </div>
 
       <section>
-        <h3>Standard Tuning</h3>
+        <div class="flex-row_SB">
+            <h3>Standard Tuning</h3>
+            <a href="#dynamic-tuner" class="primary-button" >Go To Tuner</a>
+        </div>
         <div class="flex-col_left">
           <p>
             It is super important to keep your guitar in tune. Most music is tuned using the Standard Tuning. Standard
@@ -230,11 +233,12 @@
         </div>
       </section>
 
-      <section id="dynamic-tuner">
+      <section>
         <h3>Online Microphone Tuner</h3>
         <div class="flex-col_left">
           <p>When you click the Start button below, your browser will ask you to access your microphone. Please accept
-            this request, as the tuner will not work without your consent. If you accidentally select no, please refresh
+            this request, as the tuner will not work without your consent. If you accidentally select no, please
+            refresh
             your browser and start again.
             The Guitar Tuner will detect each note when you play each guitar string.
             When a string is in tune, the background will turn Green, and when it is out of tune (too flat),
@@ -252,130 +256,133 @@
       </section>
       <section>
         <div class="flex-row-SA">
+          <article>
+            <div class="flex-col no-gap">
+              <div class="tabs">
+                <button class="tab-link" data-tab="tab1Content">Guitar</button>
+                <button class="tab-link" data-tab="tab2Content">Bass</button>
+                <button class="tab-link" data-tab="tab3Content">Ukulele</button>
+              </div>
 
-          <div class="flex-col no-gap">
-            <div class="tabs">
-              <button class="tab-link" data-tab="tab1Content">Guitar</button>
-              <button class="tab-link" data-tab="tab2Content">Bass</button>
-              <button class="tab-link" data-tab="tab3Content">Ukulele</button>
+              <div id="tab1Content" class="tab-content_main">
+                <p>String notes in Standard Tuning for any 6 stringed Guitar.</p>
+                <table class="guitar-tuner-table">
+                  <tr>
+                    <th>String</th>
+                    <th>Status</th>
+                    <th>Note</th>
+                  </tr>
+                  <tr>
+                    <td>6th (Bass String)</td>
+                    <td>Tune to</td>
+                    <td>E</td>
+                  </tr>
+                  <tr>
+                    <td>5th</td>
+                    <td>Tune to</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>4th</td>
+                    <td>Tune to</td>
+                    <td>D</td>
+                  </tr>
+                  <tr>
+                    <td>3rd</td>
+                    <td>Tune to</td>
+                    <td>G</td>
+                  </tr>
+                  <tr>
+                    <td>2nd</td>
+                    <td>Tune to</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>1st (Lightest String)</td>
+                    <td>Tune to</td>
+                    <td>E</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="tab2Content" class="tab-content_main">
+                <p>String notes in Standard Tuning for Bass Guitar.</p>
+                <table class="guitar-tuner-table">
+                  <tr>
+                    <th>String</th>
+                    <th>Status</th>
+                    <th>Note</th>
+                  </tr>
+                  <tr>
+                    <td>4th (Bass String)</td>
+                    <td>Tune to</td>
+                    <td>E</td>
+                  </tr>
+                  <tr>
+                    <td>3rd</td>
+                    <td>Tune to</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>2nd</td>
+                    <td>Tune to</td>
+                    <td>D</td>
+                  </tr>
+                  <tr>
+                    <td>1st</td>
+                    <td>Tune to</td>
+                    <td>G</td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div id="tab3Content" class="tab-content_main">
+                <p>String notes in Standard Tuning for Ukulele.</p>
+                <table class="guitar-tuner-table">
+                  <tr>
+                    <th>String</th>
+                    <th>Status</th>
+                    <th>Note</th>
+                  </tr>
+                  <tr>
+                    <td>4th (lightest)</td>
+                    <td>Tune to</td>
+                    <td>G</td>
+                  </tr>
+                  <tr>
+                    <td>3rd</td>
+                    <td>Tune to</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td>2nd</td>
+                    <td>Tune to</td>
+                    <td>E</td>
+                  </tr>
+                  <tr>
+                    <td>1st</td>
+                    <td>Tune to</td>
+                    <td>A</td>
+                  </tr>
+
+                </table>
+              </div>
             </div>
+          </article>
+          <aside id="dynamic-tuner">
+            <div class="flex-col">
 
-            <div id="tab1Content" class="tab-content_main">
-              <p>String notes in Standard Tuning for any 6 stringed Guitar.</p>
-              <table class="guitar-tuner-table">
-                <tr>
-                  <th>String</th>
-                  <th>Status</th>
-                  <th>Note</th>
-                </tr>
-                <tr>
-                  <td>6th (Bass String)</td>
-                  <td>Tune to</td>
-                  <td>E</td>
-                </tr>
-                <tr>
-                  <td>5th</td>
-                  <td>Tune to</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>4th</td>
-                  <td>Tune to</td>
-                  <td>D</td>
-                </tr>
-                <tr>
-                  <td>3rd</td>
-                  <td>Tune to</td>
-                  <td>G</td>
-                </tr>
-                <tr>
-                  <td>2nd</td>
-                  <td>Tune to</td>
-                  <td>B</td>
-                </tr>
-                <tr>
-                  <td>1st (Lightest String)</td>
-                  <td>Tune to</td>
-                  <td>E</td>
-                </tr>
-              </table>
+              <div class="guitar-tuner">
+                <p id="note-name"></p>
+                <p id="tuning-status-text">Press Start Button To Begin.</p>
+              </div>
+              <br>
+              <div class="tuner-button-container">
+                <button id="toggle-tuner" class="primary-button">Start Tuner</button>
+              </div>
             </div>
-
-            <div id="tab2Content" class="tab-content_main">
-              <p>String notes in Standard Tuning for Bass Guitar.</p>
-              <table class="guitar-tuner-table">
-                <tr>
-                  <th>String</th>
-                  <th>Status</th>
-                  <th>Note</th>
-                </tr>
-                <tr>
-                  <td>4th (Bass String)</td>
-                  <td>Tune to</td>
-                  <td>E</td>
-                </tr>
-                <tr>
-                  <td>3rd</td>
-                  <td>Tune to</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>2nd</td>
-                  <td>Tune to</td>
-                  <td>D</td>
-                </tr>
-                <tr>
-                  <td>1st</td>
-                  <td>Tune to</td>
-                  <td>G</td>
-                </tr>
-
-              </table>
-            </div>
-            <div id="tab3Content" class="tab-content_main">
-              <p>String notes in Standard Tuning for Ukulele.</p>
-              <table class="guitar-tuner-table">
-                <tr>
-                  <th>String</th>
-                  <th>Status</th>
-                  <th>Note</th>
-                </tr>
-                <tr>
-                  <td>4th (lightest)</td>
-                  <td>Tune to</td>
-                  <td>G</td>
-                </tr>
-                <tr>
-                  <td>3rd</td>
-                  <td>Tune to</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>2nd</td>
-                  <td>Tune to</td>
-                  <td>E</td>
-                </tr>
-                <tr>
-                  <td>1st</td>
-                  <td>Tune to</td>
-                  <td>A</td>
-                </tr>
-
-              </table>
-            </div>
-          </div>
-
-          <div class="flex-col">
-
-            <div class="guitar-tuner">
-              <p id="note-name"></p>
-              <p id="tuning-status-text">Press Start Button To Begin.</p>
-            </div>
-            <br>
-            <div class="tuner-button-container">
-              <button id="toggle-tuner" class="primary-button">Start Tuner</button>
-            </div>
-          </div>
+          </aside>
         </div>
       </section>
 
