@@ -132,11 +132,6 @@ p {
     position: relative;
 }
 
-#frequency-bars {
-    display: block;
-    margin: auto;
-}
-
 #note-name {
     position: absolute;
     /* Position the text absolutely within the .guitar-tuner container */
@@ -220,12 +215,6 @@ a {
     height: 50px;
     box-shadow: var(--br-dark-shadow);
     transition: all .3s ease-in-out;
-}
-
-.primary-button:active,
-.secondary-button::active {
-    transform: scale(0.98);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 /* General Component styles  */
@@ -331,15 +320,6 @@ a {
     padding: 0.6rem;
     font-size: 1.2rem;
     color: var(--navbar-bg-color);
-}
-
-.grayscale-image {
-    width: 200px;
-    height: auto;
-    margin: 10px 10px 10px 0;
-    filter: brightness(1.5);
-    opacity: 0.7;
-    border-radius: 2.5px;
 }
 
 .main-content-container {
