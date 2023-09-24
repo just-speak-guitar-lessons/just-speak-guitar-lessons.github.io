@@ -229,6 +229,18 @@ a {
     }
 }
 
+.tertiary-button {
+    background-color: white;
+    border: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brand-color-purple);
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
 /* General Component styles  */
 
 #navbar {
@@ -1356,12 +1368,17 @@ footer {
     }
 
     .interactive-placeholder {
-        height: 510px;
+        height: 704px;
     }
 
     .interactive-placeholder,
     .tuner-selection {
         width: 95vw;
+    }
+
+    .rounded-button {
+        width: 52px;
+        height: 52px;
     }
 
     .grid-container_quad {
@@ -1677,7 +1694,10 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
-
+    .interactive-placeholder, .interactive-placeholder.acoustic, .interactive-placeholder.electric, .interactive-placeholder.bass, .interactive-placeholder.uke {
+        width: 470px;
+        height: 500px;
+    }
     #navbar {
         margin: 0;
         padding: 0;
