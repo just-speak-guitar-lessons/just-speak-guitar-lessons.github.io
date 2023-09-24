@@ -278,24 +278,23 @@
                         </div>
                         <!-- acoustic guitar  -->
                     </div>
-
-                    <!-- electric g section  -->
                     <div class="flex-col ">
                         <div class="flex-col_left top interactive-placeholder electric">
                             <audio id="audio-electric"></audio>
                             <div class="button-container_electric">
+     <!-- electric g section  -->
                                 <button class="rounded-button"
                                     onclick="play('assets/media/mp3/Electric-Guitar-Notes/06-Elec-High-E.mp3')">E</button>
                                 <button class="rounded-button"
-                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/05-Elec-B.mp3')">B</button>
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/05-Elec-B.mp3')">B</button>
                                 <button class="rounded-button"
-                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/04-Elec-G.mp3')">G</button>
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/04-Elec-G.mp3')">G</button>
                                 <button class="rounded-button"
-                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/03-Elec-D.mp3')">D</button>
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/03-Elec-D.mp3')">D</button>
                                 <button class="rounded-button"
-                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/02-Elec-A.mp3')">A</button>
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/02-Electric-A.mp3')">A</button>
                                 <button class="rounded-button"
-                                    onclick="play('assets/media/mp3/Acoustic-Guitar-Notes/01-Elec-Low-E.mp3')">E</button>
+                                    onclick="play('assets/media/mp3/Electric-Guitar-Notes/01-Elec-Low-E.mp3')">E</button>
                             </div>
                         </div>
                         <!-- electric g section  -->
@@ -555,8 +554,16 @@
             </div>
         </footer>
     </main>
+    <script>
+        // Function to play audio
+        function play(audioSrc) {
+            const audio = new Audio(audioSrc);
+            audio.play();
+        }
+    </script>
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/dynamic-scripts.js" defer></script>
+    <script src="scripts/dynamic-scripts.js" defer>
+    </script>
 </body>
 
 </html>
