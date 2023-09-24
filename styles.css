@@ -195,6 +195,12 @@ a {
     height: 50px;
     box-shadow: var(--br-dark-shadow);
     transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: cornflowerblue;
+        color: var(--brand-color-black);
+        box-shadow: none;
+    }
 }
 
 .secondary-button {
@@ -215,6 +221,12 @@ a {
     height: 50px;
     box-shadow: var(--br-dark-shadow);
     transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: cornflowerblue;
+        color: var(--brand-color-black);
+        box-shadow: none;
+    }
 }
 
 /* General Component styles  */
@@ -285,10 +297,15 @@ a {
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    transition: all .5s ease-in-out;
 }
 
 #hamburger-menu .icon-bar {
     fill: var(--brand-color-purple);
+
+    &:hover {
+        fill: var(--brand-color-black);
+    }
 }
 
 .nav-menu {
@@ -305,7 +322,7 @@ a {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: var(--brand-color-purple);
+    background-color: cornflowerblue;
     left: 0;
     margin: 0;
 }
@@ -457,7 +474,7 @@ a {
     flex-direction: row;
 }
 
-.tab-button,
+/* .tab-button, */
 .tab-link {
     font-family: var(--body-copy);
     font-size: 0.98rem;
@@ -470,25 +487,20 @@ a {
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     transition: background-color 0.3s;
+
+    &:hover {
+        background-color: cornflowerblue;
+        color: var(--brand-color-black);
+        border: 1px solid var(--brand-color-black);
+        box-shadow: none;
+    }
 }
 
-.tab-button.active,
+/* .tab-button.active, */
 .tab-link.active {
     color: var(--brand-color-white);
     background-color: var(--brand-color-purple);
     border: 1px solid var(--brand-color-d-blue);
-}
-
-.tab-content {
-    display: none;
-    border: 1px solid var(--blue-grey-1);
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    padding: 20px;
-    width: 99%
 }
 
 .tab-content_main {
@@ -499,9 +511,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    padding: 20px;
-    width: 100%;
-    height: webkit-fill-available;
+    padding: 10px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 .tab-content table {
@@ -1486,26 +1498,12 @@ footer {
         gap: 0;
     }
 
-    .interactive-placeholder {
-        width: 300px;
-    }
-
-    .interactive-placeholder.electric {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 380px;
-    }
-
-
-    .interactive-placeholder.bass {
-        width: 340px;
-        margin-right: 10px;
-    }
-
+    .interactive-placeholder,
+    .interactive-placeholder.acoustic,
+    .interactive-placeholder.electric,
+    .interactive-placeholder.bass,
     .interactive-placeholder.uke {
-        width: 320px;
-        margin-right: 10px;
+        width: 340px;
     }
 
     .tuner-selection {
@@ -1596,7 +1594,7 @@ footer {
     }
 
     .hero-button-container .primary-button {
-        width: 100%;
+        width: 74%;
     }
 
     .main-content-container {
@@ -1654,6 +1652,7 @@ footer {
 
     .footer-column {
         width: 50%;
+        gap: 0;
     }
 
     .help-link {
@@ -1709,12 +1708,12 @@ footer {
 
     .nav-menu .navbar-link a {
         font-size: 1rem;
-        color: var(--primary-text-color-1);
+        color: var(--brand-color-black);
         margin-bottom: 0;
-    }
-
-    .nav-menu .navbar-link:hover {
-        border-bottom: 1px solid var(--brand-color-purple);
+        padding-bottom: 0;
+        &:hover {
+            border-bottom: 0.5px solid var(--brand-color-purple);
+        }
     }
 
     .global-hero-banner-with-button {
