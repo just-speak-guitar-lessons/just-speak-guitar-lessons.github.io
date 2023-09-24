@@ -2,11 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("External script loaded");
 
-    // Function to play audio
-    function play(audioSrc) {
-        const audio = new Audio(audioSrc);
-        audio.play();
-    }
+
 
     // Get all the guitar selection buttons
     const guitarButtons = document.querySelectorAll('.guitar-select-button');
