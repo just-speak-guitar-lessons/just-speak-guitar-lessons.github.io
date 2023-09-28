@@ -172,7 +172,7 @@ a {
     margin-top: 2em;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     margin-bottom: 2em;
 }
@@ -237,10 +237,12 @@ a {
     font-weight: 600;
     color: var(--brand-color-purple);
     text-decoration: underline;
+
     &:hover {
         text-decoration: none;
     }
 }
+
 /* General Component styles  */
 
 #navbar {
@@ -723,6 +725,11 @@ a {
     flex-direction: inherit;
 }
 
+.flex-row .emphasis-logo {
+    width: 80px;
+    height: 80px;
+}
+
 .main-editorial .image-section {
     width: 100vw;
     height: auto;
@@ -788,9 +795,11 @@ a {
 .e-minor {
     background-image: url(assets/img/frets-imgs/eminor.webp);
 }
+
 .open-a-chord {
-    background-image: url(assets/img/chords-imgs/open-a-medium.svg);
+    background-image: url(assets/img/chords-imgs/slider-imgs/open-chords/open-A-slider.webp);
 }
+
 .finger-posture {
     background-image: url(assets/img/frets-imgs/fretting-min.jpeg);
 }
@@ -1178,15 +1187,118 @@ a {
     align-items: center;
     margin-bottom: 2em;
     border-radius: 30px;
-    .contain {
-        background-size: contain;
-    }
+    margin: 0 auto;
+
     .centered-image-container_title {
         background-color: #ffffffa1;
         color: #000;
         padding: 0 20px;
         width: 100%;
     }
+}
+
+.contain {
+    background-size: contain;
+}
+
+/* slider styles  */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slider-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 22px;
+        color: var(--brand-color-purple);
+        transition: 0.6s ease;
+        background-color: var(--brand-color-white);
+        width: 47px;
+        height: 47px;
+        border: 2px solid var(--brand-color-purple);
+        border-radius: 50%;
+        transition: all .5s ease-in-out;
+        box-shadow: var(--br-shadow);
+
+        &:hover {
+            background-color: #ffffffb8;
+            box-shadow: none;
+        }
+    }
+}
+
+.next {
+    right: 0;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
 }
 
 /* footer styles  */
@@ -1231,7 +1343,7 @@ footer {
     text-transform: uppercase;
 }
 
-.footer-logo .logo-image {
+.footer-column .logo .logo-image {
     height: 40px;
     width: 40px;
     margin-right: 10px;
@@ -1314,17 +1426,14 @@ footer {
     }
 
     /* index-styles  */
-    .emphasis-logo {
-        width: 80px;
-        height: 80px;
-    }
+
 
     /* frets1 styles  */
 
-.centered-image-container {
-    margin: 0 auto;
-    margin-bottom: 2em;
-}
+    .centered-image-container {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
 
     .open-chord-carousel {
         max-width: 800px;
@@ -1546,6 +1655,13 @@ footer {
         width: 340px;
     }
 
+    .interactive-placeholder.electric {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     .tuner-selection {
         width: 100%;
         height: 510px;
@@ -1575,6 +1691,7 @@ footer {
 
     .button-container_electric {
         margin-left: 8px;
+        gap: 18px;
     }
 
     .grid-container_quad .guitar-select-button {
@@ -1645,11 +1762,6 @@ footer {
         margin: var(--side-margins-992px);
     }
 
-    /* .primary-button,
-    .secondary-button {
-        width: 42%;
-    } */
-
     .page-nav-container {
         justify-content: center;
         gap: 3em;
@@ -1679,6 +1791,11 @@ footer {
 
     .interactive-placeholder.bass {
         width: 380px;
+    }
+
+    /* chords  */
+    .slideshow-container {
+        max-width: 70%;
     }
 
     /* footer styles  */
@@ -1721,10 +1838,16 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
-    .interactive-placeholder, .interactive-placeholder.acoustic, .interactive-placeholder.electric, .interactive-placeholder.bass, .interactive-placeholder.uke {
+
+    .interactive-placeholder,
+    .interactive-placeholder.acoustic,
+    .interactive-placeholder.electric,
+    .interactive-placeholder.bass,
+    .interactive-placeholder.uke {
         width: 470px;
         height: 500px;
     }
+
     #navbar {
         margin: 0;
         padding: 0;
@@ -1758,6 +1881,7 @@ footer {
         color: var(--brand-color-black);
         margin-bottom: 0;
         padding-bottom: 0;
+
         &:hover {
             border-bottom: 0.5px solid var(--brand-color-purple);
         }
@@ -1968,6 +2092,11 @@ footer {
         width: 50%;
         height: auto;
     }
+
+    /* chords  */
+    .slideshow-container {
+        max-width: 50%;
+    }
 }
 
 @media only screen and (min-width:1800px) {
@@ -2025,13 +2154,17 @@ footer {
         width: 50%;
     }
 
-
     /* interactive tuner   */
     .flex-col_centered .guitar-headstock_tuning {
         width: 40%;
         height: auto;
     }
 
+    /* chords  */
+    .slideshow-container {
+        max-width: 30%;
+    }
+    
     .footer-row {
         margin: var(--side-margins-1800px);
     }
