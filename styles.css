@@ -387,6 +387,10 @@ a {
     background-image: url(assets/img/hero-imgs/frets-hero-2.jpg);
 }
 
+.global-hero-banner-with-button.chords {
+    background-image: url(assets/img/hero-imgs/chords-hero-2.jpg);
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -734,7 +738,6 @@ a {
     margin: 20px auto;
 }
 
-
 /* Card styles */
 .grid-container .card {
     width: 100%;
@@ -785,7 +788,9 @@ a {
 .e-minor {
     background-image: url(assets/img/frets-imgs/eminor.webp);
 }
-
+.open-a-chord {
+    background-image: url(assets/img/chords-imgs/open-a-medium.svg);
+}
 .finger-posture {
     background-image: url(assets/img/frets-imgs/fretting-min.jpeg);
 }
@@ -873,6 +878,10 @@ a {
 .grid-container .card .card-content {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.medium-img {
+    width: -webkit-fill-available;
 }
 
 .grid-container .card .card-content .card-title {
@@ -1575,6 +1584,10 @@ footer {
     .grid-container_quad .guitar-select-button .thumbnail {
         width: 150px;
         height: 110px;
+    }
+
+    .medium-img {
+        width: 500px;
     }
 }
 
