@@ -1,203 +1,267 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <meta name="description"
-    content="University final year project to test the feasibility of integrating a no AI, rules based algorithm, voice command system into a website">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Joseph Percival">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
+  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+  <meta name="author" content="Joseph Percival">
   <meta name="theme-color" content="#317EFB">
-  <title>Guitar Tutorial - Chords 2</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Montserrat&family=Raleway:wght@400;500&display=swap"
-    rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
-  <script src="scripts/script.js"></script>
+  <title>Chords - Lesson 2</title>
+  <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-imgs/chords-hero-2.jpg" type="image/jpg">
 </head>
 
-<body>
-  <main>
-    <header>
 
-      <a id="#header-anchor"></a>
-      <div class="header-container">
-        <div class="nav-bar">
-          <div class="hamburger-menu">
-            <button class="burger-button" title="menu icon">
-              <i class="fa fa-bars" title="Edit"></i>
-            </button>
-          </div>
-          <div class="logo">
-            <a href="index.html" title="Guitar Lessons">
-              <h2><img class="logo-image" src="img/logo1.png" alt="Just Speak logo">
-                <span class="dark-text">GUITAR </span><span class="red-text">LESSONS</span>
-              </h2>
-            </a>
-          </div>
-          <nav class="nav-bar">
-            <ul>
-              <li> <a href="index.html">Home</a></li>
-              <li> <a href="basics.html">Basics</a></li>
-              <li> <a href="frets.html">Frets</a></li>
-              <li> <a href="chords.html">Chords</a></li>
-              <li> <a href="rhythm.html">Rhythm</a></li>
-              <li> <a href="lead.html">Lead</a></li>
-            </ul>
-          </nav>
-          <nav class="mobile-navigation">
-            <a href="index.html">HOME</a>
-            <a href="basics.html">BASICS</a>
-            <a href="frets.html">FRETS</a>
-            <a href="chords.html">CHORDS</a>
-            <a href="rhythm.html">RHYTHM</a>
-            <a href="lead.html">LEAD</a>
-          </nav>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="navbar-container">
+        <div class="home-link">
+          <a href="/index.html" class="navbar-logo">
+            <div class="logo-container" title="logo and home button">
+              <img src="assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
+              <div class="logo-name">
+                <h1>Guitar <span>Lessons</span></h1>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
+          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
+          </svg>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li class="navbar-link navbar-item">
+            <a href="/basics.html" title="Link to the basics Page">Basics</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/strings.html" title="Link to the strings page">Strings</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/frets.html" title="Link to the tuner page">Frets</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/chords.html" title="Link to the tuner page">Chords</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/lead.html" title="Link to the tuner page">Lead</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="top" class="global-hero-banner-with-button chords">
+      <div class="hero-content">
+        <h2 class="title white">The Chords Lesson 2</h2>
+        <div class="hero-button-container">
+          <a class="secondary-button" id="openModal">Command Hub</a>
+          <a href="/chords2.html" class="primary-button">Next Lesson</a>
         </div>
       </div>
-    </header>
-    <div id="main-banner-image-frets">
-      <img src="img/nav3.png" alt="main image and title of the page">
-    </div>
-    <article>
-      <div id="dialog" class="help-box" title="help-box">
-        <h2>Help Box</h2>
-        <p>Hello, you can call this help box at any time, by saying, "What to say."<br>
-          Below are a list of command's that you can say to go anywhere within this website - Have fun.<br></p>
-        <div class="table">
-          <table>
-            <tr>
-              <th>What to say</th>
-              <th>What happens</th>
-            </tr>
-            <tr>
-              <td>Scroll Up</td>
-              <td>Scroll's the page up</td>
-            </tr>
-            <tr>
-              <td>Scroll Down</td>
-              <td>Scroll's the page down</td>
-            </tr>
-            <tr>
-              <td>Go to the Top</td>
-              <td>Takes you to the top of the page</td>
-            </tr>
-            <tr>
-              <td>Go to the bottom</td>
-              <td>Takes you to the bottom of the page</td>
-            </tr>
-            <tr>
-              <td>Go forward</td>
-              <td>Goes forward a previously visited page</td>
-            </tr>
-            <tr>
-              <td>Go backwards</td>
-              <td>returns to the previously visited page</td>
-            </tr>
-            <tr>
-              <td>Home</td>
-              <td>Takes you to the Home Page</td>
-            </tr>
-            <tr>
-              <td>Open Basics</td>
-              <td>Takes you to the first Basics Lesson</td>
-            </tr>
-            <tr>
-              <td>Open Second Basics Lesson</td>
-              <td>Takes you to the second Basics Lesson</td>
-            </tr>
-            <tr>
-              <td>Open Fret's</td>
-              <td>Takes you to the first Frets Lesson</td>
-            </tr>
-            <tr>
-              <td>Finger positioning</td>
-              <td>Takes you to the second Fret's lesson on Finger positioning.</td>
-            </tr>
-            <tr>
-              <td>Open Chords</td>
-              <td>Takes you to the Chords Lesson</td>
-            </tr>
-            <tr>
-              <td>The Power Chord</td>
-              <td>Takes you to the second Chord's Lesson on Power Chords</td>
-            </tr>
-            <tr>
-              <td>Open Rhythm</td>
-              <td>Takes you to the Rhythm Guitar Lesson</td>
-            </tr>
-            <tr>
-              <td>First music lesson</td>
-              <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song</td>
-            </tr>
-            <tr>
-              <td>Open Lead</td>
-              <td>Takes you to the Lead Guitar Lesson</td>
-            </tr>
-            <tr>
-              <td>Reading music</td>
-              <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read music</td>
-            </tr>
-          </table>
+    </section>
+  </header>
+
+  <main>
+
+    <div class="main-content-container">
+      <div class="modal" id="modal" title="help-center">
+        <div class="modal-overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h3>Command Hub</h3>
+              <span class="close-modal" id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                  <path
+                    d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
+                </svg>
+              </span>
+            </div>
+            <div class="modal-body">
+
+              <p>Please use any of the commands below to navigate anywhere on this application.
+                <br>Please enjoy - thank you.
+              </p>
+
+              <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">Lessons</button>
+                <button class="tab-button" data-tab="tab2">Controls</button>
+              </div>
+              <div class="tab-content" id="tab1">
+                <table>
+                  <!-- <th>What to say</th> -->
+                  <tr>
+                    <th>What to say to Connie.</th>
+                  </tr>
+                  <tr>
+                    <!-- <td>Home</td> -->
+                    <td>Connie, open the Home Page</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Basics</td> -->
+                    <td>Connie, open the Basics Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Basics Lesson 2.</td>
+                    <!-- <td>Go to the second Basics Lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Fret's</td> -->
+                    <td>Connie, open the Frets Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Guitar Tuner.</td>
+                    <!-- <td>Go to the second Fret's lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Chords</td> -->
+                    <td>Connie, open the Chords Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Chord's Lesson 2.</td>
+                    <!-- <td>Go to the second Chord's Lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Rhythm</td> -->
+                    <td>Connie, open the Rhythm Guitar Lesson.</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Rhythm Lesson Two</td> -->
+                    <td>Connie, open the Rhythm Guitar Lesson 2.
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Lead</td> -->
+                    <td>Connie, open the Lead Guitar Lesson.</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Lead Lesson Two</td> -->
+                    <td>Connie, open the Lead Guitar Lesson 2.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tab-content" id="tab2">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>What to say.</th>
+                    </tr>
+                    <tr>
+                      <td>Scroll Up.</td>
+                    </tr>
+                    <tr>
+                      <td>Scroll Down.</td>
+                    </tr>
+                    <tr>
+                      <td>Go to the Top Of The Page.</td>
+                    </tr>
+                    <tr>
+                      <td>Go to the bottom of the page</td>
+                    </tr>
+                    <tr>
+                      <td>Go to the next lesson</td>
+                    </tr>
+                    <tr>
+                      <td>Go back to the last lesson</td>
+                    </tr>
+                    <tr>
+                      <td>Start the guitar tuner</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </article>
-    <article>
-      <div id="main-content-wrapper">
-        <section class="welcome-chords2">
-          <h1>The Power Chord</h1>
-          <p>The <b>Power</b> chord is only played on the bass strings so it adds more depth, or power, to songs. A
+
+      <section>
+        <div class="flex-row_SB">
+          <h3>The Power Chord</h3>
+          <a href="#chord-slider" class="primary-button" aria-label="clickable link to chord section below.">Go To
+            Chords</a>
+        </div>
+        <div class="flex-col_left">
+          <p>The <b>Power</b> chord is only played on the 4 bass strings so it adds more depth or "power," to songs. A
             lot of songs that are played with distortion tend to have them in or were an added effect is required on
             top of the harmonics with the added strength and veracity of the bass notes.<br> It was invented by an
-            American during the 1900's, he wasn't aiming for these effects he was playing them because he was born
-            with only two fingers on each hand.<br><b> For all voice commands for this website, just say, "What to
-              say" at any time to open the Help Box.</b><br>
+            American named, Link Ray, during the 1900's. He wasn't aiming for these effects he was playing them because
+            he was born
+            with only two fingers on each hand.
           </p>
-        </section>
-        <section class="info-box-power">
-          <h2> The F Power Chord. </h2>
-          <div class="card-power1" aria-label="image of the F Barre chord">
+        </div>
+        <br>
+        <div class="flex-row">
+          <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo image" width="60"
+            height="60">
+          <p>
+            To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
+              Hub."
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="centered-image-container power-a-chord contain">
+          <div class="centered-image-container_title">
+            <h3>The Power Chord.</h3>
           </div>
-          <p> This type of Power chord is played the most through out any music that has a Power Chord.
-            If you did see that it's very similar to an F-Barre Chord explained earlier, then you're correct - it
-            is!<br>In the Chord Diagram, the circles signify where to place your finger tips, note that there are two
+        </div>
+        <div class="flex-col_left">
+          <p> Power chords have been used in some of the most epic guitar riffs of all-time and can be heard in songs
+            like "Iron Man" (Black Sabbath), "You Really Got Me" (The Kinks), "Smells Like Teen Spirit"
+            (Nirvana) and many more. <br>In the Chord Diagram, the circles signify where to place your finger tips, note
+            that there are two
             lower circles together and a top level one also. The note played on the first fret is called the root note
             simply because its the first bass note. In all, this is the F (root note) Power Chord.
           </p>
-        </section>
-        <section class="info-box2-power">
-          <h2>The B Flat Power Chord</h2>
-          <div class="card2-power"></div>
-          <p>This Power chord is played on the B flat root note (1st fret and 2nd string) hence the name. It has
-            exactly the same shape as the previous power chord, except each finger stays on the same fret but moves
-            down just one string each.
-            <br>If you are learning for the first time, Power chords are without any reasonable doubt the best chord
-            to start with.
-            <br>
-            It's called a Power Chord because of it's drive <i>and</i> the added power a learner would get from
-            starting to learn with this type of chord <i>and</i> the added power a learner would get from starting to
-            learn with this type of chord.
-          </p>
-        </section>
-        <div class="outro-power">
-          <p>A power chord is, in fact, a diad which is 2 notes played together. Guitar power chords are very
-            versatile, since the shape can be moved all over the fretboard, as with bar chords. Power chords are
-            mostly played on electric guitars under distortion.</p>
         </div>
-        <div class="anchor-power">
-          <a href="#top">
-            <img src="img/arrow.jpg" alt="link pointing to the top of page">
-          </a>
-          <p>Go to the top</p>
-        </div>
+      </section>
+
+      <section class="info-box2-power">
+        <h2>The B Flat Power Chord</h2>
+        <div class="card2-power"></div>
+        <p>This Power chord is played on the B flat root note (1st fret and 2nd string) hence the name. It has
+          exactly the same shape as the previous power chord, except each finger stays on the same fret but moves
+          down just one string each.
+          <br>If you are learning for the first time, Power chords are without any reasonable doubt the best chord
+          to start with.
+          <br>
+          It's called a Power Chord because of it's drive <i>and</i> the added power a learner would get from
+          starting to learn with this type of chord <i>and</i> the added power a learner would get from starting to
+          learn with this type of chord.
+        </p>
+      </section>
+      <div class="outro-power">
+        <p>A power chord is, in fact, a diad which is 2 notes played together. Guitar power chords are very
+          versatile, since the shape can be moved all over the fretboard, as with bar chords. Power chords are
+          mostly played on electric guitars under distortion.</p>
       </div>
-    </article>
+      <div class="anchor-power">
+        <a href="#top">
+          <img src="img/arrow.jpg" alt="link pointing to the top of page">
+        </a>
+        <p>Go to the top</p>
+      </div>
+    </div>
+  
+
+
     <footer>
       <div class="footer-content">
         <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
