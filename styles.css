@@ -584,7 +584,7 @@ a {
 
 .flex-row.no-wrap {
     flex-wrap: nowrap;
-    width: 60%;
+    width: 100%;
 }
 
 /* flex-row-space-around  */
@@ -1636,6 +1636,15 @@ footer {
         height: auto;
     }
 
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-row.no-wrap {
+        width: unset;
+        gap: 0;
+    }
+
     .footer-column .logo-name {
         font-family: var(--body-copy);
         font-size: 1.6rem;
@@ -1658,15 +1667,6 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
-
-    .flex-row {
-        flex-direction: row;
-    }
-
-    .flex-row.no-wrap {
-        width: unset;
-        gap: 0;
     }
 
     .interactive-placeholder,
