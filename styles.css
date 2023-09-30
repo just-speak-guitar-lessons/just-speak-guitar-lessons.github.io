@@ -359,6 +359,10 @@ a {
     color: var(--navbar-bg-color);
 }
 
+
+.navbar-link a.active-link {
+    text-decoration: underline;
+}
 .main-content-container {
     margin: var(--side-margins-sm-device);
 }
@@ -396,7 +400,11 @@ a {
 }
 
 .global-hero-banner-with-button.chords {
-    background-image: url(assets/img/hero-imgs/chords-hero-2.jpg);
+    background-image: url(assets/img/hero-imgs/chords-hero.webp);
+}
+
+.fretMap {
+    width: 96vw;
 }
 
 .hero-content {
@@ -1235,29 +1243,6 @@ img {
     height: auto;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 3s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
 .slider-controls {
     display: flex;
     flex-direction: row;
@@ -1318,6 +1303,42 @@ img {
 .dot:hover {
     background-color: #717171;
 }
+
+        /* Styles for the table */
+       .chord-table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: "Poppins";
+        }
+
+        .chord-table th, td {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chord-table th {
+            background-color: var(--brand-color-blue);
+            color: white;
+        }
+
+        /* Styling for table rows */
+        .chord-table   tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Styling for table header */
+        .chord-table  th, td {
+            font-weight: 500;
+        }
+
+        /* Center-align the table */
+        .chord-table  table {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
 /* footer styles  */
 
@@ -1763,11 +1784,12 @@ footer {
     }
 
     .medium-container {
-        width: 50%;
+        width: 40%;
     }
 
     .top {
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     .global-hero-banner-with-button {
@@ -2128,7 +2150,8 @@ footer {
 
     /* chords  */
     .slideshow-container {
-        max-width: 50%;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -2194,10 +2217,7 @@ footer {
     }
 
     /* chords  */
-    .slideshow-container {
-        max-width: 30%;
-    }
-    
+
     .footer-row {
         margin: var(--side-margins-1800px);
     }
