@@ -729,6 +729,15 @@ a {
     height: 300px;
 }
 
+.flex-col_centered .metronome-image {
+    background-image: url(assets/img/rhythm-imgs/metronome.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 96vw;
+    height: 300px;
+}
+
 .flex-col.no-gap {
     gap: 0;
 }
@@ -768,6 +777,7 @@ a {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 5px;
 }
 
 .grid-container .card .card-image-section {
@@ -911,7 +921,7 @@ a {
 }
 
 .grid-container .card .card-content {
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -930,15 +940,20 @@ a {
     text-align: left;
 }
 
-.grid-container .card .video-container {
+.grid-container .card .video-container,
+.grid-container .card .video-container .poster-image,
+.grid-container .card .video-container .video {
     position: relative;
-    width: 100%;
+    width: -webkit-fill-available;
     overflow: hidden;
-    padding-top: 56.25%;
     /* 16:9 aspect ratio (height / width) */
 }
 
-.grid-container .card .video-container iframe {
+video  {
+    cursor: pointer;
+}
+
+.grid-container .card .video-container .full-width {
     position: absolute;
     top: 0;
     left: 0;
