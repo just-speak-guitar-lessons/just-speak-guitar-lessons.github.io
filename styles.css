@@ -403,6 +403,14 @@ a {
     background-image: url(assets/img/hero-imgs/chords-hero.webp);
 }
 
+.global-hero-banner-with-button.rhythm {
+    background-image: url(assets/img/hero-imgs/rhythm-lesson-hero.webp);
+}
+
+.global-hero-banner-with-button.practical {
+    background-image: url(assets/img/hero-imgs/practical-hero.webp);
+}
+
 .fretMap {
     width: 96vw;
 }
@@ -738,6 +746,15 @@ a {
     height: 300px;
 }
 
+.flex-col_centered .c-am-tab-image {
+    background-image: url(assets/img/lead-imgs/tab-1.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 96vw;
+    height: 300px;
+}
+
 .flex-col.no-gap {
     gap: 0;
 }
@@ -919,6 +936,44 @@ a {
     width: 100%;
     max-height: 300px;
 }
+
+/* tabs-cards  */
+.tabs-numbers {
+    background-image: url(assets/img/lead-imgs/tabs-number.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
+.tabs-open-and-close {
+    background-image: url(assets/img/lead-imgs/tabs-open-close.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
+.tabs-handp {
+    background-image: url(assets/img/lead-imgs/tabs-handp.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
+.tabs-bending {
+    background-image: url(assets/img/lead-imgs/tabs-bending.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
+.tabs-vibrato {
+    background-image: url(assets/img/lead-imgs/tabs-vibrato.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
+.tabs-sliding {
+    background-image: url(assets/img/lead-imgs/tabs-sliding.webp);
+    width: 100%;
+    max-height: 300px;
+}
+
 
 .grid-container .card .card-content {
     padding: 10px;
