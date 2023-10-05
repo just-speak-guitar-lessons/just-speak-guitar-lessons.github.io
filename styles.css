@@ -363,6 +363,7 @@ a {
 .navbar-link a.active-link {
     text-decoration: underline;
 }
+
 .main-content-container {
     margin: var(--side-margins-sm-device);
 }
@@ -1004,7 +1005,7 @@ a {
     /* 16:9 aspect ratio (height / width) */
 }
 
-video  {
+video {
     cursor: pointer;
 }
 
@@ -1374,41 +1375,43 @@ img {
     background-color: #717171;
 }
 
-        /* Styles for the table */
-       .chord-table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-family: "Poppins";
-        }
+/* Styles for the table */
+.chord-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins";
+}
 
-        .chord-table th, td {
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
+.chord-table th,
+td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
-        .chord-table th {
-            background-color: var(--brand-color-blue);
-            color: white;
-        }
+.chord-table th {
+    background-color: var(--brand-color-blue);
+    color: white;
+}
 
-        /* Styling for table rows */
-        .chord-table   tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+/* Styling for table rows */
+.chord-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-        /* Styling for table header */
-        .chord-table  th, td {
-            font-weight: 500;
-        }
+/* Styling for table header */
+.chord-table th,
+td {
+    font-weight: 500;
+}
 
-        /* Center-align the table */
-        .chord-table  table {
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* Center-align the table */
+.chord-table table {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* footer styles  */
 
@@ -1512,6 +1515,123 @@ footer {
 
 .help-link span {
     text-transform: lowercase;
+}
+
+/* tabs page  */
+/* Styles for the modal */
+.tabs-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.tabs-modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 0 auto;
+    border: 1px solid #888;
+    width: 96%;
+
+    .flex-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        text-decoration: underline;
+
+        .vid-modal-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .closeVideoModal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: all 1s ease-in-out;
+
+            &:hover {
+                background-color: #e0dcdc;
+                cursor: pointer;
+            }
+
+            &:focus {
+                background-color: #e0dcdc;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/* Styles for the accordion */
+/* Initially hide all accordion content */
+.accordion .grid-container {
+    display: none;
+}
+
+/* Style for the active accordion header */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+    border-bottom: 1px solid var(--blue-grey-1);
+    background-color: var(--brand-color-white);
+    color: var(--primary-text-color-1);
+    padding: 10px 0;
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: #ffffffdb;
+    }
+}
+
+.accordion-header h3 {
+    margin-bottom: 0;
+}
+
+
+/* Styles for the active accordion */
+.accordion.active {
+    background-color: #ffffffdb;
+}
+
+.accordion .grid-container .grid-item {
+    width: -webkit-fill-available;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
 @media all and (min-width: 576px) {
@@ -1816,6 +1936,75 @@ footer {
 
     .medium-img {
         width: 500px;
+    }
+
+    /* tabs page  */
+    /* Styles for the modal */
+    .tabs-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    .tabs-modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    .closeVideoModal {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .closeVideoModal:hover,
+    .closeVideoModal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Styles for the accordion */
+    /* Initially hide all accordion content */
+    .accordion .grid-container {
+        display: none;
+    }
+
+    /* Style for the active accordion header */
+    .accordion {
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .accordion h2 {
+        background-color: #ddd;
+        padding: 10px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    /* Styles for the active accordion */
+    .accordion.active h2 {
+        background-color: blue;
+    }
+
+    .accordion .grid-container .grid-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
     }
 }
 
