@@ -138,51 +138,61 @@ videoContainers.forEach(container => {
   });
 });
 
+// video modal 
+
+  const openVideoModalBtn = document.getElementById('openVideoModal');
+  const videoModal = document.getElementById('tabsVideoModal');
+  const closeVideoModal = document.querySelector('.closeVideoModal');
+  // Get all accordion headers
+  var accordionHeaders = document.querySelectorAll(".accordion h2");
+  // Get all accordion content containers
+  var accordionContents = document.querySelectorAll(".accordion .grid-container");
+
+  openVideoModalBtn.addEventListener('click', function () {
+    videoModal.style.display = 'block';
+  });
+
+  closeVideoModal.addEventListener('click', function () {
+    videoModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target == videoModal) {
+      videoModal.style.display = 'none';
+    }
+  });
+
+  // Open Accordion 1 by default
+  accordionHeaders[0].parentNode.classList.add("active");
+  accordionContents[0].style.display = "block"; // Display the content of Accordion 1
+
+  // Handle click events on accordion headers
+  accordionHeaders.forEach(function (header, index) {
+    header.addEventListener("click", function () {
+      var accordion = this.parentNode;
+
+      if (accordion.classList.contains("active")) {
+        // If the clicked accordion is already open, close it
+        accordion.classList.remove("active");
+        accordionContents[index].style.display = "none";
+      } else {
+        // Close all accordions
+        accordionHeaders.forEach(function (h, i) {
+          if (i !== index) {
+            h.parentNode.classList.remove("active");
+            accordionContents[i].style.display = "none";
+          }
+        });
+
+        // Open the clicked accordion
+        accordion.classList.add("active");
+        accordionContents[index].style.display = "block";
+      }
+    });
+  });
+
 });
 
-  // carousel functionality 
-  // const testimonials = document.querySelector('.open-chord-carousel');
-  // const scroller = testimonials.querySelector('.scroller');
-  // const nextBtn = testimonials.querySelector('.btn.next');
-  // const prevBtn = testimonials.querySelector('.btn.prev');
-  // const itemWidth = testimonials.querySelector('.scroller-item').clientWidth;
-
-  // nextBtn.addEventListener('click', scrollToNextItem);
-  // prevBtn.addEventListener('click', scrollToPrevItem);
-
-  // function scrollToNextItem() {
-  //     if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
-  //         // The scroll position is not at the beginning of last item
-  //         scroller.scrollBy({
-  //             left: itemWidth,
-  //             top: 0,
-  //             behavior: 'smooth'
-  //         });
-  //     else
-  //         // Last item reached. Go back to first item by setting scroll position to 0
-  //         scroller.scrollTo({
-  //             left: 0,
-  //             top: 0,
-  //             behavior: 'smooth'
-  //         });
-  // }
-
-  // function scrollToPrevItem() {
-  //     if (scroller.scrollLeft != 0)
-  //         // The scroll position is not at the beginning of first item
-  //         scroller.scrollBy({
-  //             left: -itemWidth,
-  //             top: 0,
-  //             behavior: 'smooth'
-  //         });
-  //     else
-  //         // This is the first item. Go to last item by setting scroll position to scroller width
-  //         scroller.scrollTo({
-  //             left: scroller.scrollWidth,
-  //             top: 0,
-  //             behavior: 'smooth'
-  //         });
-  // }
 
   // Voice command 
 
