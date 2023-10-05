@@ -370,7 +370,7 @@ a {
 .global-hero-banner-with-button {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1530,6 +1530,7 @@ footer {
     }
 
     .global-hero-banner-with-button {
+        justify-content: flex-start;
         align-items: flex-start;
         padding-left: 20px;
     }
