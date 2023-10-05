@@ -186,100 +186,7 @@
           </div>
         </div>
       </div>
-      <style>
-        /* Styles for the modal */
-        .tabs-modal {
-          display: none;
-          position: fixed;
-          z-index: 1;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.4);
-          padding-top: 60px;
-        }
 
-        .tabs-modal-content {
-          background-color: #fefefe;
-          margin: 5% auto;
-          padding: 20px;
-          border: 1px solid #888;
-          width: 80%;
-        }
-
-        .closeVideoModal {
-          color: #aaaaaa;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-        }
-
-        .closeVideoModal:hover,
-        .closeVideoModal:focus {
-          color: #000;
-          text-decoration: none;
-          cursor: pointer;
-        }
-
-        /* Styles for the accordion */
-        /* Initially hide all accordion content */
-        .accordion .grid-container {
-          display: none;
-        }
-
-        /* Style for the active accordion header */
-        .accordion.active h2 {
-          background-color: #e0e0e0;
-        }
-
-        /* Style for the active accordion content */
-        .accordion.active .grid-container {
-          display: block;
-        }
-
-        .accordion {
-          background-color: #f1f1f1;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-        }
-
-        .accordion h2 {
-          background-color: #ddd;
-          padding: 10px;
-          margin: 0;
-          cursor: pointer;
-        }
-
-        .accordion-content {
-          display: none;
-          padding: 10px;
-        }
-
-        /* Styles for the active accordion */
-        .accordion.active h2 {
-          background-color: #ccc;
-        }
-
-        .accordion.active .accordion-content {
-          display: block;
-        }
-
-        /* Styles for the grid */
-        .grid-container {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
-        }
-
-        .grid-item {
-          border: 1px solid #ccc;
-          padding: 10px;
-          text-align: center;
-        }
-      </style>
       <section>
         <div class="flex-row_SB">
           <h3>Understanding Tablature</h3>
@@ -288,9 +195,26 @@
         </div>
         <div id="tabsVideoModal" class="tabs-modal">
           <div class="tabs-modal-content">
-            <span class="closeVideoModal">&times;</span>
+            <div class="flex-row">
+              <h3 class="vid-modal-title">Tips and tricks</h3>
+              <span class="closeVideoModal">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+              </span>
+            </div>
+
             <div class="accordion">
-              <h2>Accordion 1</h2>
+              <div class="accordion-header">
+                <h3>Beginner</h3>
+               
+                  <svg class="header-trigger" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path
+                      d="M480-529 324-373q-11 11-28 11t-28-11q-11-11-11-28t11-28l184-184q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l184 184q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-529Z" />
+                  </svg>
+                
+              </div>
               <div class="grid-container">
                 <div class="grid-item">Card 1</div>
                 <div class="grid-item">Card 2</div>
@@ -304,7 +228,15 @@
               </div>
             </div>
             <div class="accordion">
-              <h2>Accordion 2</h2>
+              <div class="accordion-header">
+                <h3>Intermediate</h3>
+               
+                  <svg class="header-trigger" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path
+                      d="M480-529 324-373q-11 11-28 11t-28-11q-11-11-11-28t11-28l184-184q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l184 184q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-529Z" />
+                  </svg>
+                
+              </div>
               <div class="grid-container">
                 <div class="grid-item">Card A</div>
                 <div class="grid-item">Card B</div>
@@ -332,7 +264,7 @@
         </div>
         <div class="flex-row">
           <div class="video-container">
-            <video class="poster-image" width="400" height="200"
+            <video class="poster-image" width="330" height="200"
               poster="assets/media/mp4/tabs-videos/beginner-tab-image.webp" preload="none">
               <source class="video" src="assets/media/mp4/tabs-videos/beginner-tab-video.mp4" type="video/mp4">
             </video>
