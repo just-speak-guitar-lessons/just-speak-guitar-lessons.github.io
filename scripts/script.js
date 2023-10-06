@@ -163,55 +163,69 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-      // Function to update grid-template-columns based on screen width
-      function updateGridColumns() {
-        var screenWidth = window.innerWidth;
+  // Function to update grid-template-columns based on screen width
+  function updateGridColumns() {
+    var screenWidth = window.innerWidth;
 
-        accordionContents.forEach(function (content, index) {
-            if (screenWidth <= 768) {
-                content.style.gridTemplateColumns = "repeat(1, 1fr)";
-                content.style.width = "-webkit-fill-available";
-            } else if (screenWidth <= 992) {
-                content.style.gridTemplateColumns = "repeat(2, 1fr)";
-            } else {
-                content.style.gridTemplateColumns = "repeat(3, 1fr)";
-            }
-        });
-    }
-
-    // Open Accordion 1 by default and apply initial grid styles
-    accordionHeaders[0].parentNode.classList.add("active");
-    accordionContents[0].style.display = "grid";
-    updateGridColumns(); // Apply initial grid styles
-
-    // Handle click events on accordion headers
-    accordionHeaders.forEach(function (header, index) {
-        header.addEventListener("click", function () {
-            var accordion = this.parentNode;
-
-            if (accordion.classList.contains("active")) {
-                // If the clicked accordion is already open, close it
-                accordion.classList.remove("active");
-                accordionContents[index].style.display = "none";
-            } else {
-                // Close all accordions
-                accordionHeaders.forEach(function (h, i) {
-                    if (i !== index) {
-                        h.parentNode.classList.remove("active");
-                        accordionContents[i].style.display = "none";
-                    }
-                });
-
-                // Open the clicked accordion and apply the grid styles
-                accordion.classList.add("active");
-                accordionContents[index].style.display = "grid";
-                updateGridColumns(); // Apply grid styles based on screen width
-            }
-        });
+    accordionContents.forEach(function (content, index) {
+      if (screenWidth <= 768) {
+        content.style.gridTemplateColumns = "repeat(1, 1fr)";
+        content.style.width = "-webkit-fill-available";
+      } else if (screenWidth <= 992) {
+        content.style.gridTemplateColumns = "repeat(2, 1fr)";
+      } else {
+        content.style.gridTemplateColumns = "repeat(3, 1fr)";
+      }
     });
+  }
 
-    // Listen for window resize events and update grid styles
-    window.addEventListener("resize", updateGridColumns);
+  function toggleChevronRotation(header) {
+    var chevron = header.querySelector(".header-trigger");
+    if (chevron) {
+      if (header.parentNode.classList.contains("active")) {
+        chevron.style.transform = "rotate(0deg)";
+      } else {
+        chevron.style.transform = "rotate(180deg)";
+      }
+    }
+  }
+
+  // Open Accordion 1 by default and apply initial grid styles
+  accordionHeaders[0].parentNode.classList.add("active");
+  toggleChevronRotation(accordionHeaders[0]);
+  accordionContents[0].style.display = "grid";
+  updateGridColumns(); // Apply initial grid styles
+
+  // Handle click events on accordion headers
+  accordionHeaders.forEach(function (header, index) {
+    header.addEventListener("click", function () {
+      var accordion = this.parentNode;
+
+      if (accordion.classList.contains("active")) {
+        // If the clicked accordion is already open, close it
+        accordion.classList.remove("active");
+        accordionContents[index].style.display = "none";
+      } else {
+        // Close all accordions
+        accordionHeaders.forEach(function (h, i) {
+          if (i !== index) {
+            h.parentNode.classList.remove("active");
+            accordionContents[i].style.display = "none";
+            toggleChevronRotation(h);
+          }
+        });
+
+        // Open the clicked accordion and apply the grid styles
+        accordion.classList.add("active");
+        toggleChevronRotation(header);
+        accordionContents[index].style.display = "grid";
+        updateGridColumns(); // Apply grid styles based on screen width
+      }
+    });
+  });
+
+  // Listen for window resize events and update grid styles
+  window.addEventListener("resize", updateGridColumns);
 
 });
 
