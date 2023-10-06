@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (screenWidth <= 768) {
         content.style.gridTemplateColumns = "repeat(1, 1fr)";
         content.style.width = "-webkit-fill-available";
-      } else if (screenWidth <= 992) {
+      } else if (screenWidth <= 1090) {
         content.style.gridTemplateColumns = "repeat(2, 1fr)";
       } else {
         content.style.gridTemplateColumns = "repeat(3, 1fr)";
