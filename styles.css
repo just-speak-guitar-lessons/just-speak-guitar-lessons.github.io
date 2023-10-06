@@ -1540,7 +1540,7 @@ footer {
     background-color: #fefefe;
     margin: 0 auto;
     border: 1px solid #888;
-    width: 96%;
+    width: 100%;
 
     .flex-row {
         flex-direction: row;
@@ -1627,10 +1627,14 @@ footer {
     background-color: #ffffffdb;
 }
 
+.accordion .grid-container {
+    margin: 0;
+    margin-top: 20px;
+}
+
 .accordion .grid-container .grid-item {
     width: -webkit-fill-available;
-    border: 1px solid #ccc;
-    padding: 10px;
+    border-bottom: 1px solid #ccc;
     text-align: center;
 }
 
