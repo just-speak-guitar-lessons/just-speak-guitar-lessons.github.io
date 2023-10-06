@@ -1563,12 +1563,10 @@ footer {
             align-items: center;
             justify-content: center;
             background-color: transparent;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            transition: all 1s ease-in-out;
+            transition: all .5s ease-in-out;
 
             &:hover {
+                border-radius: 50%;
                 background-color: #e0dcdc;
                 cursor: pointer;
             }
@@ -1612,6 +1610,7 @@ footer {
     padding: 10px 0;
     margin: 0;
     cursor: pointer;
+
     &:hover {
         background-color: #ffffffdb;
     }
@@ -1943,72 +1942,26 @@ footer {
     }
 
     /* tabs page  */
-    /* Styles for the modal */
-    .tabs-modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-top: 60px;
-    }
 
     .tabs-modal-content {
-        background-color: #fefefe;
-        margin: 5% auto;
         padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
+        .flex-row {
+            padding: 0;
+        }
     }
 
-    .closeVideoModal {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .closeVideoModal:hover,
-    .closeVideoModal:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    /* Styles for the accordion */
-    /* Initially hide all accordion content */
-    .accordion .grid-container {
-        display: none;
-    }
-
-    /* Style for the active accordion header */
     .accordion {
-        background-color: #f1f1f1;
+        width: 100%;
         margin-bottom: 10px;
-        border: 1px solid #ccc;
         border-radius: 5px;
-    }
 
-    .accordion h2 {
-        background-color: #ddd;
-        padding: 10px;
-        margin: 0;
-        cursor: pointer;
-    }
-
-    /* Styles for the active accordion */
-    .accordion.active h2 {
-        background-color: blue;
+        .accordion .grid-container {
+            display: none;
+        }
     }
 
     .accordion .grid-container .grid-item {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
+        border-bottom: none;
     }
 }
 
@@ -2151,6 +2104,12 @@ footer {
         text-transform: lowercase;
     }
 
+}
+
+@media only screen and (min-width: 1090px) {
+    .accordion .grid-container {
+        justify-content: center;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -2369,6 +2328,12 @@ footer {
         width: 42px;
         height: 42px;
     }
+
+    /* tabs  */
+    .accordion .grid-container .grid-item {
+        flex-direction: column;
+    }
+
 }
 
 @media only screen and (min-width: 1400px) {
@@ -2413,6 +2378,11 @@ footer {
     .slideshow-container {
         width: 100%;
         max-width: 100%;
+    }
+
+    /* tabs  */
+    .tabs-modal-content {
+        width: 76%;
     }
 }
 
@@ -2483,4 +2453,8 @@ footer {
         margin: var(--side-margins-1800px);
     }
 
+     /* tabs  */
+     .tabs-modal-content {
+        width: 60%;
+    }
 }
