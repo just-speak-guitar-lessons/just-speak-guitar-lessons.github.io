@@ -13,15 +13,16 @@
   <link rel="stylesheet" href="styles.css">
   <link media="print" onload="this.onload=null;this.removeAttribute('media');"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-imgs/tabs-hero.webp" type="image/webp">
+  <link rel="preload" fetchpriority="high" as="image"
+    href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/tabs-hero.webp" type="image/webp">
 </head>
 
 <body>
   <header>
     <nav id="navbar">
       <div class="navbar-container">
-        <div class="home-link">
-          <a href="/index.html" class="navbar-logo">
+        <div class="home-link" tabindex="0">
+          <a href="/just-speak-guitar-lessons.github.io/index.html" class="navbar-logo">
             <div class="logo-container" title="logo and home button">
               <img src="assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
               <div class="logo-name">
@@ -31,32 +32,33 @@
           </a>
         </div>
 
-        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button"
+          tabindex="1">
           <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
             <path
               d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
           </svg>
         </button>
         <ul id="nav-menu" class="nav-menu">
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="2">
             <a href="/basics.html" title="Link to the basics Page">Basics</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="3">
             <a href="/strings.html" title="Link to the strings page">Strings</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="4">
             <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="5">
             <a href="/frets.html" title="Link to the frets page">Frets</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="6">
             <a href="/chords.html" title="Link to the chords page">Chords</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="7">
             <a href="/rhythm.html" title="Link to the rhythm page">Rhythm</a>
           </li>
-          <li class="navbar-link navbar-item">
+          <li class="navbar-link navbar-item" tabindex="8">
             <a href="/lead.html" class="active-link" title="Link to the lead page">Tabs</a>
           </li>
         </ul>
@@ -66,7 +68,7 @@
       <div class="hero-content">
         <h2 class="title white">The Tablature Lesson </h2>
         <div class="hero-button-container">
-          <a class="primary-button" id="openModal">Command Hub</a>
+          <a class="primary-button" id="openModal" tabindex="9">Command Hub</a>
         </div>
       </div>
     </section>
@@ -81,7 +83,7 @@
             <div class="modal-header">
 
               <h3>Command Hub</h3>
-              <span class="close-modal" id="closeModal">
+              <span class="close-modal" id="closeModal" tabindex="10">
                 <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
                   <path
                     d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
@@ -95,8 +97,8 @@
               </p>
 
               <div class="tabs">
-                <button class="tab-button active" data-tab="tab1">Lessons</button>
-                <button class="tab-button" data-tab="tab2">Controls</button>
+                <button class="tab-button active" data-tab="tab1" tabindex="11">Lessons</button>
+                <button class="tab-button" data-tab="tab2" tabindex="12">Controls</button>
               </div>
               <div class="tab-content" id="tab1">
                 <table>
@@ -190,14 +192,15 @@
       <section>
         <div class="flex-row_SB">
           <h3>Understanding Tablature</h3>
-          <a id="openVideoModal" class="primary-button" aria-label="trigger to open video selection.">See
+          <a id="openVideoModal" class="primary-button" aria-label="clickable link to open video selection."
+            tabindex="13">See
             Videos</a>
         </div>
         <div id="tabsVideoModal" class="tabs-modal">
           <div class="tabs-modal-content">
             <div class="flex-row">
               <h3 class="vid-modal-title">Tips and tricks</h3>
-              <span class="closeVideoModal">
+              <span class="closeVideoModal" tabindex="14">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                   <path
                     d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -210,7 +213,7 @@
                 <h3>Beginner</h3>
 
                 <svg class="chevron header-trigger" xmlns="http://www.w3.org/2000/svg" height="24"
-                  viewBox="0 -960 960 960" width="24">
+                  viewBox="0 -960 960 960" width="24" tabindex="15">
                   <path
                     d="M480-529 324-373q-11 11-28 11t-28-11q-11-11-11-28t11-28l184-184q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l184 184q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-529Z" />
                 </svg>
@@ -219,10 +222,17 @@
               <div class="grid-container">
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="16">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/beginner-tab-image.webp" preload="none"
                       alt="placeholder image for video tutorial on how to read tabs.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-tab-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-tab-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -232,10 +242,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="17">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/h-p-image.webp" preload="none"
                       alt="placeholder image for video tutorial on how to do hammer on and pull off techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/hammeron-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/hammeron-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -245,10 +262,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="18">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/bend-tips-image.webp" preload="none"
                       alt="placeholder image for video tutorial on string bending techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/bending-tips.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/bending-tips.mp4"
+                        type="video/mp4" >
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -258,10 +282,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="19">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/beginner-vibrato-image.webp" preload="none"
                       alt="placeholder image for video tutorial on string vibrato techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-vibrato-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-vibrato-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -271,10 +302,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="20">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/beginner-slide-image.webp" preload="none"
                       alt="placeholder image for video tutorial on string sliding techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-slide-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-slide-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -284,10 +322,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="21">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/beginner/pm-beginner-image.webp" preload="none"
                       alt="placeholder image for video tutorial on string muting techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/pm-beginner-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/beginner/pm-beginner-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -302,7 +347,7 @@
                 <h3>Intermediate</h3>
 
                 <svg class="chevron header-trigger" xmlns="http://www.w3.org/2000/svg" height="24"
-                  viewBox="0 -960 960 960" width="24">
+                  viewBox="0 -960 960 960" width="24" tabindex="22">
                   <path
                     d="M480-529 324-373q-11 11-28 11t-28-11q-11-11-11-28t11-28l184-184q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l184 184q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-529Z" />
                 </svg>
@@ -311,10 +356,17 @@
               <div class="grid-container">
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="23">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/intermediate/inter-hp-image.webp" preload="none"
                       alt="placeholder image for video tutorial on intermediate hammer on techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-hp-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-hp-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -324,10 +376,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="24">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/intermediate/inter-slide-image.webp" preload="none"
                       alt="placeholder image for video tutorial on advanced string sliding techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-slide-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-slide-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -335,13 +394,20 @@
                   </h3>
                 </div>
 
-                
+
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="25">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/intermediate/inter-bend-image.webp" preload="none"
-                      alt="placeholder image for video tutorial on advanced bending techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-slide-video.mp4" type="video/mp4">
+                      alt="placeholder image for video tutorial on advanced bending techniques." >
+                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-slide-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -352,10 +418,17 @@
 
                 <div class="grid-item">
                   <div class="video-container">
+                    <button class="playPauseButton" tabindex="26">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                        <path
+                          d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+                      </svg>
+                    </button>
                     <video class="poster-image" width="330" height="200"
                       poster="assets/media/mp4/tabs-videos/intermediate/inter-vib-image.webp" preload="none"
                       alt="placeholder image for video tutorial on advanced vibrato techniques.">
-                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-vib-video.mp4" type="video/mp4">
+                      <source class="video" src="assets/media/mp4/tabs-videos/intermediate/inter-vib-video.mp4"
+                        type="video/mp4">
                     </video>
                     <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
                   </div>
@@ -380,12 +453,18 @@
         </div>
         <div class="flex-row">
           <div class="video-container">
+            <button class="playPauseButton" tabindex="27">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                <path
+                  d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
+              </svg>
+            </button>
             <video class="poster-image" width="330" height="200"
-              poster="assets/media/mp4/tabs-videos/beginner/beginner-tab-image.webp" preload="none">
+              poster="assets/media/mp4/tabs-videos/beginner/beginner-tab-image.webp" preload="none" >
               <source class="video" src="assets/media/mp4/tabs-videos/beginner/beginner-tab-video.mp4" type="video/mp4">
             </video>
-            <!-- video reference: https://www.youtube.com/watch?v=ThwuNjbJB00  -->
           </div>
+
         </div>
       </section>
 
@@ -541,14 +620,20 @@
           traditional sheet music notation. </p>
       </div>
 
-
+      <a href="#top" class="btt-button" title="Go back to the top button" tabindex="28">
+        <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+          <path
+            d="M463.077-200v-495.308L224.102-456.333 200-480l280-280 280 280-24.102 23.667-238.975-238.975V-200h-33.846Z">
+          </path>
+        </svg>
+      </a>
       <!-- end of main container  -->
     </div>
 
     <footer>
       <div class="footer-row">
         <div class="footer-column">
-          <a class="logo" href="index.html" title="Guitar Lessons">
+          <a class="logo" href="/just-speak-guitar-lessons.github.io/index.html" title="Guitar Lessons" tabindex="29">
             <img class="logo-image" src="assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
               title="Guitar Lessons">
             <div class="logo-name">
@@ -562,8 +647,8 @@
 
           <ul aria-label="Connect with us" class="footer-list-row">
             <li>
-              <a href="http://www.facebook.com" aria-label="icon link to the Facebook website"
-                class="social-media-link">
+              <a href="http://www.facebook.com" aria-label="icon link to the Facebook website" class="social-media-link"
+                tabindex="30">
 
                 <svg class="social-media-icons facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg"
                   width="54" height="54" viewbox="0 0 30 30">
@@ -576,7 +661,7 @@
 
             <li>
               <a href="https://www.linkedin.com/in/joseph-percival/" aria-label="Link to the Author's Linked In account"
-                class="social-media-link">
+                class="social-media-link" tabindex="31">
                 <svg class="social-media-icons linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg"
                   width="54" height="54" viewbox="0 0 30 30">
                   <path class="fill"
@@ -588,7 +673,7 @@
             </li>
             <li>
               <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account"
-                class="social-media-link">
+                class="social-media-link" tabindex="32">
                 <svg class="social-media-icons twitter" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg"
                   width="54" height="54" viewbox="0 0 30 30">
                   <path class="fill"
@@ -608,7 +693,7 @@
           </h3>
           <ul>
             <li>
-              <a href="#" class="help-link">
+              <a href="#" class="help-link" tabindex="33">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="M480-436.847q-37.006 0-61.502-26.077-24.497-26.076-24.497-63.768v-247.923q0-35.512 24.938-60.448 24.937-24.936 61.002-24.936t61.061 24.936q24.997 24.936 24.997 60.448v247.923q0 37.692-24.497 63.768-24.496 26.077-61.502 26.077Zm0-211.076Zm-22.692 517.922v-141.385q-100.23-9.077-168.768-82.076-68.539-73-68.539-173.23h45.384q0 89.077 62.698 150.115 62.698 61.038 151.653 61.038 88.956 0 151.918-61.038 62.961-61.038 62.961-150.115h45.384q0 100.23-68.539 173.23-68.538 72.999-168.768 82.076v141.385h-45.384ZM480-482.231q17.615 0 29.115-12.923t11.5-31.694v-247.767q0-17-11.677-28.5-11.676-11.5-28.938-11.5t-28.938 11.5q-11.677 11.5-11.677 28.5v247.923q0 18.615 11.5 31.538 11.5 12.923 29.115 12.923Z" />
@@ -620,7 +705,7 @@
             </li>
 
             <li>
-              <a href="#" class="help-link">
+              <a href="#" class="help-link" tabindex="34">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933ZM360.539-165.77l69.539-163.078q-34.606-11.994-60.995-37.535-26.389-25.541-39.466-62.31L165-362.539q29.462 69.462 79.693 120.308 50.23 50.846 115.846 76.461Zm-31.538-364.922q12.539-36.769 38.846-62.307 26.308-25.538 60.846-37.384L362.539-795Q289.846-765.538 239-714.192q-50.846 51.346-74 117.346l164.001 66.154Zm150.908 164.538q47.398 0 80.668-33.179 33.269-33.179 33.269-80.576 0-47.398-33.179-80.668-33.178-33.269-80.576-33.269-47.398 0-80.668 33.179-33.269 33.178-33.269 80.576 0 47.398 33.179 80.668 33.179 33.269 80.576 33.269ZM599.846-165.77q67.077-27.23 117.115-77.576Q767-293.693 794.23-360.539l-163.078-68.923q-12.692 37.384-39.115 62.999-26.422 25.615-60.961 36.846l68.77 163.847Zm30.537-366.306 163.847-67.77Q767-666.307 716.654-716.654 666.307-767 599.846-794.23l-67.154 163.847q33.384 12.231 58.499 37.269 25.115 25.038 39.192 61.038Z" />
@@ -630,7 +715,7 @@
             </li>
 
             <li>
-              <a href="#" class="help-link">
+              <a href="#" class="help-link" tabindex="35">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="m608.923-141.54-256.846-90.692-212.076 84.076v-596.843l212.076-73.461 256.846 89.692 211.076-83.692v597.613L608.923-141.54ZM583-198.077v-494.999l-206-70.231v494.999l206 70.231Zm45.384 0 146.231-48.154V-748.23l-146.231 55.154v494.999ZM185.385-212.77l146.231-55.538v-494.999l-146.231 48.923v501.614Zm442.999-480.306v494.999-494.999Zm-296.768-70.231v494.999-494.999Z" />
@@ -646,17 +731,17 @@
           </h3>
           <ul class="footer-list">
             <li>
-              <a href="#" class="help-link">
+              <div class="help-link">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="M829.999-521.693v391.692H129.001v-392.461q-27.616-22.077-37-55.153-9.385-33.077 1.23-66.923l57.923-185.461h655.307l60.308 185.461q10.615 33.846.73 67.307-9.884 33.462-37.5 55.538Zm-260.768-20.999q34.385 0 55.154-20.538 20.769-20.539 17.154-46.385L615-784.616H502.692v170.385q0 28.693 19.115 50.116 19.116 21.423 47.424 21.423Zm-185.077 0q31.077 0 52.116-20.923 21.038-20.923 21.038-50.616v-170.385H344.615l-26.539 176.54q-3.23 22.922 15.924 44.153 19.154 21.231 50.154 21.231Zm-180.846 0q26.308 0 45.539-18.038 19.231-18.039 22.615-44.347l26.385-179.539H184.384L138-634q-10.77 33.308 8.577 62.308 19.346 29 56.731 29Zm552.384 0q34.693 0 55.885-27.731Q832.77-598.154 821.616-634l-46.385-150.616H661.769l26.384 179.539q3.769 26.308 22.808 44.347 19.039 18.038 44.731 18.038ZM174.384-175.384h610.232v-324.847q-2.462 1.769-11.116 2.346-8.654.577-17.808.577-25.385 0-47.308-10.885t-42.769-34.038q-15.615 20.384-39.23 32.653-23.616 12.27-55.308 12.27-27.692 0-48.808-9.654-21.115-9.654-42.269-30.808-17.308 19.923-41.077 30.192-23.769 10.27-50.077 10.27-28.692 0-52.692-10.423t-41-34.5Q267.692-517 244.5-507.154q-23.193 9.846-41.192 9.846-8.539 0-16.385-.577-7.846-.577-12.539-2.346v324.847Zm597.923 0H186.693h585.614Z" />
                 </svg>
                 <p>Mon-Fri 8.30 <span>a.m - 5 p.m</span>
                 </p>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#" class="help-link">
+              <div class="help-link">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="M769.999-140.001q-104.153 0-215.768-53.616-111.615-53.615-209-150.999Q247.616-442 193.809-553.808q-53.808-111.807-53.808-216.191v-50h191.537l37.692 173.23-113.153 110.923q28.769 47.307 58.846 87.154Q345-408.846 377-376.846q36 36.385 77.962 67.885 41.961 31.5 92.808 59.423L659-365.153l160.999 33.999v191.153h-50ZM234-577.999l86.001-83.154-24.539-113.462H185.385q-.769 40.308 11.115 88.846 11.885 48.539 37.5 107.77Zm356.307 349.153q39.077 19.384 88.039 31 48.961 11.615 96.269 12.846v-110.078l-101.461-20.615-82.847 86.847ZM234-577.999Zm356.307 349.153Z" />
@@ -664,10 +749,10 @@
                 <p>
                   07709718757
                 </p>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#" class="help-link">
+              <div class="help-link">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                   <path
                     d="M100.001-180.001v-599.998h759.998v599.998H100.001ZM480-473.924 145.385-695.385v470h669.23v-470L480-473.924Zm0-47.691 325.615-213h-650.23l324.615 213Zm-334.615-173.77v-39.23 215.396-176.166Z" />
@@ -676,7 +761,7 @@
                     joseph.m.percival@gmail.com
                   </span>
                 </p>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
