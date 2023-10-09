@@ -1,177 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("External script loaded");
 
-  const navToggle = document.querySelector(".hamburger-menu");
-  const links = document.querySelector(".nav-menu");
+  // Find all play buttons and videos
+  const playButtons = document.querySelectorAll('.playPauseButton');
+  const videos = document.querySelectorAll('.poster-image');
 
-  navToggle.addEventListener('click', function () {
-    links.classList.toggle("show");
-  })
+  // Add event listeners to handle "Enter" key press and click for all play buttons
+  playButtons.forEach((button, index) => {
+    // Add event listener to handle "Enter" key press
+    button.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        const video = videos[index]; // Get the associated video element
+        toggleVideoPlay(video);
+        video.focus(); // Focus on the video to enable browser video controls
+      }
+    });
 
-  // modal functionality 
-  const openModalBtn = document.getElementById('openModal');
-  const closeModalBtn = document.getElementById('closeModal');
-  const modal = document.getElementById('modal');
-  const modalOverlay = document.querySelector('.modal-overlay'); // Add this line
+    // Add event listener to handle button click
+    button.addEventListener('click', () => {
+      const video = videos[index]; // Get the associated video element
+      toggleVideoPlay(video);
+      video.focus(); // Focus on the video to enable browser video controls
+    });
+  });
 
-  function openModal() {
-    modal.style.display = 'flex';
-
-    if (window.innerWidth >= 768) {
-      modal.style.top = '60px';
-      modal.style.left = '50%';
-      modal.style.height = 'webkit-fill-available'; // Center horizontally
-      modal.style.transform = 'translate(-50%, 1%)'; /* Center the modal */
-
-      // Remove the sliding animation by setting transition to none
-      modal.style.transition = 'none';
+  // Function to toggle video play/pause
+  function toggleVideoPlay(video) {
+    if (video.paused) {
+      video.play();
+      video.volume = 0.5; // Set the volume to 50% (adjust as needed)
+      video.controls = true; // Enable browser video controls
+      const button = video.previousElementSibling; // Get the play button
+      button.style.display = 'none'; // Hide the play button when video is playing
     } else {
-      const desiredTop = calculateModalTop();
-      modal.style.top = `${desiredTop}px`;
+      video.pause();
     }
   }
 
-  function closeModal() {
-    modal.style.top = '100%';
-    modal.style.left = '0'; // Reset left position
-    modal.style.transform = 'none'; /* Reset transform when closing modal */
-    modal.style.transition = 'top 0.3s ease-in-out'; // Restore transition
-    modal.style.display = 'none';
-    // Remove the event listener after closing the modal
-    modalOverlay.removeEventListener('click', closeModal);
+  // Function to toggle modal open/close
+  function toggleModal(open, modal) {
+    if (open) {
+      modal.style.display = 'flex';
+      if (window.innerWidth >= 768) {
+        modal.style.top = '60px';
+        modal.style.left = '50%';
+        modal.style.height = 'webkit-fill-available';
+        modal.style.transform = 'translate(-50%, 1%)';
+        modal.style.transition = 'none';
+      } else {
+        modal.style.top = `${calculateModalTop()}px`;
+      }
+    } else {
+      modal.style.top = '100%';
+      modal.style.left = '0';
+      modal.style.transform = 'none';
+      modal.style.transition = 'top 0.3s ease-in-out';
+      modal.style.display = 'none';
+      modalOverlay.removeEventListener('click', closeModal);
+    }
   }
 
-  function calculateModalTop() {
-    const viewportHeight = window.innerHeight;
-    const desiredPercentage = 4; /* Adjust this percentage as needed */
-    return (viewportHeight * desiredPercentage) / 100;
-  }
-
-  openModalBtn.addEventListener('click', openModal);
-  closeModalBtn.addEventListener('click', closeModal);
-
-
-  // Function to handle modal tab clicks
-  function handleModalTabClick(event) {
+  // Function to handle tab clicks
+  function handleTabClick(event) {
     const tabName = event.currentTarget.getAttribute('data-tab');
     const modalContainer = event.currentTarget.closest('.modal');
     const tabContents = modalContainer.querySelectorAll('.tab-content');
-
-    // Hide all modal tab contents
-    tabContents.forEach(content => {
-      content.style.display = 'none';
-    });
-
-    // Deactivate all modal tab buttons
     const tabLinks = modalContainer.querySelectorAll('.tab-button');
-    tabLinks.forEach(link => {
-      link.classList.remove('active');
-    });
 
-    // Display the selected modal tab content and activate the button
+    tabContents.forEach(content => content.style.display = 'none');
+    tabLinks.forEach(link => link.classList.remove('active'));
+
     const selectedTabContent = modalContainer.querySelector(`#${tabName}`);
     selectedTabContent.style.display = 'block';
     event.currentTarget.classList.add('active');
   }
 
-  // Add click event listeners to modal tab buttons
-  const modalTabButtons = document.querySelectorAll('.modal .tab-button');
-  modalTabButtons.forEach(button => {
-    button.addEventListener('click', handleModalTabClick);
-  });
-
-  // Initialize the first modal tab as active for the modal
-  const firstModalTabButton = document.querySelector('.modal .tab-button');
-  if (firstModalTabButton) {
-    firstModalTabButton.click();
-  }
-
-  /// Function to handle tab clicks for the new tabs
-  function handleNewTabClick(event) {
-    const tabName = event.currentTarget.getAttribute('data-tab');
-    const tabsContainer = event.currentTarget.closest('.flex-col');
-    const tabContents = tabsContainer.querySelectorAll('.tab-content');
-    const tabContentsMain = tabsContainer.querySelectorAll('.tab-content_main');
-
-    // Hide all new tab contents
-    tabContents && tabContentsMain.forEach(content => {
-      content.style.display = 'none';
-    });
-
-    // Deactivate all new tab links
-    const tabLinks = tabsContainer.querySelectorAll('.tab-link');
-    tabLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-
-    // Display the selected new tab content and activate the link
-    const selectedTabContent = tabsContainer.querySelector(`#${tabName}`);
-    selectedTabContent.style.display = 'block';
-    event.currentTarget.classList.add('active');
-  }
-
-  // Add click event listeners to new tab links
-  const newTabLinks = document.querySelectorAll('.flex-col .tab-link');
-  newTabLinks.forEach(link => {
-    link.addEventListener('click', handleNewTabClick);
-  });
-
-  // Initialize the first new tab as active for the new tabs
-  const firstNewTabLink = document.querySelector('.flex-col .tab-link');
-  if (firstNewTabLink) {
-    firstNewTabLink.click();
-  }
-
-  // video cards functionality 
-  const videoContainers = document.querySelectorAll('.video-container');
-
-  videoContainers.forEach(container => {
-    const video = container.querySelector('video');
-
-    // Remove the 'controls' attribute initially
-    video.removeAttribute('controls');
-
-    // Add 'controls' when the poster is clicked
-    container.addEventListener('click', () => {
-      video.setAttribute('controls', 'controls');
-      video.play();
-    });
-  });
-
-  // video modal 
-
-  const openVideoModalBtn = document.getElementById('openVideoModal');
-  const videoModal = document.getElementById('tabsVideoModal');
-  const closeVideoModal = document.querySelector('.closeVideoModal');
-  // Get all accordion headers
-  var accordionHeaders = document.querySelectorAll(".accordion-header");
-
-  // Get all accordion content containers
-  var accordionContents = document.querySelectorAll(".accordion .grid-container");
-
-  openVideoModalBtn.addEventListener('click', function () {
-    videoModal.style.display = 'block';
-  });
-
-  closeVideoModal.addEventListener('click', function () {
-    videoModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', function (event) {
-    if (event.target == videoModal) {
-      videoModal.style.display = 'none';
-    }
-  });
-
-  // Function to update grid-template-columns based on screen width
+  // Function to update grid styles based on screen width
   function updateGridColumns() {
-    var screenWidth = window.innerWidth;
+    const screenWidth = window.innerWidth;
 
-    accordionContents.forEach(function (content, index) {
-      if (screenWidth <= 768) {
+    accordionContents.forEach((content, index) => {
+      if (screenWidth <= SMALL_SCREEN) {
         content.style.gridTemplateColumns = "repeat(1, 1fr)";
         content.style.width = "-webkit-fill-available";
-      } else if (screenWidth <= 1090) {
+      } else if (screenWidth <= MEDIUM_SCREEN) {
         content.style.gridTemplateColumns = "repeat(2, 1fr)";
       } else {
         content.style.gridTemplateColumns = "repeat(3, 1fr)";
@@ -179,35 +91,98 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Function to toggle chevron rotation
   function toggleChevronRotation(header) {
-    var chevron = header.querySelector(".header-trigger");
+    const chevron = header.querySelector(".header-trigger");
     if (chevron) {
-      if (header.parentNode.classList.contains("active")) {
-        chevron.style.transform = "rotate(0deg)";
-      } else {
-        chevron.style.transform = "rotate(180deg)";
-      }
+      chevron.style.transform = header.parentNode.classList.contains("active") ? "rotate(0deg)" : "rotate(180deg)";
     }
   }
 
-  // Open Accordion 1 by default and apply initial grid styles
-  accordionHeaders[0].parentNode.classList.add("active");
-  toggleChevronRotation(accordionHeaders[0]);
-  accordionContents[0].style.display = "grid";
-  updateGridColumns(); // Apply initial grid styles
+  // Constants
+  const SMALL_SCREEN = 768;
+  const MEDIUM_SCREEN = 1090;
 
-  // Handle click events on accordion headers
-  accordionHeaders.forEach(function (header, index) {
-    header.addEventListener("click", function () {
-      var accordion = this.parentNode;
+  const navToggle = document.querySelector(".hamburger-menu");
+  const links = document.querySelector(".nav-menu");
+
+  const video = document.querySelector('.poster-image');
+  const modal = document.getElementById('modal');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  const modalTabButtons = document.querySelectorAll('.modal .tab-button');
+  const firstModalTabButton = document.querySelector('.modal .tab-button');
+  const videoContainers = document.querySelectorAll('.video-container');
+  const openVideoModalBtn = document.getElementById('openVideoModal');
+  const videoModal = document.getElementById('tabsVideoModal');
+  const closeVideoModal = document.querySelector('.closeVideoModal');
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+  const accordionContents = document.querySelectorAll(".accordion .grid-container");
+
+  // Add event listeners
+  navToggle.addEventListener('click', () => links.classList.toggle("show"));
+  video.addEventListener('keydown', (event) => event.key === 'Enter' && toggleVideoPlay(video));
+
+  openModalBtn.addEventListener('click', () => toggleModal(true, modal));
+  closeModalBtn.addEventListener('click', () => toggleModal(false, modal));
+  openModalBtn.addEventListener('keydown', (event) => event.key === 'Enter' && toggleModal(true, modal));
+  closeModalBtn.addEventListener('keydown', (event) => event.key === 'Enter' && toggleModal(false, modal));
+
+  modalTabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+  if (firstModalTabButton) {
+    firstModalTabButton.click();
+  }
+
+  videoContainers.forEach(container => {
+    const videoInContainer = container.querySelector('video');
+    if (videoInContainer) {
+      videoInContainer.removeAttribute('controls');
+      container.addEventListener('click', () => toggleVideoPlay(videoInContainer));
+    }
+  });
+
+  openVideoModalBtn.addEventListener('click', () => {
+    toggleModal(true, videoModal);
+  });
+
+  openVideoModalBtn.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      toggleModal(true, videoModal);
+    }
+  });
+
+  closeVideoModal.addEventListener('click', () => {
+    toggleModal(false, videoModal);
+    const videoInModal = videoModal.querySelector('video');
+    videoInModal.pause();
+  });
+
+  closeVideoModal.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      toggleModal(false, videoModal);
+      const videoInModal = videoModal.querySelector('video');
+      videoInModal.pause();
+    }
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === videoModal) {
+      toggleModal(false, videoModal);
+      const videoInModal = videoModal.querySelector('video');
+      videoInModal.pause();
+    }
+  });
+
+  accordionHeaders.forEach((header, index) => {
+    header.addEventListener("click", () => {
+      const accordion = header.parentNode;
 
       if (accordion.classList.contains("active")) {
-        // If the clicked accordion is already open, close it
         accordion.classList.remove("active");
         accordionContents[index].style.display = "none";
       } else {
-        // Close all accordions
-        accordionHeaders.forEach(function (h, i) {
+        accordionHeaders.forEach((h, i) => {
           if (i !== index) {
             h.parentNode.classList.remove("active");
             accordionContents[i].style.display = "none";
@@ -215,19 +190,30 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Open the clicked accordion and apply the grid styles
         accordion.classList.add("active");
         toggleChevronRotation(header);
         accordionContents[index].style.display = "grid";
-        updateGridColumns(); // Apply grid styles based on screen width
+        updateGridColumns();
       }
     });
   });
 
-  // Listen for window resize events and update grid styles
-  window.addEventListener("resize", updateGridColumns);
-
+  // Initializations
+  accordionHeaders[0].parentNode.classList.add("active");
+  toggleChevronRotation(accordionHeaders[0]);
+  accordionContents[0].style.display = "grid";
+  updateGridColumns();
 });
+
+// Function to calculate modal top position
+function calculateModalTop() {
+  const viewportHeight = window.innerHeight;
+  const desiredPercentage = 4; /* Adjust this percentage as needed */
+  return (viewportHeight * desiredPercentage) / 100;
+}
+
+
+
 
 
 // Voice command
