@@ -126,6 +126,10 @@ p {
     line-height: 1.78;
 }
 
+.pointer-cursor {
+    cursor: pointer;
+  }
+
 .guitar-tuner {
     width: 300px;
     height: 300px;
@@ -1003,10 +1007,6 @@ a {
     width: -webkit-fill-available;
     overflow: hidden;
     /* 16:9 aspect ratio (height / width) */
-}
-
-video {
-    cursor: pointer;
 }
 
 .grid-container .card .video-container .full-width {
@@ -2479,8 +2479,13 @@ footer {
         /* Center the button perfectly */
         border-radius: 50%;
         border: none;
-        background-color: red;
+        background-color: #eb1616;
         padding: 20px;
+        transition: all .5s ease-in-out;
     }
+    .playPauseButton:hover {
+            background-color: #ee3838;
+        }
+    
 
 }

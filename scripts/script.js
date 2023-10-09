@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const video = videos[index]; // Get the associated video element
       toggleVideoPlay(video);
       video.focus(); // Focus on the video to enable browser video controls
+
+        // Add the pointer-cursor class to the button
+    button.classList.add('pointer-cursor');
     });
   });
 
