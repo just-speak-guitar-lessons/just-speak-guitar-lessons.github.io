@@ -13,8 +13,7 @@
   <link rel="stylesheet" href="styles.css">
   <link media="print" onload="this.onload=null;this.removeAttribute('media');"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="preload" fetchpriority="high" as="image"
-    href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/tabs-hero.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/tabs-hero.webp" type="image/webp">
 </head>
 
 <body>
@@ -32,7 +31,7 @@
           </a>
         </div>
 
-        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button"
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button" title="Navigation Menu button"
           tabindex="1">
           <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
             <path
@@ -68,7 +67,7 @@
       <div class="hero-content">
         <h2 class="title white">The Tablature Lesson </h2>
         <div class="hero-button-container">
-          <a class="primary-button" id="openModal" tabindex="9">Command Hub</a>
+          <a class="primary-button" id="openModal" tabindex="9" aria-label="Voice Command Modal button" title="Open Voice Command Modal">Command Hub</a>
         </div>
       </div>
     </section>
@@ -97,8 +96,8 @@
               </p>
 
               <div class="tabs">
-                <button class="tab-button active" data-tab="tab1" tabindex="11">Lessons</button>
-                <button class="tab-button" data-tab="tab2" tabindex="12">Controls</button>
+                <button class="tab-button active" data-tab="tab1" tabindex="11" aria-label="General Commands Tab Button" title="General Voice Commands Tab Button">Lessons</button>
+                <button class="tab-button" data-tab="tab2" tabindex="12" aria-label="Advanced Commands Tab Button" title="Advanced Voice Commands Tab Button">Controls</button>
               </div>
               <div class="tab-content" id="tab1">
                 <table>
@@ -192,7 +191,7 @@
       <section>
         <div class="flex-row_SB">
           <h3>Understanding Tablature</h3>
-          <a id="openVideoModal" class="primary-button" aria-label="clickable link to open video selection."
+          <a id="openVideoModal" class="primary-button" aria-label="clickable link to open video selection." title="Click to open Video Modal"
             tabindex="13">See
             Videos</a>
         </div>
@@ -200,7 +199,7 @@
           <div class="tabs-modal-content">
             <div class="flex-row">
               <h3 class="vid-modal-title">Tips and tricks</h3>
-              <span class="closeVideoModal" tabindex="14">
+              <span class="closeVideoModal" tabindex="14" aria-label="Close Button" title="Click to close this modal">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                   <path
                     d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -209,7 +208,7 @@
             </div>
 
             <div id="beginner" class="accordion">
-              <div class="accordion-header">
+              <div class="accordion-header" aria-label="Click the Chevron to Open and Close this Section" title="Click the Chevron to Open and Close this Section">
                 <h3>Beginner</h3>
 
                 <svg class="chevron header-trigger" xmlns="http://www.w3.org/2000/svg" height="24"
@@ -222,7 +221,7 @@
               <div class="grid-container">
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="16">
+                    <button class="playPauseButton" tabindex="16" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -242,7 +241,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="17">
+                    <button class="playPauseButton" tabindex="17"  aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -262,7 +261,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="18">
+                    <button class="playPauseButton" tabindex="18" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -282,7 +281,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="19">
+                    <button class="playPauseButton" tabindex="19" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -302,7 +301,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="20">
+                    <button class="playPauseButton" tabindex="20" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -322,7 +321,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="21">
+                    <button class="playPauseButton" tabindex="21" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -343,7 +342,7 @@
             </div>
 
             <div id="intermediate" class="accordion">
-              <div class="accordion-header">
+              <div class="accordion-header" aria-label="Click the Chevron to Open and Close this Section" title="Click the Chevron to Open and Close this Section">
                 <h3>Intermediate</h3>
 
                 <svg class="chevron header-trigger" xmlns="http://www.w3.org/2000/svg" height="24"
@@ -356,7 +355,7 @@
               <div class="grid-container">
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="23">
+                    <button class="playPauseButton" tabindex="23" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -376,7 +375,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="24">
+                    <button class="playPauseButton" tabindex="24" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -397,7 +396,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="25">
+                    <button class="playPauseButton" tabindex="25" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -418,7 +417,7 @@
 
                 <div class="grid-item">
                   <div class="video-container">
-                    <button class="playPauseButton" tabindex="26">
+                    <button class="playPauseButton" tabindex="26" aria-label="Video play button" title="Click the view this video">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                         <path
                           d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
@@ -453,7 +452,7 @@
         </div>
         <div class="flex-row">
           <div class="video-container">
-            <button class="playPauseButton" tabindex="27">
+            <button class="playPauseButton" tabindex="27"  aria-label="Video play button" title="Click to view this video">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
                 <path
                   d="M381-239q-20 13-40.5 1.5T320-273v-414q0-24 20.5-35.5T381-721l326 207q18 12 18 34t-18 34L381-239Z" />
