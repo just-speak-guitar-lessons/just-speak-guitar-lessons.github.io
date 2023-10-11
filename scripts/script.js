@@ -1,53 +1,195 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("External script loaded");
 
-  // Find all play buttons and videos
+  // Constants
+  const SMALL_SCREEN = 743;
+  const MEDIUM_SCREEN = 990;
+
+  // Elements
   const playButtons = document.querySelectorAll('.playPauseButton');
   const videos = document.querySelectorAll('.poster-image');
+  const modal = document.getElementById('modal');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  const videoContainers = document.querySelectorAll('.video-container');
+  const openVideoModalBtn = document.getElementById('openVideoModal');
+  const videoModal = document.getElementById('tabsVideoModal');
+  const closeVideoModal = document.querySelector('.closeVideoModal');
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  const accordionContents = document.querySelectorAll('.accordion .grid-container');
 
-  // Add event listeners to handle "Enter" key press and click for all play buttons
-  playButtons.forEach((button, index) => {
-    // Add event listener to handle "Enter" key press
-    button.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        const video = videos[index]; // Get the associated video element
-
-        if (video.paused) {
-          toggleVideoPlay(video);
-          video.focus(); // Focus on the video to enable browser video controls
-        } else {
-          video.pause(); // Pause the video if it's already playing
+  // Event Listeners
+  function addPlayButtonListeners() {
+    playButtons.forEach((playButton, index) => {
+      playButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          const video = videos[index];
+          if (video && video.paused) {
+            toggleVideoPlay(video);
+            video.focus();
+          }
+          event.preventDefault();
         }
+      });
 
-        event.preventDefault(); // Prevent the default action of the Enter key
-      }
+      playButton.addEventListener('click', () => {
+        const video = videos[index];
+        if (video && video.paused) {
+          toggleVideoPlay(video);
+          video.focus();
+        }
+        playButton.classList.add('pointer-cursor');
+      });
     });
+  }
 
-    // Add event listener to handle button click
+  // Get all tab buttons and tab content
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  // Set the default tab to be open (tab1)
+  tabContents[0].style.display = 'block';
+
+  // Add click event listeners to tab buttons
+  tabButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      const video = videos[index]; // Get the associated video element
+      // Hide all tab content
+      tabContents.forEach(content => (content.style.display = 'none'));
 
-      if (video.paused) {
-        toggleVideoPlay(video);
-        video.focus(); // Focus on the video to enable browser video controls
-      } else {
-        video.pause(); // Pause the video if it's already playing
-      }
+      // Show the selected tab content based on data-tab attribute
+      const selectedTab = button.getAttribute('data-tab');
+      const correspondingContent = document.getElementById(selectedTab);
+      correspondingContent.style.display = 'block';
 
-      // Add the pointer-cursor class to the button
-      button.classList.add('pointer-cursor');
+      // Remove 'active' class from all tab buttons
+      tabButtons.forEach(tabButton => tabButton.classList.remove('active'));
+
+      // Add 'active' class to the clicked tab button
+      button.classList.add('active');
     });
   });
+  
+  function addModalListeners() {
+    if (openModalBtn && closeModalBtn) {
+      openModalBtn.addEventListener('click', () => toggleModal(true, modal));
+      openModalBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          toggleModal(true, modal);
+        }
+      });
+      closeModalBtn.addEventListener('click', () => toggleModal(false, modal));
+      closeModalBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          toggleModal(false, modal);
+        }
+      });
+
+      // Add other modal-related event listeners
+    }
+  }
+
+  function addVideoListeners() {
+    videoContainers.forEach(container => {
+      const videoInContainer = container.querySelector('video');
+      if (videoInContainer) {
+        videoInContainer.removeAttribute('controls');
+        container.addEventListener('click', () => toggleVideoPlay(videoInContainer));
+      }
+    });
+
+    if (videoModal && openVideoModalBtn && closeVideoModal) {
+      openVideoModalBtn.addEventListener('click', () => {
+        toggleModal(true, videoModal);
+      });
+
+      openVideoModalBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          toggleModal(true, videoModal);
+        }
+      });
+
+      closeVideoModal.addEventListener('click', () => {
+        toggleModal(false, videoModal);
+        const videoInModal = videoModal.querySelector('video');
+        if (videoInModal) {
+          videoInModal.pause();
+        }
+      });
+
+      closeVideoModal.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          toggleModal(false, videoModal);
+          const videoInModal = videoModal.querySelector('video');
+          if (videoInModal) {
+            videoInModal.pause();
+          }
+        }
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === videoModal) {
+          toggleModal(false, videoModal);
+          const videoInModal = videoModal.querySelector('video');
+          if (videoInModal) {
+            videoInModal.pause();
+          }
+        }
+      });
+    }
+  }
+
+  function addAccordionListeners() {
+    if (accordionHeaders.length > 0) {
+      accordionHeaders.forEach((header, index) => {
+        header.addEventListener('click', () => {
+          const accordion = header.parentNode;
+  
+          if (accordion.classList.contains('active')) {
+            accordion.classList.remove('active');
+            accordionContents[index].style.display = 'none';
+          } else {
+            accordionHeaders.forEach((h, i) => {
+              if (i !== index) {
+                h.parentNode.classList.remove('active');
+                accordionContents[i].style.display = 'none';
+                toggleChevronRotation(h);
+              }
+            });
+  
+            accordion.classList.add('active');
+            toggleChevronRotation(header);
+            accordionContents[index].style.display = 'grid';
+            updateGridColumns();
+          }
+        });
+  
+        header.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.keyCode === 13) {
+            this.click();
+          }
+        });
+      });
+  
+      // Initializations
+      accordionHeaders[0].parentNode.classList.add('active');
+      toggleChevronRotation(accordionHeaders[0]);
+      accordionContents[0].style.display = 'grid';
+      updateGridColumns();
+    }
+  }
 
   // Function to toggle video play/pause
   function toggleVideoPlay(video) {
-    if (video.paused) {
+    if (video && video.paused) {
       video.play();
-      video.volume = 0.5; // Set the volume to 50% (adjust as needed)
-      video.controls = true; // Enable browser video controls
-      const button = video.previousElementSibling; // Get the play button
-      button.style.display = 'none'; // Hide the play button when video is playing
-    } else {
+      video.volume = 0.5;
+      video.controls = true;
+      const button = video.previousElementSibling;
+      if (button) {
+        button.style.display = 'none';
+      }
+    } else if (video) {
       video.pause();
     }
   }
@@ -57,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (open) {
       modal.style.display = 'flex';
       if (window.innerWidth >= 768) {
-        modal.style.top = '10vh';
+        modal.style.top = '60px';
         modal.style.left = '50%';
         modal.style.height = 'webkit-fill-available';
         modal.style.transform = 'translate(-50%, 1%)';
@@ -74,160 +216,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Other functions for handling tab clicks, updating grid columns, toggling chevron rotation, etc.
 
-  // Function to handle tab clicks
-  function handleTabClick(event) {
-    const tabName = event.currentTarget.getAttribute('data-tab');
-    const modalContainer = event.currentTarget.closest('.modal');
-    const tabContents = modalContainer.querySelectorAll('.tab-content');
-    const tabLinks = modalContainer.querySelectorAll('.tab-button');
-
-    tabContents.forEach(content => content.style.display = 'none');
-    tabLinks.forEach(link => link.classList.remove('active'));
-
-    const selectedTabContent = modalContainer.querySelector(`#${tabName}`);
-    selectedTabContent.style.display = 'block';
-    event.currentTarget.classList.add('active');
-  }
-
-  // Function to update grid styles based on screen width
-  function updateGridColumns() {
-    const screenWidth = window.innerWidth;
-
-    accordionContents.forEach((content, index) => {
-      if (screenWidth <= SMALL_SCREEN) {
-        content.style.gridTemplateColumns = "repeat(1, 1fr)";
-        content.style.width = "-webkit-fill-available";
-        content.style.height = "fit-content";
-
-      } else if (screenWidth <= MEDIUM_SCREEN) {
-        content.style.gridTemplateColumns = "repeat(2, 1fr)";
-      } else {
-        content.style.gridTemplateColumns = "repeat(3, 1fr)";
-      }
-    });
-  }
-
-  // Function to toggle chevron rotation
-  function toggleChevronRotation(header) {
-    const chevron = header.querySelector(".header-trigger");
-    if (chevron) {
-      chevron.style.transform = header.parentNode.classList.contains("active") ? "rotate(0deg)" : "rotate(180deg)";
-    }
-  }
-
-  // Constants
-  const SMALL_SCREEN = 743;
-  const MEDIUM_SCREEN = 990;
-
-  const navToggle = document.querySelector(".hamburger-menu");
-  const links = document.querySelector(".nav-menu");
-
-  const video = document.querySelector('.poster-image');
-  const modal = document.getElementById('modal');
-  const modalOverlay = document.querySelector('.modal-overlay');
-  const openModalBtn = document.getElementById('openModal');
-  const closeModalBtn = document.getElementById('closeModal');
-  const modalTabButtons = document.querySelectorAll('.modal .tab-button');
-  const firstModalTabButton = document.querySelector('.modal .tab-button');
-  const videoContainers = document.querySelectorAll('.video-container');
-  const openVideoModalBtn = document.getElementById('openVideoModal');
-  const videoModal = document.getElementById('tabsVideoModal');
-  const closeVideoModal = document.querySelector('.closeVideoModal');
-  const accordionHeaders = document.querySelectorAll(".accordion-header");
-  const accordionContents = document.querySelectorAll(".accordion .grid-container");
-
-  // Add event listeners
-  navToggle.addEventListener('click', () => links.classList.toggle("show"));
-  video.addEventListener('keydown', (event) => event.key === 'Enter' && toggleVideoPlay(video));
-
-  openModalBtn.addEventListener('click', () => toggleModal(true, modal));
-  closeModalBtn.addEventListener('click', () => toggleModal(false, modal));
-  openModalBtn.addEventListener('keydown', (event) => event.key === 'Enter' && toggleModal(true, modal));
-  closeModalBtn.addEventListener('keydown', (event) => event.key === 'Enter' && toggleModal(false, modal));
-
-  modalTabButtons.forEach(button => button.addEventListener('click', handleTabClick));
-  if (firstModalTabButton) {
-    firstModalTabButton.click();
-  }
-
-  videoContainers.forEach(container => {
-    const videoInContainer = container.querySelector('video');
-    if (videoInContainer) {
-      videoInContainer.removeAttribute('controls');
-      container.addEventListener('click', () => toggleVideoPlay(videoInContainer));
-    }
-  });
-
-  openVideoModalBtn.addEventListener('click', () => {
-    toggleModal(true, videoModal);
-  });
-
-  openVideoModalBtn.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      toggleModal(true, videoModal);
-    }
-  });
-
-  closeVideoModal.addEventListener('click', () => {
-    toggleModal(false, videoModal);
-    const videoInModal = videoModal.querySelector('video');
-    videoInModal.pause();
-  });
-
-  closeVideoModal.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      toggleModal(false, videoModal);
-      const videoInModal = videoModal.querySelector('video');
-      videoInModal.pause();
-    }
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === videoModal) {
-      toggleModal(false, videoModal);
-      const videoInModal = videoModal.querySelector('video');
-      videoInModal.pause();
-    }
-  });
-
-  accordionHeaders.forEach((header, index) => {
-    header.addEventListener("click", () => {
-      const accordion = header.parentNode;
-
-      if (accordion.classList.contains("active")) {
-        accordion.classList.remove("active");
-        accordionContents[index].style.display = "none";
-      } else {
-        accordionHeaders.forEach((h, i) => {
-          if (i !== index) {
-            h.parentNode.classList.remove("active");
-            accordionContents[i].style.display = "none";
-            toggleChevronRotation(h);
-          }
-        });
-
-        accordion.classList.add("active");
-        toggleChevronRotation(header);
-        accordionContents[index].style.display = "grid";
-        updateGridColumns();
-      }
-    });
-
-    // Add keydown event listener for Enter key
-    header.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter' || event.keyCode === 13) {
-        // Trigger a click event when Enter key is pressed
-        this.click();
-      }
-    });
-  });
   // Initializations
-  accordionHeaders[0].parentNode.classList.add("active");
-  toggleChevronRotation(accordionHeaders[0]);
-  accordionContents[0].style.display = "grid";
-  updateGridColumns();
+  addPlayButtonListeners();
+  addModalListeners();
+  addVideoListeners();
+  addAccordionListeners();
+
+  // Additional setup and initialization code
 });
+
+
+
 
 
 // Voice command
