@@ -128,7 +128,7 @@ p {
 
 .pointer-cursor {
     cursor: pointer;
-  }
+}
 
 .guitar-tuner {
     width: 300px;
@@ -365,7 +365,8 @@ a {
 
 
 .navbar-link a.active-link {
-    text-decoration: underline;
+    font-weight: bold;
+    color: var(--primary-hover);
 }
 
 .main-content-container {
@@ -524,14 +525,14 @@ a {
 }
 
 /* .tab-button, */
-.tab-link {
+.tab-button {
     font-family: var(--body-copy);
     font-size: 0.98rem;
     letter-spacing: 1px;
     background-color: #809ee1;
     color: var(--brand-color-black);
     border: 1px solid var(--blue-grey-1);
-    width: 50%;
+    width: -webkit-fill-available;
     padding: 10px 20px;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
@@ -543,13 +544,12 @@ a {
         border: 1px solid var(--brand-color-black);
         box-shadow: none;
     }
-}
 
-/* .tab-button.active, */
-.tab-link.active {
-    color: var(--brand-color-white);
-    background-color: var(--brand-color-purple);
-    border: 1px solid var(--brand-color-d-blue);
+    &.active {
+        color: var(--brand-color-white);
+        background-color: var(--brand-color-purple);
+        border: 1px solid var(--brand-color-d-blue);
+    }
 }
 
 .tab-content_main {
@@ -804,8 +804,8 @@ a {
 
 .grid-container .card .card-image-section {
     width: 100%;
-    height: 300px;
-    background-size: cover;
+    height: 200px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1015,6 +1015,35 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: -webkit-fill-available;
+}
+
+.playPauseButton {
+    position: absolute;
+    /* Set to absolute positioning */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Center the button perfectly */
+    border-radius: 50%;
+    border: none;
+    background-color: #eb1616;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.playPauseButton:hover {
+    background-color: #ee3838;
 }
 
 .btt-button {
@@ -1524,30 +1553,30 @@ footer {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: 9vh;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
 }
 
 .tabs-modal-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #fefefe;
     margin: 0 auto;
     border: 1px solid #888;
     width: 100%;
+    height: fit-content;
 
     .flex-row {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        text-decoration: underline;
+        margin-bottom: 0;
 
         .vid-modal-title {
             display: flex;
@@ -1592,10 +1621,9 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 95%;
-    background-color: #f1f1f1;
+    width: 100%;
+    background-color: inherit;
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 
 .accordion-header {
@@ -1603,38 +1631,38 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: -webkit-fill-available;
+    width: 95%;
     border-bottom: 1px solid var(--blue-grey-1);
     background-color: var(--brand-color-white);
     color: var(--primary-text-color-1);
-    padding: 10px 0;
+    padding: 5px 0;
     margin: 0;
     cursor: pointer;
-
-    &:hover {
-        background-color: #ffffffdb;
-    }
 }
 
 .accordion-header h3 {
     margin-bottom: 0;
 }
 
-
-/* Styles for the active accordion */
-.accordion.active {
-    background-color: #ffffffdb;
-}
-
 .accordion .grid-container {
     margin: 0;
-    margin-top: 20px;
 }
 
 .accordion .grid-container .grid-item {
-    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     border-bottom: 1px solid #ccc;
-    text-align: center;
+
+    .video-container {
+        max-width: 97%;
+
+        .poster-image {
+            max-width: inherit;
+        }
+    }
 }
 
 @media all and (min-width: 576px) {
@@ -1944,6 +1972,8 @@ footer {
     /* tabs page  */
 
     .tabs-modal-content {
+        height: fit-content;
+        width: auto;
         padding: 20px;
 
         .flex-row {
@@ -1955,14 +1985,15 @@ footer {
         width: 100%;
         margin-bottom: 10px;
         border-radius: 5px;
-
-        .accordion .grid-container {
-            display: none;
+        .accordion-header {
+            width: 100%;
         }
-    }
-
-    .accordion .grid-container .grid-item {
-        border-bottom: none;
+        .grid-container {
+            display: none;
+            .grid-item {
+                border-bottom: none;
+            }
+        }
     }
 }
 
@@ -2105,9 +2136,19 @@ footer {
         text-transform: lowercase;
     }
 
+    /* tabs  */
+    .tabs-modal {
+        padding-top: 0;
+    }
+
+    .accordion-header {
+        padding: 0;
+    }
+
 }
 
 @media only screen and (min-width: 1090px) {
+
     .accordion .grid-container {
         justify-content: center;
     }
@@ -2330,7 +2371,6 @@ footer {
         height: 42px;
     }
 
-    /* tabs  */
     .accordion .grid-container .grid-item {
         flex-direction: column;
     }
@@ -2382,6 +2422,7 @@ footer {
     }
 
     /* tabs  */
+
     .tabs-modal-content {
         width: 76%;
     }
@@ -2458,34 +2499,5 @@ footer {
     .tabs-modal-content {
         width: 60%;
     }
-
-    .video-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        /* Set to relative positioning */
-    }
-
-    .playPauseButton {
-        position: absolute;
-        /* Set to absolute positioning */
-        top: 50%;
-        /* Center vertically */
-        left: 50%;
-        /* Center horizontally */
-        transform: translate(-50%, -50%);
-        /* Center the button perfectly */
-        border-radius: 50%;
-        border: none;
-        background-color: #eb1616;
-        padding: 20px;
-        transition: all .5s ease-in-out;
-    }
-    .playPauseButton:hover {
-            background-color: #ee3838;
-        }
-    
 
 }
