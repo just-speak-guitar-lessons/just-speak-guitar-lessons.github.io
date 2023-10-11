@@ -1003,10 +1003,8 @@ a {
 .grid-container .card .video-container,
 .grid-container .card .video-container .poster-image,
 .grid-container .card .video-container .video {
-    position: relative;
     width: -webkit-fill-available;
     overflow: hidden;
-    /* 16:9 aspect ratio (height / width) */
 }
 
 .grid-container .card .video-container .full-width {
