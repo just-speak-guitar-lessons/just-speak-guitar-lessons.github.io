@@ -11,19 +11,31 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         const video = videos[index]; // Get the associated video element
-        toggleVideoPlay(video);
-        video.focus(); // Focus on the video to enable browser video controls
+
+        if (video.paused) {
+          toggleVideoPlay(video);
+          video.focus(); // Focus on the video to enable browser video controls
+        } else {
+          video.pause(); // Pause the video if it's already playing
+        }
+
+        event.preventDefault(); // Prevent the default action of the Enter key
       }
     });
 
     // Add event listener to handle button click
     button.addEventListener('click', () => {
       const video = videos[index]; // Get the associated video element
-      toggleVideoPlay(video);
-      video.focus(); // Focus on the video to enable browser video controls
 
-        // Add the pointer-cursor class to the button
-    button.classList.add('pointer-cursor');
+      if (video.paused) {
+        toggleVideoPlay(video);
+        video.focus(); // Focus on the video to enable browser video controls
+      } else {
+        video.pause(); // Pause the video if it's already playing
+      }
+
+      // Add the pointer-cursor class to the button
+      button.classList.add('pointer-cursor');
     });
   });
 
@@ -45,13 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (open) {
       modal.style.display = 'flex';
       if (window.innerWidth >= 768) {
-        modal.style.top = '60px';
+        modal.style.top = '10vh';
         modal.style.left = '50%';
         modal.style.height = 'webkit-fill-available';
         modal.style.transform = 'translate(-50%, 1%)';
         modal.style.transition = 'none';
-      } else {
-        modal.style.top = `${calculateModalTop()}px`;
+        modal.style.zIndex = '1';
       }
     } else {
       modal.style.top = '100%';
@@ -62,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modalOverlay.removeEventListener('click', closeModal);
     }
   }
+
 
   // Function to handle tab clicks
   function handleTabClick(event) {
@@ -86,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (screenWidth <= SMALL_SCREEN) {
         content.style.gridTemplateColumns = "repeat(1, 1fr)";
         content.style.width = "-webkit-fill-available";
+        content.style.height = "fit-content";
+
       } else if (screenWidth <= MEDIUM_SCREEN) {
         content.style.gridTemplateColumns = "repeat(2, 1fr)";
       } else {
@@ -103,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Constants
-  const SMALL_SCREEN = 768;
-  const MEDIUM_SCREEN = 1090;
+  const SMALL_SCREEN = 743;
+  const MEDIUM_SCREEN = 990;
 
   const navToggle = document.querySelector(".hamburger-menu");
   const links = document.querySelector(".nav-menu");
@@ -199,24 +213,21 @@ document.addEventListener('DOMContentLoaded', () => {
         updateGridColumns();
       }
     });
-  });
 
+    // Add keydown event listener for Enter key
+    header.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        // Trigger a click event when Enter key is pressed
+        this.click();
+      }
+    });
+  });
   // Initializations
   accordionHeaders[0].parentNode.classList.add("active");
   toggleChevronRotation(accordionHeaders[0]);
   accordionContents[0].style.display = "grid";
   updateGridColumns();
 });
-
-// Function to calculate modal top position
-function calculateModalTop() {
-  const viewportHeight = window.innerHeight;
-  const desiredPercentage = 4; /* Adjust this percentage as needed */
-  return (viewportHeight * desiredPercentage) / 100;
-}
-
-
-
 
 
 // Voice command
