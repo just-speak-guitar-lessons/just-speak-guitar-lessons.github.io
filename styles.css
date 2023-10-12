@@ -293,14 +293,17 @@ a {
     align-items: center;
 }
 
-.navbar-logo img {
-    width: 40px;
-    height: auto;
-}
-
 .logo-container {
     display: flex;
     align-items: center;
+}
+
+.logo-container .emphasis-logo {
+    background-image: url(assets/img/global-imgs/badge.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
 }
 
 .logo-name h1 {
@@ -402,7 +405,7 @@ a {
 }
 
 .global-hero-banner-with-button.frets {
-    background-image: url(assets/img/hero-imgs/frets-hero-2.jpg);
+    background-image: url(assets/img/hero-imgs/frets-hero.webp);
 }
 
 .global-hero-banner-with-button.chords {
@@ -667,31 +670,31 @@ a {
 }
 
 .page-nav-container .card-image.basics {
-    background-image: url(assets/img/index-imgs/basics-thumbnail.webp);
+    background-image: url(assets/img/hero-imgs/basics-hero.webp);
 }
 
 .page-nav-container .card-image.strings {
-    background-image: url(assets/img/index-imgs/strings-image.webp);
+    background-image: url(assets/img/hero-imgs/strings-hero.webp);
 }
 
 .page-nav-container .card-image.tuning {
-    background-image: url(assets/img/index-imgs/tuning-image-sm.webp);
+    background-image: url(assets/img/hero-imgs/tuning-hero.webp);
 }
 
 .page-nav-container .card-image.frets {
-    background-image: url(assets/img/index-imgs/frets-image.webp);
+    background-image: url(assets/img/hero-imgs/frets-hero.webp);
 }
 
 .page-nav-container .card-image.chords {
-    background-image: url(assets/img/index-imgs/chords-image.webp);
+    background-image: url(assets/img/hero-imgs/chords-hero.webp);
 }
 
 .page-nav-container .card-image.rhythm {
-    background-image: url(assets/img/index-imgs/rhythm-guitar-image.webp);
+    background-image: url(assets/img/hero-imgs/rhythm-lesson-hero.webp);
 }
 
 .page-nav-container .card-image.lead {
-    background-image: url(assets/img/index-imgs/lead-guitar-image.webp);
+    background-image: url(assets/img/hero-imgs/tabs-hero.webp);
 }
 
 .page-nav-container .card-content {
@@ -771,6 +774,9 @@ a {
 }
 
 .flex-row .emphasis-logo {
+    background-image: url(assets/img/global-imgs/badge.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 80px;
     height: 80px;
 }
@@ -783,31 +789,26 @@ a {
 /* generic card layout  */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* Default to a single column */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    max-width: 900px;
-    margin: 20px auto;
 }
 
 /* Card styles */
 .grid-container .card {
-    width: 100%;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
     padding: 5px;
 }
 
 .grid-container .card .card-image-section {
-    width: 100%;
+    width: -webkit-fill-available;
     height: 200px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+    border-radius: inherit;
 }
 
 .headstock {
@@ -823,7 +824,7 @@ a {
 }
 
 .fretboard {
-    background-image: url(assets/img/basics-imgs/frets-image.webp);
+    background-image: url(assets/img/hero-imgs/frets-hero.webp);
 }
 
 .frets {
@@ -983,6 +984,7 @@ a {
 .grid-container .card .card-content {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.9);
+    height: -webkit-fill-available;
 }
 
 .medium-img {
@@ -1000,13 +1002,6 @@ a {
     text-align: left;
 }
 
-.grid-container .card .video-container,
-.grid-container .card .video-container .poster-image,
-.grid-container .card .video-container .video {
-    width: -webkit-fill-available;
-    overflow: hidden;
-}
-
 .grid-container .card .video-container .full-width {
     position: absolute;
     top: 0;
@@ -1019,9 +1014,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     width: -webkit-fill-available;
+    height: auto;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.grid-container .card .video-container .poster-image,
+.grid-container .card .video-container .video {
+    width: -webkit-fill-available;
+    height: auto;
+    overflow: hidden;
 }
 
 .playPauseButton {
@@ -1473,7 +1478,16 @@ footer {
     align-items: center;
 }
 
-.footer-column .logo-name {
+.footer-column .logo .emphasis-logo {
+    background-image: url(assets/img/global-imgs/badge.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.footer-column .logo .logo-name {
     font-family: var(--body-copy);
     font-size: 1.4rem;
     line-height: 5pt;
@@ -1482,11 +1496,6 @@ footer {
     text-transform: uppercase;
 }
 
-.footer-column .logo .logo-image {
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-}
 
 .footer-column .footer-list-row {
     display: flex;
@@ -1859,11 +1868,6 @@ footer {
         width: -webkit-fill-available;
     }
 
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* Two columns */
-    }
-
     .flex-col_centered {
         margin-bottom: 1em;
         width: 100%;
@@ -1898,6 +1902,11 @@ footer {
 
     .emphasis {
         letter-spacing: 1pt;
+    }
+
+    /* grid-layout  */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     }
 
     #interactive-image-tuner {
@@ -1954,6 +1963,15 @@ footer {
         gap: 18px;
     }
 
+    .grid-container .grid-item {
+        max-height: 700px;
+        height: 100%;
+    }
+
+    .grid-container .card {
+        height: 100%;
+    }
+
     .grid-container_quad .guitar-select-button {
         padding: 8px;
     }
@@ -1983,11 +2001,14 @@ footer {
         width: 100%;
         margin-bottom: 10px;
         border-radius: 5px;
+
         .accordion-header {
             width: 100%;
         }
+
         .grid-container {
             display: none;
+
             .grid-item {
                 border-bottom: none;
             }
@@ -2078,14 +2099,11 @@ footer {
 
     /* basics styles */
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0;
-        max-width: 944px;
-        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     }
 
-    .grid-container .card .card-content {
-        height: 460px;
+    .grid-container .grid-item {
+        max-height: 560px;
     }
 
     .interactive-placeholder.bass {
@@ -2283,16 +2301,6 @@ footer {
 
     .grid-container {
         max-width: 1163px;
-    }
-
-    .grid-container .card .card-content {
-        height: 350px;
-    }
-
-    .grid-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     #sm-device-display {
