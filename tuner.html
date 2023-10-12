@@ -11,9 +11,9 @@
   <title>Tuning</title>
   <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
-    rel="stylesheet">
-    <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-imgs/tuning-hero.webp" type="image/webp">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-imgs/tuning-hero.webp" type="image/webp">
 
   <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
@@ -31,7 +31,7 @@
         <div class="home-link">
           <a href="/index.html" class="navbar-logo">
             <div class="logo-container" title="logo and home button">
-              <img src="assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
+              <div class="emphasis-logo"></div>
               <div class="logo-name">
                 <h1>Guitar <span>Lessons</span></h1>
               </div>
@@ -47,25 +47,26 @@
         </button>
         <ul id="nav-menu" class="nav-menu">
           <li class="navbar-link navbar-item">
-            <a href="/basics.html" title="Link to the basics Page">Basics</a>
+            <a href="//just-speak-guitar-lessons.github.io/basics.html" title="Link to the basics Page">Basics</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/strings.html" title="Link to the strings page">Strings</a>
+            <a href="//just-speak-guitar-lessons.github.io/strings.html" title="Link to the strings page">Strings</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
+            <a href="//just-speak-guitar-lessons.github.io/tuner.html" class="active-link"
+              title="Link to the tuner page">Tuner</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/frets.html" title="Link to the tuner page">Frets</a>
+            <a href="//just-speak-guitar-lessons.github.io/frets.html" title="Link to the tuner page">Frets</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/chords.html" title="Link to the tuner page">Chords</a>
+            <a href="//just-speak-guitar-lessons.github.io/chords.html" title="Link to the tuner page">Chords</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
+            <a href="//just-speak-guitar-lessons.github.io/rhythm.html" title="Link to the tuner page">Rhythm</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/lead.html" title="Link to the tuner page">Lead</a>
+            <a href="//just-speak-guitar-lessons.github.io/lead.html" title="Link to the tuner page">Tabs</a>
           </li>
         </ul>
       </div>
@@ -198,8 +199,8 @@
 
       <section>
         <div class="flex-row_SB">
-            <h3>Standard Tuning</h3>
-            <a href="#dynamic-tuner" class="primary-button" >Go To Tuner</a>
+          <h3>Standard Tuning</h3>
+          <a href="#dynamic-tuner" class="primary-button">Go To Tuner</a>
         </div>
         <div class="flex-col_left">
           <p>
@@ -220,7 +221,7 @@
         </div>
         <br>
         <div class="flex-row">
-          <img class="emphasis-logo" src="assets/img/global-imgs/badge.svg" alt="company logo" width="60" height="60">
+          <div class="emphasis-logo"></div>
           <p>
             To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
               Hub."
@@ -254,7 +255,7 @@
         <div class="flex-row-SA">
           <article>
             <div class="flex-row">
-            <h3>Instrument Notes.</h3>
+              <h3>Instrument Notes.</h3>
             </div>
             <div class="flex-col no-gap">
               <div class="tabs">
@@ -372,7 +373,7 @@
           <aside id="dynamic-tuner">
             <div class="flex-row">
               <h3>Mic Tuner.</h3>
-              </div>
+            </div>
             <div class="flex-col">
               <div class="guitar-tuner">
                 <p id="note-name"></p>
@@ -411,8 +412,7 @@
       <div class="footer-row">
         <div class="footer-column">
           <a class="logo" href="index.html" title="Guitar Lessons">
-            <img class="logo-image" src="assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
-              title="Guitar Lessons">
+            <div class="emphasis-logo"></div>
             <div class="logo-name">
               Guitar <span>Lessons</span>
             </div>
