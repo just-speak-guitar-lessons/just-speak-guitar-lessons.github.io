@@ -28,10 +28,9 @@
     <nav id="navbar">
       <div class="navbar-container">
         <div class="home-link">
-          <a href="//just-speak-guitar-lessons.github.io/index.html" class="navbar-logo">
+          <a href="/just-speak-guitar-lessons.github.io/index.html" class="navbar-logo">
             <div class="logo-container" title="logo and home button">
-              <img src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg" width="40" height="40"
-                alt="company logo">
+              <div class="emphasis-logo"></div>
               <div class="logo-name">
                 <h1>Guitar <span>Lessons</span></h1>
               </div>
@@ -47,27 +46,34 @@
         </button>
         <ul id="nav-menu" class="nav-menu">
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/basics.html" title="Link to the basics Page">Basics</a>
+              <a href="//just-speak-guitar-lessons.github.io/basics.html" class="active-link"
+                  title="Link to the basics Page">Basics</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/strings.html" title="Link to the strings page">Strings</a>
+              <a href="//just-speak-guitar-lessons.github.io/strings.html"
+                  title="Link to the strings page">Strings</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/tuner.html" title="Link to the tuner page">Tuner</a>
+              <a href="//just-speak-guitar-lessons.github.io/tuner.html"
+                  title="Link to the tuner page">Tuner</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/frets.html" title="Link to the tuner page">Frets</a>
+              <a href="//just-speak-guitar-lessons.github.io/frets.html"
+                  title="Link to the tuner page">Frets</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/chords.html" title="Link to the tuner page">Chords</a>
+              <a href="//just-speak-guitar-lessons.github.io/chords.html"
+                  title="Link to the tuner page">Chords</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/rhythm.html" title="Link to the tuner page">Rhythm</a>
+              <a href="//just-speak-guitar-lessons.github.io/rhythm.html"
+                  title="Link to the tuner page">Rhythm</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/lead.html" title="Link to the tuner page">Lead</a>
+              <a href="//just-speak-guitar-lessons.github.io/lead.html"
+                  title="Link to the tuner page">Tabs</a>
           </li>
-        </ul>
+      </ul>
       </div>
     </nav>
     <section id="top" class="global-hero-banner-with-button basics">
@@ -82,375 +88,369 @@
   </header>
 
   <main>
-    <article>
-      <div class="main-content-container">
-        <div class="modal" id="modal" title="help-center">
-          <div class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
 
-                <h3>Command Hub</h3>
-                <span class="close-modal" id="closeModal">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
-                    <path
-                      d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
-                  </svg>
-                </span>
+    <div class="main-content-container">
+      <div class="modal" id="modal" title="help-center">
+        <div class="modal-overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h3>Command Hub</h3>
+              <span class="close-modal" id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                  <path
+                    d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
+                </svg>
+              </span>
+            </div>
+            <div class="modal-body">
+
+              <p>Please use any of the commands below to navigate anywhere on this application.
+                <br>Please enjoy - thank you.
+              </p>
+
+              <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">Lessons</button>
+                <button class="tab-button" data-tab="tab2">Controls</button>
               </div>
-              <div class="modal-body">
+              <div class="tab-content" id="tab1">
 
-                <p>Please use any of the commands below to navigate anywhere on this application.
-                  <br>Please enjoy - thank you.
-                </p>
-
-                <div class="tabs">
-                  <button class="tab-button active" data-tab="tab1">Lessons</button>
-                  <button class="tab-button" data-tab="tab2">Controls</button>
-                </div>
-                <div class="tab-content" id="tab1">
-
-                  <table>
-                    <!-- <th>What to say</th> -->
+                <table>
+                  <!-- <th>What to say</th> -->
+                  <tr>
+                    <th>What to say to Connie.</th>
+                  </tr>
+                  <tr>
+                    <!-- <td>Home</td> -->
+                    <td>Connie, open the Home Page</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Basics</td> -->
+                    <td>Connie, open the Basics Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Basics Lesson 2.</td>
+                    <!-- <td>Go to the second Basics Lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Fret's</td> -->
+                    <td>Connie, open the Frets Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Guitar Tuner.</td>
+                    <!-- <td>Go to the second Fret's lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Chords</td> -->
+                    <td>Connie, open the Chords Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Chord's Lesson 2.</td>
+                    <!-- <td>Go to the second Chord's Lesson.</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Rhythm</td> -->
+                    <td>Connie, open the Rhythm Guitar Lesson.</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Rhythm Lesson Two</td> -->
+                    <td>Connie, open the Rhythm Guitar Lesson 2.
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Lead</td> -->
+                    <td>Connie, open the Lead Guitar Lesson.</td>
+                  </tr>
+                  <tr>
+                    <!-- <td>Open Lead Lesson Two</td> -->
+                    <td>Connie, open the Lead Guitar Lesson 2.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tab-content" id="tab2">
+                <table>
+                  <tbody>
                     <tr>
-                      <th>What to say to Connie.</th>
+                      <th>What to say.</th>
                     </tr>
                     <tr>
-                      <!-- <td>Home</td> -->
-                      <td>Connie, open the Home Page</td>
+                      <td>Scroll Up.</td>
                     </tr>
                     <tr>
-                      <!-- <td>Open Basics</td> -->
-                      <td>Connie, open the Basics Lesson.</td>
+                      <td>Scroll Down.</td>
                     </tr>
                     <tr>
-                      <td>Connie, open the Basics Lesson 2.</td>
-                      <!-- <td>Go to the second Basics Lesson.</td> -->
+                      <td>Go to the Top Of The Page.</td>
                     </tr>
                     <tr>
-                      <!-- <td>Open Fret's</td> -->
-                      <td>Connie, open the Frets Lesson.</td>
+                      <td>Go to the bottom of the page</td>
                     </tr>
                     <tr>
-                      <td>Connie, open the Guitar Tuner.</td>
-                      <!-- <td>Go to the second Fret's lesson.</td> -->
+                      <td>Go to the next lesson</td>
                     </tr>
                     <tr>
-                      <!-- <td>Open Chords</td> -->
-                      <td>Connie, open the Chords Lesson.</td>
+                      <td>Go back to the last lesson</td>
                     </tr>
                     <tr>
-                      <td>Connie, open the Chord's Lesson 2.</td>
-                      <!-- <td>Go to the second Chord's Lesson.</td> -->
+                      <td>Start the guitar tuner</td>
                     </tr>
-                    <tr>
-                      <!-- <td>Open Rhythm</td> -->
-                      <td>Connie, open the Rhythm Guitar Lesson.</td>
-                    </tr>
-                    <tr>
-                      <!-- <td>Open Rhythm Lesson Two</td> -->
-                      <td>Connie, open the Rhythm Guitar Lesson 2.
-                      </td>
-                    </tr>
-                    <tr>
-                      <!-- <td>Open Lead</td> -->
-                      <td>Connie, open the Lead Guitar Lesson.</td>
-                    </tr>
-                    <tr>
-                      <!-- <td>Open Lead Lesson Two</td> -->
-                      <td>Connie, open the Lead Guitar Lesson 2.
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="tab-content" id="tab2">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>What to say.</th>
-                      </tr>
-                      <tr>
-                        <td>Scroll Up.</td>
-                      </tr>
-                      <tr>
-                        <td>Scroll Down.</td>
-                      </tr>
-                      <tr>
-                        <td>Go to the Top Of The Page.</td>
-                      </tr>
-                      <tr>
-                        <td>Go to the bottom of the page</td>
-                      </tr>
-                      <tr>
-                        <td>Go to the next lesson</td>
-                      </tr>
-                      <tr>
-                        <td>Go back to the last lesson</td>
-                      </tr>
-                      <tr>
-                        <td>Start the guitar tuner</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-
-        <section>
-          <div class="flex-col_left">
-            <h3>Posture</h3>
-            <div class="flex-col_left">
-              <p>Developing the correct posture is very important when learning to play the guitar in a natural, healthy
-                way. By keeping your upper body relaxed and learning how to have proper posture while standing and
-                sitting, you will be able to play to your best ability while also avoiding injury. Holding and playing
-                the guitar will even begin to feel subconsciously natural after you have gotten comfortable with the
-                instrument.</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="flex-row">
-            <img class="emphasis-logo" src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg"
-              alt="company logo" width="60" height="60">
-            <p>
-              To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
-                Hub."
-              </span>
-            </p>
-          </div>
-        </section>
-
-        <section>
-          <h3>Maintaining Good Upper Body Posture</h3>
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section sitting"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Good Posture</h3>
-                  <p class="card-text">
-                    Keep your back straight and your shoulders relaxed. While practicing, keep your back as straight as
-                    you can without putting any strain on your lower back, focusing on upper body alignment. This will
-                    provide you with more flexibility, while helping to reduce any aches.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section shoulders"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Shoulders.</h3>
-                  <p class="card-text">
-                    Focus on keeping your shoulders relaxed, while keeping some slight pressure in your shoulder blades.
-                    Although your shoulders may shift while playing some parts, try to keep some levelness.
-                    If it is hard to keep your shoulders level, you may need to reposition your guitar.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section take-time"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Take Breaks.</h3>
-                  <p class="card-text">
-                    You should only practice between 30
-                    minutes to an hour - then take a short break. During your break, put the
-                    guitar down and do some upper body stretches on your back and shoulders. Regular rests,
-                    ensures that you don't become tense while playing.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h3>Good Sitting Posture</h3>
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section chair"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Correct Seating.</h3>
-                  <p class="card-text">
-                    Purchase a folding chair to sit on while playing. Find a folding chair, or any chair that is low to
-                    the ground. Make sure that the chair allows you to comfortably sit up straight. Sitting on a couch
-                    or bed will make it difficult to practice good posture while playing guitar.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section no-slouching"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Sit Properly.</h3>
-                  <p class="card-text">
-                    Sit at the front of the chair to avoid slouching. Using the back of the chair as support for your
-                    back and shoulders will make it hard to have proper posture. Do not rely on the chair for support
-                    and focus on staying at the front of the chair the entire time you play.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section foot-position"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Foot Placement.</h3>
-                  <p class="card-text">
-                    Place both feet on the ground and spread them apart comfortably. Doing this will allow you to keep
-                   your back posture and allow you to rest the guitar on your thigh.
-                    If you need to raise your leg to support the guitar, then your chair is
-                    too high or your guitar needs to be repositioned.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section classical"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Classical.</h3>
-                  <p class="card-text">
-                    When playing, keep the guitar close to the center of your body. The guitar sits between your legs,
-                    resting on the inner thigh, so that the guitar stands at a 45 degree angle. Optionally, Placing
-                    your leading foot on a footstool, will keep the guitar raised and in the proper position.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section regular"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Regular.</h3>
-                  <p class="card-text">
-                    To play in this position, place the guitars body on your leading thigh. In this position, the guitar
-                    is more
-                    horizontal and your forearm gently rests on the guitars body.
-                    Allow the guitar to sit balanced, you should not need to use your hands to balance it.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section regular-resting"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Regular Positioning.</h3>
-                  <p class="card-text">
-                    Rest your forearm on the lower part of the guitar's body. With your forearm here, you should not be
-                    supporting the neck of the guitar with your other hand. Check the balance of the guitar is correct
-                    by
-                    taking your other hand completely off of the guitar.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h3>Good Standing Posture</h3>
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section strap"></div>
-                <div class="card-content">
-                  <h3 class="card-title">The Strap.</h3>
-                  <p class="card-text">
-                    Guitar straps are an important part
-                    of playing the guitar while standing, they are affordable and can be purchased online too.
-                    Once you receive the strap, attach it to the strap pins on both ends of your guitar.
-                    Always ensure that the strap is secured before playing.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section strap-adjusting"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Strap Adjustment.</h3>
-                  <p class="card-text">
-                    With the guitar strap properly attached, put the
-                    strap over your head and let it fall naturally at your waist. If you prefer playing with the guitar
-                    in a low position, adjust the strap to let the guitar fall
-                    lower. If it is too low, adjust the strap to raise the guitar.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <div class="card">
-                <div class="card-image-section standing"></div>
-                <div class="card-content">
-                  <h3 class="card-title">Standing.</h3>
-                  <p class="card-text">
-                    Keep your feet in line with your shoulders. Even though you could be moving around while playing,
-                    keeping your feet spread in a natural way, helps posture. Keeping your feet below your
-                    shoulders will keep your entire body in line and will help you stop any aches.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="italic-text">
-              <p>Even a soft strum can get a pretty loud sound. A lot of beginner's tend to hit their guitar with
-                everything they’ve got, and can sound harsh to other people. Take your time and try to think about
-                other
-                people too.</p>
-
-            </div>
-          </div>
-        </section>
-
-        <a href="#top" class="btt-button" title="Go back to the top button">
-          <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
-            <path class="arrow"
-              d="M463.077-200v-495.308L224.102-456.333 200-480l280-280 280 280-24.102 23.667-238.975-238.975V-200h-33.846Z">
-            </path>
-          </svg>
-        </a>
       </div>
-    </article>
+
+      <section>
+        <div class="flex-col_left">
+          <h3>Posture</h3>
+          <div class="flex-col_left">
+            <p>Developing the correct posture is very important when learning to play the guitar in a natural, healthy
+              way. By keeping your upper body relaxed and learning how to have proper posture while standing and
+              sitting, you will be able to play to your best ability while also avoiding injury. Holding and playing
+              the guitar will even begin to feel subconsciously natural after you have gotten comfortable with the
+              instrument.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex-row">
+          <div class="emphasis-logo"></div>
+          <p>
+            To open the Voice Commands, just say, <span class="emphasis">"Connie, Open the Command
+              Hub."
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Maintaining Good Upper Body Posture</h3>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section sitting"></div>
+              <div class="card-content">
+                <h3 class="card-title">Good Posture</h3>
+                <p class="card-text">
+                  Keep your back straight and your shoulders relaxed. While practicing, keep your back as straight as
+                  you can without putting any strain on your lower back, focusing on upper body alignment. This will
+                  provide you with more flexibility, while helping to reduce any aches.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section shoulders"></div>
+              <div class="card-content">
+                <h3 class="card-title">Shoulders.</h3>
+                <p class="card-text">
+                  Focus on keeping your shoulders relaxed, while keeping some slight pressure in your shoulder blades.
+                  Although your shoulders may shift while playing some parts, try to keep some levelness.
+                  If it is hard to keep your shoulders level, you may need to reposition your guitar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section take-time"></div>
+              <div class="card-content">
+                <h3 class="card-title">Take Breaks.</h3>
+                <p class="card-text">
+                  You should only practice between 30
+                  minutes to an hour - then take a short break. During your break, put the
+                  guitar down and do some upper body stretches on your back and shoulders. Regular rests,
+                  ensures that you don't become tense while playing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Good Sitting Posture</h3>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section chair"></div>
+              <div class="card-content">
+                <h3 class="card-title">Correct Seating.</h3>
+                <p class="card-text">
+                  Purchase a folding chair to sit on while playing. Find a folding chair, or any chair that is low to
+                  the ground. Make sure that the chair allows you to comfortably sit up straight. Sitting on a couch
+                  or bed will make it difficult to practice good posture while playing guitar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section no-slouching"></div>
+              <div class="card-content">
+                <h3 class="card-title">Sit Properly.</h3>
+                <p class="card-text">
+                  Sit at the front of the chair to avoid slouching. Using the back of the chair as support for your
+                  back and shoulders will make it hard to have proper posture. Do not rely on the chair for support
+                  and focus on staying at the front of the chair the entire time you play.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section foot-position"></div>
+              <div class="card-content">
+                <h3 class="card-title">Foot Placement.</h3>
+                <p class="card-text">
+                  Place both feet on the ground and spread them apart comfortably. Doing this will allow you to keep
+                  your back posture and allow you to rest the guitar on your thigh.
+                  If you need to raise your leg to support the guitar, then your chair is
+                  too high or your guitar needs to be repositioned.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section classical"></div>
+              <div class="card-content">
+                <h3 class="card-title">Classical.</h3>
+                <p class="card-text">
+                  When playing, keep the guitar close to the center of your body. The guitar sits between your legs,
+                  resting on the inner thigh, so that the guitar stands at a 45 degree angle. Optionally, Placing
+                  your leading foot on a footstool, will keep the guitar raised and in the proper position.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section regular"></div>
+              <div class="card-content">
+                <h3 class="card-title">Regular.</h3>
+                <p class="card-text">
+                  To play in this position, place the guitars body on your leading thigh. In this position, the guitar
+                  is more
+                  horizontal and your forearm gently rests on the guitars body.
+                  Allow the guitar to sit balanced, you should not need to use your hands to balance it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section regular-resting"></div>
+              <div class="card-content">
+                <h3 class="card-title">Regular Positioning.</h3>
+                <p class="card-text">
+                  Rest your forearm on the lower part of the guitar's body. With your forearm here, you should not be
+                  supporting the neck of the guitar with your other hand. Check the balance of the guitar is correct
+                  by
+                  taking your other hand completely off of the guitar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Good Standing Posture</h3>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section strap"></div>
+              <div class="card-content">
+                <h3 class="card-title">The Strap.</h3>
+                <p class="card-text">
+                  Guitar straps are an important part
+                  of playing the guitar while standing, they are affordable and can be purchased online too.
+                  Once you receive the strap, attach it to the strap pins on both ends of your guitar.
+                  Always ensure that the strap is secured before playing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section strap-adjusting"></div>
+              <div class="card-content">
+                <h3 class="card-title">Strap Adjustment.</h3>
+                <p class="card-text">
+                  With the guitar strap properly attached, put the
+                  strap over your head and let it fall naturally at your waist. If you prefer playing with the guitar
+                  in a low position, adjust the strap to let the guitar fall
+                  lower. If it is too low, adjust the strap to raise the guitar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-image-section standing"></div>
+              <div class="card-content">
+                <h3 class="card-title">Standing.</h3>
+                <p class="card-text">
+                  Keep your feet in line with your shoulders. Even though you could be moving around while playing,
+                  keeping your feet spread in a natural way, helps posture. Keeping your feet below your
+                  shoulders will keep your entire body in line and will help you stop any aches.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="italic-text">
+          <p>Even a soft strum can get a pretty loud sound. A lot of beginner's tend to hit their guitar with
+            everything they’ve got, and can sound harsh to other people. Take your time and try to think about
+            other
+            people too.</p>
+
+        </div>
+
+      </section>
+
+      <a href="#top" class="btt-button" title="Go back to the top button">
+        <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+          <path class="arrow"
+            d="M463.077-200v-495.308L224.102-456.333 200-480l280-280 280 280-24.102 23.667-238.975-238.975V-200h-33.846Z">
+          </path>
+        </svg>
+      </a>
+    </div>
 
     <footer>
       <div class="footer-row">
         <!-- <div class="footer-top-row_container"> -->
         <div class="footer-column">
           <a class="logo" href="index.html" title="Guitar Lessons">
-            <img class="logo-image" src="//just-speak-guitar-lessons.github.io/assets/img/global-imgs/badge.svg"
-              width="80" height="80" alt="Site logo" title="Guitar Lessons">
-            <div class="logo-name">
-              Guitar <span>Lessons</span>
-            </div>
+            <div class="emphasis-logo"></div>
+            <h1 class="logo-name">Guitar <span>Lessons</span></h1>
           </a>
         </div>
 
         <div class="footer-column">
           <h2 class="emphasis">Connect with us</h2>
-
-
           <ul aria-label="Connect with us" class="footer-list-row">
             <li>
               <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
-
                 <svg class="facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg" width="54"
                   height="54" viewbox="0 0 30 30">
                   <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
