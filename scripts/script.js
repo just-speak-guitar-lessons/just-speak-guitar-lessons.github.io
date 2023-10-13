@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('External script loaded')
 
+  // mobile nav logic 
+  const hamburgerButton = document.getElementById("hamburger-menu");
+  const iconBar = document.getElementById("icon-bar");
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+  let isMenuOpen = false;
+
+  hamburgerButton.addEventListener("click", function () {
+    const navMenu = document.getElementById("nav-menu");
+    isMenuOpen = !isMenuOpen;
+    navMenu.classList.toggle("show");
+
+    if (isMenuOpen) {
+      // Set cross icon state
+      bar1.style.transform = "rotate(-45deg) translate(-7px, 4px)";
+      bar2.style.opacity = "0";
+      bar3.style.transform = "rotate(45deg) translate(-5px, -7px)";
+    } else {
+      // Set hamburger icon state
+      bar1.style.transform = "none";
+      bar2.style.opacity = "1";
+      bar3.style.transform = "none";
+    }
+  });
   // Constants
   const SMALL_SCREEN = 743
   const MEDIUM_SCREEN = 990

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
-    <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+    <meta name="description"
+        content="Introduction page of Guitar tutorials, describing voice controls and multiple navigational areas.">
     <meta name="author" content="Joseph Percival">
     <meta name="theme-color" content="#317EFB">
     <title>Voice-Controlled Guitar Tutorials | Learn Guitar with Voice Commands Home Page</title>
-    <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/global-imgs/badge.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');"
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
@@ -28,7 +29,7 @@
                         <div class="logo-container" title="logo and home button">
                             <div class="emphasis-logo"></div>
                             <div class="logo-name">
-                                <h1>Guitar <span>Lessons</span></h1>
+                                <h1 class="logo-name">Guitar <span>Lessons</span></h1>
                             </div>
                         </div>
                     </a>
@@ -36,12 +37,13 @@
 
                 <button type="button" class="hamburger-menu" id="hamburger-menu"
                     aria-label="main navigation menu button" title="Navigation Menu button">
-                    <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
-                        width="40">
-                        <path
-                            d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
-                    </svg>
+                    <div id="icon-bar">
+                        <div class="bar" id="bar1"></div>
+                        <div class="bar" id="bar2"></div>
+                        <div class="bar" id="bar3"></div>
+                    </div>
                 </button>
+
                 <ul id="nav-menu" class="nav-menu">
                     <li class="navbar-link navbar-item">
                         <a href="//just-speak-guitar-lessons.github.io/basics.html"
@@ -74,6 +76,7 @@
                 </ul>
             </div>
         </nav>
+
         <section id="top" class="global-hero-banner-with-button index">
             <div class="hero-content">
                 <h2 class="title white">Welcome to Just Speak Guitar Lessons</h2>
