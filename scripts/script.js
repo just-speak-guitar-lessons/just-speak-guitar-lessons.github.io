@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('External script loaded')
 
-  // mobile nav logic 
-  const hamburgerButton = document.getElementById("hamburger-menu");
-  const iconBar = document.getElementById("icon-bar");
-  const bar1 = document.getElementById("bar1");
-  const bar2 = document.getElementById("bar2");
-  const bar3 = document.getElementById("bar3");
-  let isMenuOpen = false;
+  // mobile nav logic
+  const hamburgerButton = document.getElementById('hamburger-menu')
+  const iconBar = document.getElementById('icon-bar')
+  const bar1 = document.getElementById('bar1')
+  const bar2 = document.getElementById('bar2')
+  const bar3 = document.getElementById('bar3')
+  let isMenuOpen = false
 
-  hamburgerButton.addEventListener("click", function () {
-    const navMenu = document.getElementById("nav-menu");
-    isMenuOpen = !isMenuOpen;
-    navMenu.classList.toggle("show");
+  hamburgerButton.addEventListener('click', function () {
+    const navMenu = document.getElementById('nav-menu')
+    isMenuOpen = !isMenuOpen
+    navMenu.classList.toggle('show')
 
     if (isMenuOpen) {
       // Set cross icon state
-      bar1.style.transform = "rotate(-45deg) translate(-7px, 4px)";
-      bar2.style.opacity = "0";
-      bar3.style.transform = "rotate(45deg) translate(-5px, -7px)";
+      bar1.style.transform = 'rotate(-45deg) translate(-7px, 4px)'
+      bar2.style.opacity = '0'
+      bar3.style.transform = 'rotate(45deg) translate(-5px, -7px)'
     } else {
       // Set hamburger icon state
-      bar1.style.transform = "none";
-      bar2.style.opacity = "1";
-      bar3.style.transform = "none";
+      bar1.style.transform = 'none'
+      bar2.style.opacity = '1'
+      bar3.style.transform = 'none'
     }
-  });
+  })
   // Constants
   const SMALL_SCREEN = 743
   const MEDIUM_SCREEN = 990
@@ -75,25 +75,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll('.tab-button')
   const tabContents = document.querySelectorAll('.tab-content')
 
-  // Set the default tab to be open (tab1)
-  tabContents[0].style.display = 'block'
+  // Add the "active" class to the first tab button and its content when the page loads
+  tabButtons[0].classList.add('active')
+  tabContents[0].classList.add('active')
 
   // Add click event listeners to tab buttons
   tabButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      // Hide all tab content
-      tabContents.forEach(content => (content.style.display = 'none'))
-
-      // Show the selected tab content based on data-tab attribute
+      // Get the data-tab attribute of the clicked tab button
       const selectedTab = button.getAttribute('data-tab')
-      const correspondingContent = document.getElementById(selectedTab)
-      correspondingContent.style.display = 'block'
 
-      // Remove 'active' class from all tab buttons
-      tabButtons.forEach(tabButton => tabButton.classList.remove('active'))
+      // Toggle the 'active' class on all tab buttons with the same data-tab attribute
+      tabButtons.forEach(tabButton => {
+        if (tabButton.getAttribute('data-tab') === selectedTab) {
+          tabButton.classList.add('active')
+        } else {
+          tabButton.classList.remove('active')
+        }
+      })
 
-      // Add 'active' class to the clicked tab button
-      button.classList.add('active')
+      // Toggle the 'active' class on all tab contents with the same data-tab attribute
+      tabContents.forEach(content => {
+        if (content.id === selectedTab) {
+          content.classList.add('active')
+        } else {
+          content.classList.remove('active')
+        }
+      })
     })
   })
 
