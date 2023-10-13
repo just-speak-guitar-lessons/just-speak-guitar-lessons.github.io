@@ -61,7 +61,7 @@ html {
 
 body {
     background-color: var(--brand-color-white);
-    overflow: hidden;
+    overflow: auto;
 }
 
 nav {
@@ -811,6 +811,7 @@ a {
 
 /* generic card layout  */
 .grid-container {
+    margin: 10px 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -1035,16 +1036,18 @@ a {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    width: -webkit-fill-available;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     overflow: hidden;
     border-radius: inherit;
 }
 
 .grid-container .card .video-container .poster-image,
 .grid-container .card .video-container .video {
-    width: -webkit-fill-available;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -1983,12 +1986,16 @@ footer {
     }
 
     .grid-container .grid-item {
-        max-height: 700px;
+        max-height: 500px;
         height: 100%;
     }
 
-    .grid-container .card {
-        height: 100%;
+    .video-container {
+        height: 200px;
+    }
+
+    .grid-container .card .card-content {
+        height: 266px;
     }
 
     .grid-container_quad .guitar-select-button {
@@ -2133,6 +2140,11 @@ footer {
 
     .interactive-placeholder.bass {
         width: 380px;
+    }
+
+    /* strings  */
+    .grid-container .card .card-content {
+        height: 290px;
     }
 
     /* chords  */
@@ -2371,6 +2383,11 @@ footer {
         width: 50%;
     }
 
+    /* strings  */
+    .grid-container .card .card-content {
+        height: 240px;
+    }
+
     .interactive-notes {
         width: 60%;
         margin-bottom: 2em;
@@ -2490,13 +2507,15 @@ footer {
     }
 
     .modal {
-        top: 55px;
+        top: 60px;
+        overflow: hidden;
     }
 
     .modal-content {
         width: 40%;
-        height: 86%;
+        height: 654px;
         left: 30%;
+        top: 16%;
     }
 
     .global-hero-banner-with-button {
