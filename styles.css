@@ -57,11 +57,11 @@
 html {
     scroll-behavior: smooth;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
     background-color: var(--brand-color-white);
+    overflow: hidden;
 }
 
 nav {
@@ -334,7 +334,7 @@ a {
         border-bottom: 2px solid var(--brand-color-purple);
         width: 30px;
         height: 8px;
-      }
+    }
 
     &:hover {
         border-color: var(--brand-color-d-blue);
@@ -489,7 +489,7 @@ a {
     justify-content: flex-start;
     background-color: white;
     padding: 10px;
-    height: 111%;
+    height: 100vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -561,6 +561,23 @@ a {
     }
 }
 
+/* modal tabs  */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    border: 1px solid var(--blue-grey-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+/* guitar tuner tabs  */
+
 .tab-content_main {
     display: none;
     border: 1px solid var(--blue-grey-1);
@@ -586,7 +603,7 @@ a {
     letter-spacing: 1px;
     padding: 8px;
     text-align: left;
-    background-color: #6e7bdb;
+    background-color: #bec4f7;
     color: var(--brand-color-black);
 }
 
@@ -819,13 +836,14 @@ a {
     background-repeat: no-repeat;
     background-position: top;
     border-radius: inherit;
-    }
-    .grid-container .card .card-image-section.md {
-        background-size: contain;
-        width: 70%;
-        height: 300px;
-        background-position: center;
-    }
+}
+
+.grid-container .card .card-image-section.md {
+    background-size: contain;
+    width: 70%;
+    height: 300px;
+    background-position: center;
+}
 
 
 .headstock {
@@ -1401,11 +1419,10 @@ img {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease;
-}
 
-.active,
-.dot:hover {
-    background-color: #717171;
+    &:hover {
+        background-color: #717171;
+    }
 }
 
 /* Styles for the table */
@@ -1843,11 +1860,11 @@ footer {
     }
 
     .modal-content {
-        width: 75%;
-        height: 86%;
+        width: 90%;
+        height: 90%;
         position: relative;
-        left: 12%;
-        top: 4%;
+        left: 5%;
+        top: 2%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -1865,9 +1882,9 @@ footer {
         overflow-y: revert;
     }
 
-    .tabs,
-    .tab-content {
-        width: -webkit-fill-available;
+
+    .tab-content .active {
+        width: 96vw;
     }
 
     .flex-col_centered {
@@ -2097,6 +2114,12 @@ footer {
 
     .page-nav-container .card-content .primary-button {
         width: 100%;
+    }
+
+    /* modal styles  */
+    .modal-content {
+    height: 87%;
+    border-radius: 5px;
     }
 
     /* basics styles */
