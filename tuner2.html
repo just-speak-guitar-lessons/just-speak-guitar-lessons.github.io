@@ -44,12 +44,12 @@
                 </div>
 
                 <button type="button" class="hamburger-menu" id="hamburger-menu"
-                    aria-label="main navigation menu button">
-                    <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
-                        width="40">
-                        <path
-                            d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
-                    </svg>
+                    aria-label="main navigation menu button" title="Navigation Menu button">
+                    <div id="icon-bar">
+                        <div class="bar" id="bar1"></div>
+                        <div class="bar" id="bar2"></div>
+                        <div class="bar" id="bar3"></div>
+                    </div>
                 </button>
                 <ul id="nav-menu" class="nav-menu">
                     <li class="navbar-link navbar-item">
@@ -83,15 +83,25 @@
                 </ul>
             </div>
         </nav>
+
+        <div id="custom-alert" class="hidden">
+            <div class="custom-alert-message">
+                <div class="alert-image"></div>
+                <p>We are sorry, it looks like you haven't visited another page on this site, so we are unable to take you back at this time - thank you.</p>
+                <button id="close-alert">OK</button>
+            </div>
+        </div>
+        
         <section id="top" class="global-hero-banner-with-button tuning">
             <div class="hero-content">
                 <h2 class="title white">The Tuning <br> Lesson 2</h2>
                 <div class="hero-button-container">
-                    <a class="secondary-button" id="openModal">Command Hub </a>
-                    <a onclick="goBack()" class="primary-button">Go Back</a>
+                    <a class="secondary-button" id="openModal" tabindex="0">Command Hub </a>
+                    <a class="primary-button" id="backBtn" tabindex="0">Go Back</a>
                 </div>
             </div>
         </section>
+
     </header>
 
     <main>

@@ -26,6 +26,43 @@ document.addEventListener('DOMContentLoaded', () => {
       bar3.style.transform = 'none'
     }
   })
+
+  const backBtns = document.querySelectorAll('#backBtn');
+  const customAlert = document.getElementById('custom-alert');
+  const closeAlertButton = document.getElementById('close-alert');
+  
+  backBtns.forEach(backBtn => {
+    backBtn.addEventListener('click', () => {
+      goBack();
+    });
+  
+    backBtn.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        event.preventDefault();
+        goBack();
+      }
+    });
+  });
+  
+  closeAlertButton.addEventListener('click', () => {
+    customAlert.style.display = 'none';
+  });
+  
+  function goBack() {
+    if (window.history.length > 1) {
+      const previousUrl = document.referrer;
+      
+      if (!previousUrl.startsWith("https://just-speak-guitar-lessons.github.io/")) {
+        customAlert.style.display = 'block';
+      } else {
+        window.history.back(1);
+      }
+    } else {
+      customAlert.style.display = 'block';
+    }
+  }
+  
+
   // Constants
   const SMALL_SCREEN = 743
   const MEDIUM_SCREEN = 990
