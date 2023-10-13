@@ -31,36 +31,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const customAlert = document.getElementById('custom-alert');
   const closeAlertButton = document.getElementById('close-alert');
   
-  backBtns.forEach(backBtn => {
-    backBtn.addEventListener('click', () => {
-      goBack();
-    });
-  
-    backBtn.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.keyCode === 13) {
-        event.preventDefault();
+  // Check if customAlert and closeAlertButton exist before adding event listeners
+  if (customAlert && closeAlertButton) {
+    backBtns.forEach(backBtn => {
+      backBtn.addEventListener('click', () => {
         goBack();
-      }
-    });
-  });
+      });
   
-  closeAlertButton.addEventListener('click', () => {
-    customAlert.style.display = 'none';
-  });
+      backBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+          event.preventDefault();
+          goBack();
+        }
+      });
+    });
+  
+    closeAlertButton.addEventListener('click', () => {
+      customAlert.style.display = 'none';
+    });
+  }
   
   function goBack() {
     if (window.history.length > 1) {
       const previousUrl = document.referrer;
-      
-      if (!previousUrl.startsWith("https://just-speak-guitar-lessons.github.io/")) {
+  
+      if (customAlert && !previousUrl.startsWith("https://just-speak-guitar-lessons.github.io/")) {
         customAlert.style.display = 'block';
       } else {
         window.history.back(1);
       }
-    } else {
+    } else if (customAlert) {
       customAlert.style.display = 'block';
     }
   }
+  
   
 
   // Constants
