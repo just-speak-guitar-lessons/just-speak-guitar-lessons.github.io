@@ -296,14 +296,15 @@ a {
 .logo-container {
     display: flex;
     align-items: center;
+    width: -webkit-fill-available;
 }
 
 .logo-container .emphasis-logo {
     background-image: url(assets/img/global-imgs/badge.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
 }
 
 .logo-name h1 {
@@ -327,11 +328,16 @@ a {
     transition: all .5s ease-in-out;
 }
 
-#hamburger-menu .icon-bar {
-    fill: var(--brand-color-purple);
+#hamburger-menu #icon-bar,
+#hamburger-menu #icon-bar .bar {
+    .bar {
+        border-bottom: 2px solid var(--brand-color-purple);
+        width: 30px;
+        height: 8px;
+      }
 
     &:hover {
-        fill: var(--brand-color-black);
+        border-color: var(--brand-color-d-blue);
     }
 }
 
@@ -1477,8 +1483,8 @@ footer {
     background-image: url(assets/img/global-imgs/badge.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
     margin-right: 10px;
 }
 
@@ -1489,6 +1495,7 @@ footer {
     padding-left: 10px;
     font-weight: 600;
     text-transform: uppercase;
+    width: -webkit-fill-available;
 }
 
 

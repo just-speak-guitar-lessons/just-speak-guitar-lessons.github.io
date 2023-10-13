@@ -2,8 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("External script loaded");
 
-
-
     // Get all the guitar selection buttons
     const guitarButtons = document.querySelectorAll('.guitar-select-button');
 
