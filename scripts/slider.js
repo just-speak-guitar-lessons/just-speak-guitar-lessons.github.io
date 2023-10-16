@@ -1,4 +1,4 @@
-// slider for chords page 
+// slider for chords page
 let slideIndex = 1;
 
 // Function to show slides
@@ -24,6 +24,9 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].classList.add('active');
 }
+
+// Rest of your code remains the same
+
 
 // Function to handle clicking on "Previous" button
 document.getElementById('prevButton').addEventListener('click', () => {

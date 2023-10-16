@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const previousUrl = document.referrer;
   
       if (customAlert && !previousUrl.startsWith("https://just-speak-guitar-lessons.github.io/")) {
-        customAlert.style.display = 'block';
+        customAlert.style.display = 'flex';
       } else {
         window.history.back(1);
       }
     } else if (customAlert) {
-      customAlert.style.display = 'block';
+      customAlert.style.display = 'flex';
     }
   }
   
