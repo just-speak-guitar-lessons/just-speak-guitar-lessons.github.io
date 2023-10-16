@@ -1085,11 +1085,11 @@ a {
   border: none;
   background-color: #eb1616;
   padding: 20px;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-
 .playPauseButton:hover {
-  background-color: #ee3838;
+  background-color: #a10909;
 }
 
 .btt-button {
@@ -1103,13 +1103,16 @@ a {
   border-radius: 0.5rem;
   padding: 0.5rem;
   text-decoration: none;
+  cursor: pointer;
   transition: 0.2s ease-out;
   box-shadow: 10px 10px 22px -6px rgba(0, 0, 0, 0.44);
 }
-
 .btt-button .span {
   fill: var(--brand-color-white);
-  transition: 0.2s ease-out;
+}
+.btt-button:hover {
+  box-shadow: none;
+  background-color: #1d1467;
 }
 
 /* dynamic tuner page */
@@ -1983,6 +1986,9 @@ footer {
   .accordion .grid-container .grid-item {
     border-bottom: none;
   }
+  .grid-container .card .card-content.media {
+    height: 400px;
+  }
 }
 @media screen and (min-width: 992px) {
   section {
@@ -2104,14 +2110,19 @@ footer {
   .accordion-header {
     padding: 0;
   }
+  .grid-container .card .card-content.media {
+    height: 440px;
+  }
 }
 @media only screen and (min-width: 1090px) {
-  /* chords  */
   .slideshow-container {
     max-width: 60%;
   }
   .accordion .grid-container {
     justify-content: center;
+  }
+  .grid-container .card .card-content.media {
+    height: 400px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -2293,6 +2304,9 @@ footer {
   .accordion .grid-container .grid-item {
     flex-direction: column;
   }
+  .grid-container .card .card-content.media {
+    height: 380px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   section {
@@ -2327,6 +2341,9 @@ footer {
   /* chords  */
   .slideshow-container {
     width: 100%;
+  }
+  .grid-container .card .card-content.media {
+    height: 350px;
   }
   /* tabs  */
   .tabs-modal-content {
