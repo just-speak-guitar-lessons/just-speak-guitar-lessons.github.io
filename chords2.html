@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
-  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+  <meta name="description" content="Tutorial on Barre Chords.">
   <meta name="author" content="Joseph Percival">
   <meta name="theme-color" content="#317EFB">
   <title>Voice-Controlled Guitar Tutorials | Learn Guitar with Voice Commands Chords - Lesson 2</title>
-  <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
+  <link rel="icon" href="assets/img/global-imgs/badge.svg" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link media="print" onload="this.onload=null;this.removeAttribute('media');"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-imgs/chords-hero.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/img/hero-imgs/chords-hero.webp" type="image/webp">
 </head>
 
 
@@ -32,11 +32,13 @@
           </a>
         </div>
 
-        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
-          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
-            <path
-              d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
-          </svg>
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button"
+          title="Navigation Menu button">
+          <div id="icon-bar">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+          </div>
         </button>
         <ul id="nav-menu" class="nav-menu">
           <li class="navbar-link navbar-item">
@@ -64,6 +66,7 @@
         </ul>
       </div>
     </nav>
+
     <div id="custom-alert" class="hidden">
       <div class="custom-alert-message">
         <div class="alert-image"></div>
@@ -73,10 +76,11 @@
       </div>
     </div>
 
-
     <section id="top" class="global-hero-banner-with-button chords">
       <div class="hero-content">
-        <h2 class="title white">The Chords <br> Lesson 2</h2>
+        <div class="title">
+        <h2 class="white">The Chords <br> Lesson 2</h2>
+        </div>
         <div class="hero-button-container">
           <a class="secondary-button" id="openModal" tabindex="0">Command Hub</a>
           <a id="backBtn" class="primary-button" tabindex="0">Go Back</a>
@@ -113,56 +117,46 @@
               </div>
               <div class="tab-content" id="tab1">
                 <table>
-                  <!-- <th>What to say</th> -->
                   <tr>
                     <th>What to say to Connie.</th>
                   </tr>
                   <tr>
-                    <!-- <td>Home</td> -->
                     <td>Connie, open the Home Page</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Basics</td> -->
                     <td>Connie, open the Basics Lesson.</td>
                   </tr>
                   <tr>
                     <td>Connie, open the Basics Lesson 2.</td>
-                    <!-- <td>Go to the second Basics Lesson.</td> -->
                   </tr>
                   <tr>
-                    <!-- <td>Open Fret's</td> -->
+                    <td>Connie, open the Strings Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Microphone Guitar Tuner.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Manual Guitar Tuner.</td>
+                  </tr>
+                  <tr>
                     <td>Connie, open the Frets Lesson.</td>
                   </tr>
                   <tr>
-                    <td>Connie, open the Guitar Tuner.</td>
-                    <!-- <td>Go to the second Fret's lesson.</td> -->
+                    <td>Connie, open the Frets Lesson 2.</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Chords</td> -->
                     <td>Connie, open the Chords Lesson.</td>
                   </tr>
                   <tr>
                     <td>Connie, open the Chord's Lesson 2.</td>
-                    <!-- <td>Go to the second Chord's Lesson.</td> -->
                   </tr>
                   <tr>
-                    <!-- <td>Open Rhythm</td> -->
                     <td>Connie, open the Rhythm Guitar Lesson.</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Rhythm Lesson Two</td> -->
-                    <td>Connie, open the Rhythm Guitar Lesson 2.
-                    </td>
+                    <td>Connie, open the Tabs Lesson.</td>
                   </tr>
-                  <tr>
-                    <!-- <td>Open Lead</td> -->
-                    <td>Connie, open the Lead Guitar Lesson.</td>
-                  </tr>
-                  <tr>
-                    <!-- <td>Open Lead Lesson Two</td> -->
-                    <td>Connie, open the Lead Guitar Lesson 2.
-                    </td>
-                  </tr>
+
                 </table>
               </div>
               <div class="tab-content" id="tab2">
@@ -203,7 +197,8 @@
       <section>
         <div class="flex-row_SB">
           <h3>Barre Chords.</h3>
-          <a href="#chord-slider" class="primary-button" aria-label="clickable link to chord section below.">Go To
+          <a href="#chord-slider" class="primary-button" aria-label="Go to carousel button."
+            title="click this to go to chord carousel below">Go To
             Chords</a>
         </div>
         <div class="flex-col_left">
@@ -319,27 +314,27 @@
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/F-major.webp"
-                  alt="Image of the F Barre chord." width="640" height="360">
+                  alt="Image of the F Barre chord." width="500" height="324">
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/Fmin-barre.webp"
-                  alt="Image of the F minor Barre chord.">
+                  alt="Image of the F minor Barre chord." width="500" height="324">
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/Fmaj7.webp"
-                  alt="Image of the F Major 7th Barre chord.">
+                  alt="Image of the F Major 7th Barre chord." width="500" height="324">
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/Bflatmaj.webp"
-                  alt="Image of the open B Flat Major chord.">
+                  alt="Image of the open B Flat Major chord." width="500" height="324">
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/Bminor.webp"
-                  alt="Image of the open B Flat Minor chord.">
+                  alt="Image of the open B Flat Minor chord." width="500" height="324">
               </div>
               <div class="slide">
                 <img src="assets/img/chords-imgs/slider-imgs/barre-chords/B7.webp"
-                  alt="Image of the open B Flat 7 chord.">
+                  alt="Image of the open B Flat 7 chord." width="500" height="324">
               </div>
             </div>
 
@@ -430,12 +425,23 @@
         </div>
       </section>
 
+
       <div class="italic-text">
-        <p>Learning and mastering guitar chords is an essential skill for any guitarist, as it allows them to accompany
-          songs, write their own music, and play a wide range of musical styles.
-        </p>
+        <p>The Fingerboard is the primary component of most stringed instruments. It is a thin, long strip of wood
+          adhered to the front of the neck of a string instrument. The strings run over the board, between the nut at
+          the top of the guitar and the bridge at the bottom and over the sound hole on an Acoustic and the pick-ups on
+          an Electric Guitar.</p>
       </div>
 
+      <div>
+        <a href="#top" class="btt-button" title="Go back to the top button">
+          <svg class="span" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M463.077-200v-495.308L224.102-456.333 200-480l280-280 280 280-24.102 23.667-238.975-238.975V-200h-33.846Z">
+            </path>
+          </svg>
+        </a>
+      </div>
       <!-- end of main container  -->
     </div>
 
