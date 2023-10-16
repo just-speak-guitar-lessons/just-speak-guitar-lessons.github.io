@@ -1096,11 +1096,11 @@ a {
     border: none;
     background-color: #eb1616;
     padding: 20px;
+    cursor: pointer;
     transition: all 0.5s ease-in-out;
-}
-
-.playPauseButton:hover {
-    background-color: #ee3838;
+    &:hover {
+        background-color: #a10909;
+    }
 }
 
 .btt-button {
@@ -1114,13 +1114,16 @@ a {
     border-radius: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
+    cursor: pointer;
     transition: 0.2s ease-out;
     box-shadow: 10px 10px 22px -6px rgba(0, 0, 0, 0.44);
-}
-
-.btt-button .span {
+.span {
     fill: var(--brand-color-white);
-    transition: 0.2s ease-out;
+}
+&:hover {
+    box-shadow: none;
+    background-color: #1d1467;
+}
 }
 
 /* dynamic tuner page */
@@ -2068,6 +2071,12 @@ footer {
             }
         }
     }
+    // rhythm
+    .grid-container .card {
+        .card-content.media {
+            height: 400px;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -2219,20 +2228,23 @@ footer {
     .accordion-header {
         padding: 0;
     }
+    // rhythm
+    .grid-container .card .card-content.media {
+        height: 440px;
+    }
 }
 
 @media only screen and (min-width: 1090px) {
-
-        /* chords  */
-     // tuner 
-    //  #prevButton {left: -40px;}
-    //  #nextButton {right: -40px;}
- .slideshow-container {
-    max-width: 60%;
- }
+    .slideshow-container {
+        max-width: 60%;
+    }
 
     .accordion .grid-container {
         justify-content: center;
+    }
+    // rhythm
+    .grid-container .card .card-content.media {
+        height: 400px;
     }
 }
 
@@ -2450,6 +2462,13 @@ footer {
     .accordion .grid-container .grid-item {
         flex-direction: column;
     }
+
+    // rhythm
+    .grid-container .card {
+        .card-content.media {
+            height: 380px;
+        }
+    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -2494,8 +2513,12 @@ footer {
         width: 100%;
     }
 
-    /* tabs  */
+    // rhythm
+    .grid-container .card .card-content.media {
+        height: 350px;
+    }
 
+    /* tabs  */
     .tabs-modal-content {
         width: 76%;
     }
