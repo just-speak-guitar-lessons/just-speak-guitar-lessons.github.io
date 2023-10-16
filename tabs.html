@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
-  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+  <meta name="description" content="Tutorial on Rhythm in musical and guitar theory with video content.">
   <meta name="author" content="Joseph Percival">
   <meta name="theme-color" content="#317EFB">
-  <title>Voice-Controlled Guitar Tutorials | Learn Guitar with Voice Commands Tabs - Lesson</title>
-  <link rel="icon" href="assets/img/global-imgs/badge.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <title>Voice-Controlled Guitar Tutorials | Learn Guitar with Voice Commands - Lesson</title>
   <link media="print" onload="this.onload=null;this.removeAttribute('media');"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/tabs-hero.webp"
-    type="image/webp">
+  <link rel="icon" href="assets/img/global-imgs/badge.svg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" fetchpriority="high" as="image"
+    href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/tabs-hero.webp" type="image/webp">
 
 </head>
 
@@ -23,10 +23,10 @@
     <nav id="navbar">
       <div class="navbar-container">
         <div class="home-link">
-          <a href="/just-speak-guitar-lessons.github.io/index.html" class="navbar-logo">
+          <a href="/index.html" class="navbar-logo">
             <div class="logo-container" title="logo and home button">
               <div class="emphasis-logo"></div>
-              <div class="logo-name" aria-label="Return To Home Page">
+              <div class="logo-name">
                 <h1>Guitar <span>Lessons</span></h1>
               </div>
             </div>
@@ -35,10 +35,11 @@
 
         <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button"
           title="Navigation Menu button">
-          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
-            <path
-              d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
-          </svg>
+          <div id="icon-bar">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+          </div>
         </button>
         <ul id="nav-menu" class="nav-menu">
           <li class="navbar-link navbar-item">
@@ -60,14 +61,17 @@
             <a href="//just-speak-guitar-lessons.github.io/rhythm.html" title="Link to the tuner page">Rhythm</a>
           </li>
           <li class="navbar-link navbar-item">
-            <a href="//just-speak-guitar-lessons.github.io/lead.html"  class="active-link" title="Link to the tuner page">Tabs</a>
+            <a href="//just-speak-guitar-lessons.github.io/lead.html" title="Link to the tuner page" class="active-link">Tabs</a>
           </li>
         </ul>
       </div>
     </nav>
-    <section id="top" class="global-hero-banner-with-button tabs">
+
+    <section id="top" class="global-hero-banner-with-button rhythm">
       <div class="hero-content">
-        <h2 class="title white">The Tablature Lesson </h2>
+        <div class="title">
+          <h2 class="white"> The Tablature Lesson </h2>
+        </div>
         <div class="hero-button-container">
           <a class="primary-button" id="openModal" tabindex="0" aria-label="Voice Command Modal button"
             title="Open Voice Command Modal">Command Hub</a>
@@ -83,8 +87,9 @@
         <div class="modal-overlay">
           <div class="modal-content">
             <div class="modal-header">
+
               <h3>Command Hub</h3>
-              <span class="close-modal" id="closeModal" tabindex="0">
+              <span class="close-modal" id="closeModal">
                 <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
                   <path
                     d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
@@ -98,63 +103,51 @@
               </p>
 
               <div class="tabs">
-                <button class="tab-button active" data-tab="tab1" aria-label="General Commands Tab Button"
-                  title="General Voice Commands Tab Button">Lessons</button>
-                <button class="tab-button" data-tab="tab2" aria-label="Advanced Commands Tab Button"
-                  title="Advanced Voice Commands Tab Button">Controls</button>
+                <button class="tab-button active" data-tab="tab1">Lessons</button>
+                <button class="tab-button" data-tab="tab2">Controls</button>
               </div>
               <div class="tab-content" id="tab1">
                 <table>
-                  <!-- <th>What to say</th> -->
                   <tr>
                     <th>What to say to Connie.</th>
                   </tr>
                   <tr>
-                    <!-- <td>Home</td> -->
                     <td>Connie, open the Home Page</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Basics</td> -->
                     <td>Connie, open the Basics Lesson.</td>
                   </tr>
                   <tr>
                     <td>Connie, open the Basics Lesson 2.</td>
-                    <!-- <td>Go to the second Basics Lesson.</td> -->
                   </tr>
                   <tr>
-                    <!-- <td>Open Fret's</td> -->
+                    <td>Connie, open the Strings Lesson.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Microphone Guitar Tuner.</td>
+                  </tr>
+                  <tr>
+                    <td>Connie, open the Manual Guitar Tuner.</td>
+                  </tr>
+                  <tr>
                     <td>Connie, open the Frets Lesson.</td>
                   </tr>
                   <tr>
-                    <td>Connie, open the Guitar Tuner.</td>
-                    <!-- <td>Go to the second Fret's lesson.</td> -->
+                    <td>Connie, open the Frets Lesson 2.</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Chords</td> -->
                     <td>Connie, open the Chords Lesson.</td>
                   </tr>
                   <tr>
                     <td>Connie, open the Chord's Lesson 2.</td>
-                    <!-- <td>Go to the second Chord's Lesson.</td> -->
                   </tr>
                   <tr>
-                    <!-- <td>Open Rhythm</td> -->
                     <td>Connie, open the Rhythm Guitar Lesson.</td>
                   </tr>
                   <tr>
-                    <!-- <td>Open Rhythm Lesson Two</td> -->
-                    <td>Connie, open the Rhythm Guitar Lesson 2.
-                    </td>
+                    <td>Connie, open the Tabs Lesson.</td>
                   </tr>
-                  <tr>
-                    <!-- <td>Open Lead</td> -->
-                    <td>Connie, open the Lead Guitar Lesson.</td>
-                  </tr>
-                  <tr>
-                    <!-- <td>Open Lead Lesson Two</td> -->
-                    <td>Connie, open the Lead Guitar Lesson 2.
-                    </td>
-                  </tr>
+
                 </table>
               </div>
               <div class="tab-content" id="tab2">
@@ -195,9 +188,7 @@
       <section>
         <div class="flex-row_SB">
           <h3>Understanding Tablature</h3>
-          <a id="openVideoModal" class="primary-button" tabindex="0"
-            aria-label="clickable link to open video selection." title="Click to open Video Modal">See
-            Videos</a>
+          <a id="openVideoModal" class="primary-button" tabindex="0" title="Go To Videos" aria-label="Go To Video tutorials.">Go To Videos</a>
         </div>
         <div id="tabsVideoModal" class="tabs-modal">
           <div class="tabs-modal-content">
@@ -630,7 +621,8 @@
       <div class="italic-text">
         <p>
           Guitar tabs are widely used by guitarists to learn and play songs without requiring extensive knowledge of
-          traditional sheet music notation. From beginner to professional - yes even your favorite guitar player uses tabs!</p>
+          traditional sheet music notation. From beginner to professional - yes even your favorite guitar player uses
+          tabs!</p>
       </div>
 
       <a href="#top" class="btt-button" title="Go back to the top button" aria-label="back to the top button">
@@ -646,7 +638,7 @@
     <footer>
       <div class="footer-row">
         <div class="footer-column">
-          <a class="logo" href="/just-speak-guitar-lessons.github.io/index.html" title="Guitar Lessons">
+          <a class="logo" href="index.html" title="Guitar Lessons">
             <div class="emphasis-logo"></div>
             <div class="logo-name">
               Guitar <span>Lessons</span>
