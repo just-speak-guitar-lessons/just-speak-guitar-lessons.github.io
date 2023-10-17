@@ -1906,6 +1906,7 @@ footer {
         position: relative;
         left: 5%;
         top: 2%;
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2165,12 +2166,6 @@ footer {
         width: 100%;
     }
 
-    /* modal styles  */
-    .modal-content {
-        height: 87%;
-        border-radius: 5px;
-    }
-
     /* basics styles */
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
@@ -2329,7 +2324,6 @@ footer {
 
     .modal-content {
         width: 60%;
-        height: 86%;
         left: 20%;
     }
 
@@ -2566,7 +2560,7 @@ footer {
 
     .modal-content {
         width: 40%;
-        height: 700px;
+        height: 710px;
         left: 30%;
         top: 10%;
     }
