@@ -13,8 +13,10 @@
     <link rel="icon" href="assets/img/global-imgs/badge.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link media="print" onload="this.onload=null;this.removeAttribute('media');"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/index-hero.webp" type="image/webp">
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="image" href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/index-hero.webp"
+        type="image/webp">
 
 </head>
 
@@ -95,7 +97,7 @@
                         <div class="modal-header">
 
                             <h3>Command Hub</h3>
-                            <span class="close-modal" id="closeModal" tabindex="0">
+                            <span class="close-modal" id="closeModal">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
                                     <path
                                         d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z" />
@@ -109,64 +111,52 @@
                             </p>
 
                             <div class="tabs">
-                                <button class="tab-button active" data-tab="tab1"
-                                    aria-label="General Commands Tab Button"
-                                    title="General Voice Commands Tab Button">Lessons</button>
-                                <button class="tab-button" data-tab="tab2" aria-label="Advanced Commands Tab Button"
-                                    title="Advanced Voice Commands Tab Button">Controls</button>
+                                <button class="tab-button active" data-tab="tab1">Lessons</button>
+                                <button class="tab-button" data-tab="tab2">Controls</button>
                             </div>
                             <div class="tab-content" id="tab1">
+
                                 <table>
-                                    <!-- <th>What to say</th> -->
                                     <tr>
                                         <th>What to say to Connie.</th>
                                     </tr>
                                     <tr>
-                                        <!-- <td>Home</td> -->
                                         <td>Connie, open the Home Page</td>
                                     </tr>
                                     <tr>
-                                        <!-- <td>Open Basics</td> -->
                                         <td>Connie, open the Basics Lesson.</td>
                                     </tr>
                                     <tr>
                                         <td>Connie, open the Basics Lesson 2.</td>
-                                        <!-- <td>Go to the second Basics Lesson.</td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>Open Fret's</td> -->
+                                        <td>Connie, open the Strings Lesson.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connie, open the Microphone Guitar Tuner.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connie, open the Manual Guitar Tuner.</td>
+                                    </tr>
+                                    <tr>
                                         <td>Connie, open the Frets Lesson.</td>
                                     </tr>
                                     <tr>
-                                        <td>Connie, open the Guitar Tuner.</td>
-                                        <!-- <td>Go to the second Fret's lesson.</td> -->
+                                        <td>Connie, open the Frets Lesson 2.</td>
                                     </tr>
                                     <tr>
-                                        <!-- <td>Open Chords</td> -->
                                         <td>Connie, open the Chords Lesson.</td>
                                     </tr>
                                     <tr>
                                         <td>Connie, open the Chord's Lesson 2.</td>
-                                        <!-- <td>Go to the second Chord's Lesson.</td> -->
                                     </tr>
                                     <tr>
-                                        <!-- <td>Open Rhythm</td> -->
                                         <td>Connie, open the Rhythm Guitar Lesson.</td>
                                     </tr>
                                     <tr>
-                                        <!-- <td>Open Rhythm Lesson Two</td> -->
-                                        <td>Connie, open the Rhythm Guitar Lesson 2.
-                                        </td>
+                                        <td>Connie, open the Tabs Lesson.</td>
                                     </tr>
-                                    <tr>
-                                        <!-- <td>Open Lead</td> -->
-                                        <td>Connie, open the Lead Guitar Lesson.</td>
-                                    </tr>
-                                    <tr>
-                                        <!-- <td>Open Lead Lesson Two</td> -->
-                                        <td>Connie, open the Lead Guitar Lesson 2.
-                                        </td>
-                                    </tr>
+
                                 </table>
                             </div>
                             <div class="tab-content" id="tab2">
@@ -203,8 +193,7 @@
                     </div>
                 </div>
             </div>
-
-
+            
             <section>
                 <div class="flex-col_left">
                     <h3>Hello</h3>
@@ -511,9 +500,14 @@
             </div>
         </footer>
     </main>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script src="/just-speak-guitar-lessons.github.io/scripts/voice-control.js"></script>
+    <!-- generic script  -->
     <script src="scripts/script.js"></script>
+    <!-- Include Annyang library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <!-- Your external script -->
+    <script src="scripts/voice-control.js"></script>
+
+
 </body>
 
 </html>
