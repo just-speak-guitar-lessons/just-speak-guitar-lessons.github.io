@@ -1615,9 +1615,9 @@ footer {
 .tabs-modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 9vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -1668,6 +1668,12 @@ footer {
                 background-color: #e0dcdc;
                 cursor: pointer;
             }
+        }
+    }
+    .accordion-header {
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
         }
     }
 }
