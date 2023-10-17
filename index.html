@@ -17,6 +17,7 @@
         rel="stylesheet">
     <link rel="preload" as="image" href="/just-speak-guitar-lessons.github.io/assets/img/hero-imgs/index-hero.webp"
         type="image/webp">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 
 </head>
 
@@ -503,11 +504,25 @@
     <!-- generic script  -->
     <script src="scripts/script.js"></script>
     <!-- Include Annyang library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <!-- Your external script -->
-    <script src="scripts/voice-control.js"></script>
-
-
-</body>
+    <script>
+        if (annyang) {
+          // Initialize Annyang
+          annyang.start();
+      
+          // Define voice commands
+          annyang.addCommands({
+            'Connie, open the Home Page': function() {
+              // Handle the voice command here, e.g., navigate to the home page.
+              window.location.href = '/just-speak-guitar-lessons.github.io/index.html';
+            },
+            'Connie, open the Basics Lesson': function() {
+              // Handle the voice command here.
+              window.location.href = '/just-speak-guitar-lessons.github.io/basics.html';
+            },
+            // Add more commands for other pages.
+          });
+        }
+      </script>
+      </body>
 
 </html>
