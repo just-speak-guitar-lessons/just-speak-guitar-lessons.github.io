@@ -1,4 +1,6 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('External script loaded')
+  
 // Voice command
 
     if (annyang) {
@@ -94,3 +96,4 @@
         // SpeechKITT.vroom();
     }
     // $("#skitt-listening-text__instructions").text("say \"open help center\"");
+})
